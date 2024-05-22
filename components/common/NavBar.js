@@ -11,7 +11,7 @@ const NavBar = () => {
         width={"100%"}
         padding={{ base: "10px 0px", md: "25px 0px" }}
         bg={"transparent"}
-        position={"sticky"}
+        // position={"relative"}
         // top={0}
         zIndex={100}
       >
