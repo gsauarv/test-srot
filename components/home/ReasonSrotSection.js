@@ -8,7 +8,7 @@ const ReasonSrot = () => {
         as="section"
         paddingTop={{
           base: "20px",
-          md: "400px",
+          md: "150px",
         }}
       >
         <CommonWrapper>

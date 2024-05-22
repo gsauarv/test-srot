@@ -11,9 +11,9 @@ const NavBar = () => {
         width={"100%"}
         padding={{ base: "10px 0px", md: "25px 0px" }}
         bg={"transparent"}
-        // position={"relative"}
-        // top={0}
-        zIndex={100}
+        position={"sticky"}
+        top={0}
+        zIndex={1000000}
       >
         <CommonWrapper>
           <Flex align={"center"} justifyContent={"space-between"}>
@@ -73,7 +73,12 @@ export default NavBar;
 const NavLink = ({ label }) => {
   return (
     <>
-      <Text color={"#4C4B63"} fontSize={"14px"} fontWeight={"500"}>
+      <Text
+        color={"#4C4B63"}
+        fontSize={"14px"}
+        fontWeight={"500"}
+        cursor={"pointer"}
+      >
         {label}
       </Text>
     </>
