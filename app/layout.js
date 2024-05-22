@@ -1,3 +1,4 @@
+import CommonLayout from "@/components/common/CommonLayout";
 import "./globals.css";
 
 export const metadata = {
@@ -8,11 +9,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      {/* <head>
-        <link rel="icon" href="../public/Frame.png" sizes="any" />
-      </head> */}
-
-      <body>{children}</body>
+      <body>
+        <CommonLayout>{children}</CommonLayout>
+      </body>
     </html>
   );
 }
