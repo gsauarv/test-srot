@@ -13,14 +13,13 @@ export default function Home() {
         position={"absolute"}
         width={"100%"}
         top={0}
-        // height={"75dvh"}
-        overflow={"visible"}
         sx={{
-          height: {
-            base: "105dvh",
-            md: "80dvh",
-            lg: "80dvh",
+          h: {
+            base: "105vh",
+            md: "80vh",
+            lg: "85vh",
             xl: "75dvh",
+            "2xl": "65dvh",
           },
         }}
       >
@@ -51,7 +50,9 @@ export default function Home() {
           justifyContent: "space-between",
           flexDir: {
             base: "column",
-            md: "row",
+            md: "column",
+            lg: "row",
+            xl: "row",
           },
         }}
       >
@@ -168,15 +169,18 @@ export default function Home() {
 
         <Box
           sx={{
-            width: "fit-content",
+            // width: "800px",
+            // h: "600px",
             padding: "0px 20px 0px 0px",
             paddingTop: {
               base: "40px",
               md: "0px",
             },
+
+            position: "relative",
           }}
         >
-          <Image src={LandingImage} />
+          <Image src={LandingImage} layout="responsive" objectFit="cover" />
         </Box>
       </Flex>
     </>
