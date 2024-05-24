@@ -49,7 +49,7 @@ const LandingSection = () => {
         <Box>
           <Box
             sx={{
-              padding: "0px 20px 0px 0px",
+              // padding: "0px 20px 0px 0px",
               paddingTop: {
                 base: "40px",
                 md: "0px",
@@ -74,7 +74,7 @@ const LandingSection = () => {
               <Image
                 src={image}
                 // layout="responsive"
-                objectFit="cover"
+                // objectFit="cover"
                 width={900}
                 height={500}
               />
