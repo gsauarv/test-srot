@@ -1,0 +1,61 @@
+"use client";
+import Docker from "@/public/docker.svg";
+import Google from "@/public/google.svg";
+import Medium from "@/public/medium.svg";
+import Netflix from "@/public/netflix.svg";
+import Vercel from "@/public/vercel.svg";
+import Youtube from "@/public/youtube.svg";
+import { Box, Divider, Flex, Text } from "@chakra-ui/react";
+import Image from "next/image";
+import Slider from "react-slick";
+import CommonWrapper from "../common/CommonWrapper";
+
+const BrandCarasoul = () => {
+  const image_array = [Netflix, Medium, Google, Youtube, Vercel, Docker];
+  const settings = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 1800,
+    autoplaySpeed: 1800,
+    cssEase: "linear",
+    arrows: false,
+    pauseOnHover: true,
+  };
+  return (
+    <>
+      <Box sx={{ paddingBlock: "65px" }}>
+        <CommonWrapper type={"tight"}>
+          <Divider />
+          <Flex justifyContent={"center"} paddingTop={"68px"}>
+            <Text sx={{ color: "#121127", fontSize: "20px", fontWeight: 600 }}>
+              Trusted by over 39,000 forward-thinking companies
+            </Text>
+          </Flex>
+
+          <Box sx={{ paddingTop: "60px" }}>
+            <div className="slider-container">
+              <Slider {...settings}>
+                {image_array?.map((item, index) => (
+                  <Box
+                    sx={{
+                      width: "101px",
+                      height: "27px",
+                      position: "relative",
+                    }}
+                  >
+                    <Image src={item} key={index} fill />
+                  </Box>
+                ))}
+              </Slider>
+            </div>
+          </Box>
+        </CommonWrapper>
+      </Box>
+    </>
+  );
+};
+
+export default BrandCarasoul;
