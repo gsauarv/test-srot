@@ -1,3 +1,5 @@
+import BlogSection from "@/components/home/BlogSection";
+import CustomerReview from "@/components/home/CustomerReview";
 import LandingSection from "@/components/home/LandingSection";
 import PlatformSection from "@/components/home/PlatformSection";
 import ReasonSrot from "@/components/home/ReasonSrotSection";
@@ -10,6 +12,8 @@ export default function Home() {
       <ReasonSrot />
       <PlatformSection />
       <WhyChooseSection />
+      <CustomerReview />
+      <BlogSection />
     </>
   );
 }
