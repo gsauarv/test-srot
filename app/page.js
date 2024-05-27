@@ -1,6 +1,7 @@
 import BlogSection from "@/components/home/BlogSection";
 import BrandCarasoul from "@/components/home/BrandCarasoul";
 import CustomerReview from "@/components/home/CustomerReview";
+import FaqsSection from "@/components/home/FaqsSection";
 import LandingSection from "@/components/home/LandingSection";
 import PlatformSection from "@/components/home/PlatformSection";
 import ReasonSrot from "@/components/home/ReasonSrotSection";
@@ -18,6 +19,7 @@ export default function Home() {
       <CustomerReview />
       <BlogSection />
       <BrandCarasoul />
+      <FaqsSection />
     </>
   );
 }

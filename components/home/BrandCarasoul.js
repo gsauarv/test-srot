@@ -35,7 +35,7 @@ const BrandCarasoul = () => {
             </Text>
           </Flex>
 
-          <Box sx={{ paddingTop: "60px" }}>
+          <Box sx={{ paddingBlock: "65px" }}>
             <div className="slider-container">
               <Slider {...settings}>
                 {image_array?.map((item, index) => (
@@ -52,6 +52,8 @@ const BrandCarasoul = () => {
               </Slider>
             </div>
           </Box>
+
+          <Divider />
         </CommonWrapper>
       </Box>
     </>
