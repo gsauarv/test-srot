@@ -1,5 +1,6 @@
 "use client";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import Footer from "./Footer";
 import NavBar from "./NavBar";
 
 const theme = extendTheme({
@@ -26,6 +27,7 @@ const CommonLayout = ({ children }) => {
       <ChakraProvider theme={theme}>
         <NavBar />
         {children}
+        <Footer />
       </ChakraProvider>
     </>
   );
