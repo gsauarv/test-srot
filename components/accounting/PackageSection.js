@@ -3,34 +3,36 @@ import { BsFillSendFill } from "react-icons/bs";
 import { MdOutlineCheck } from "react-icons/md";
 import SectionTitle from "../common/SectionTitle";
 
-const PackageSection = () => {
+const PackageSection = ({ title = true }) => {
   return (
     <>
-      <Flex sx={{ justifyContent: "center", paddingBlock: "45px" }}>
-        <Box sx={{ width: "471.98px", textAlign: "center" }}>
-          <SectionTitle title={"Our Suitable Package For Your Need"} />
-          <Text
-            sx={{
-              fontSize: "15px",
-              paddingTop: "16px",
-              color: "#6C6B80",
-              fontWeight: 300,
-            }}
-          >
-            Choose a plan tailored to your need.
-          </Text>
-        </Box>
+      <Flex sx={{ justifyContent: "center", paddingBlock: title && "45px" }}>
+        {title && (
+          <Box sx={{ width: "471.98px", textAlign: "center" }}>
+            <SectionTitle title={"Our Suitable Package For Your Need"} />
+            <Text
+              sx={{
+                fontSize: "15px",
+                paddingTop: "16px",
+                color: "#6C6B80",
+                fontWeight: 300,
+              }}
+            >
+              Choose a plan tailored to your need.
+            </Text>
+          </Box>
+        )}
       </Flex>
 
       <Flex
         justifyContent={"center"}
         alignItems={"center"}
         columnGap={"32px"}
-        paddingBlock={"40px"}
+        paddingBlock={title ? "40px" : "0px"}
       >
-        <PackageCard />
-        <PackageCard isRecommended />
-        <PackageCard />
+        <PackageCard title={title} />
+        <PackageCard isRecommended title={title} />
+        <PackageCard title={title} />
       </Flex>
     </>
   );
@@ -38,7 +40,7 @@ const PackageSection = () => {
 
 export default PackageSection;
 
-const PackageCard = ({ isRecommended = false }) => {
+const PackageCard = ({ isRecommended = false, title }) => {
   return (
     <>
       <Box
@@ -51,6 +53,7 @@ const PackageCard = ({ isRecommended = false }) => {
           overflow: "hidden",
           paddingBottom: isRecommended && "37px",
           paddingTop: !isRecommended && "46px",
+          boxShadow: !title && "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
         }}
       >
         {isRecommended && (

@@ -2,6 +2,7 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 import { Box, Button, Flex, IconButton, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Logo from "../../public/logo.svg";
 import CommonWrapper from "./CommonWrapper";
 
@@ -32,9 +33,9 @@ const NavBar = () => {
               >
                 <NavLink label={"Accounting"} to="/accounting" />
                 <NavLink label={"Restaurant"} />
-                <NavLink label={"Pricing"} />
-                <NavLink label={"Help"} />
-                <NavLink label={"Contact us"} />
+                <NavLink label={"Pricing"} to="/pricing" />
+                <NavLink label={"Help"} to="/help" />
+                <NavLink label={"Contact us"} to="/contact" />
               </Flex>
             </Flex>
 
@@ -74,13 +75,15 @@ const NavBar = () => {
 export default NavBar;
 
 const NavLink = ({ label, to = "" }) => {
+  const pathname = usePathname();
+  console.log({ pathname });
   return (
     <>
       <Link href={to}>
         <Text
-          color={"#4C4B63"}
+          color={pathname === to ? "#4559BD" : "#4C4B63"}
           fontSize={"14px"}
-          fontWeight={"500"}
+          fontWeight={pathname === to ? 700 : "500"}
           cursor={"pointer"}
         >
           {label}
