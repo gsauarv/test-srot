@@ -1,7 +1,7 @@
 import { Avatar, Box, Flex, Text } from "@chakra-ui/react";
 import Image from "next/image";
 
-const BlogCard = () => {
+const BlogCard = ({ title, author, content, date }) => {
   return (
     <>
       <Box
@@ -25,9 +25,10 @@ const BlogCard = () => {
               fontWeight: 700,
               color: "#121127",
               lineHeight: "25.2px",
+              height: "50px",
             }}
           >
-            Guide for designing better mobile apps typography
+            {title}
           </Text>
 
           <Text
@@ -36,10 +37,10 @@ const BlogCard = () => {
               fontWeight: 400,
               fontSize: "14px",
               paddingTop: "24px",
+              height: "110px",
             }}
           >
-            The health platform boosted acceptance rates and expanded global
-            coverage by switching to Dlex
+            {content}
           </Text>
 
           <Flex
@@ -53,12 +54,12 @@ const BlogCard = () => {
               <Text
                 sx={{ fontSize: "14px", fontWeight: 700, color: "#121127" }}
               >
-                Courtney Henry
+                {author}
               </Text>
               <Text
                 sx={{ fontSize: "12px", fontWeight: 400, color: "#1211278F" }}
               >
-                Jun 27, 2020 · 6 min read
+                {date} · 6 min read
               </Text>
             </Box>
           </Flex>
