@@ -40,7 +40,7 @@ const NavBar = () => {
             </Flex>
 
             <Flex display={{ base: "none", md: "flex" }}>
-              <Button variant={"text"}>Sign in</Button>
+              {/* <Button variant={"text"}>Sign in</Button> */}
               <Button
                 backgroundColor={"brand.primary"}
                 _hover={{
