@@ -1,6 +1,6 @@
 "use client";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
-import { lazy } from "react";
+import { lazy, useEffect, useState } from "react";
 import Footer from "./Footer";
 // import NavBar from "./NavBar";
 
@@ -25,13 +25,22 @@ const theme = extendTheme({
 });
 
 const CommonLayout = ({ children }) => {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   return (
     <>
-      <ChakraProvider theme={theme}>
-        <NavBar />
-        {children}
-        <Footer />
-      </ChakraProvider>
+      {mounted ? (
+        <ChakraProvider theme={theme}>
+          <NavBar />
+          {children}
+          <Footer />
+        </ChakraProvider>
+      ) : (
+        <></>
+      )}
     </>
   );
 };
