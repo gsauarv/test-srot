@@ -1,7 +1,10 @@
 "use client";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import { lazy } from "react";
 import Footer from "./Footer";
-import NavBar from "./NavBar";
+// import NavBar from "./NavBar";
+
+const NavBar = lazy(() => import("./NavBar"));
 
 const theme = extendTheme({
   colors: {
