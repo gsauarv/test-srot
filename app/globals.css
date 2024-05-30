@@ -5,6 +5,8 @@
   box-sizing: border-box;
   font-family: "Manrope", sans-serif !important;
   font-optical-sizing: auto !important;
+  scroll-behavior: smooth !important;
+  
 }
 
 

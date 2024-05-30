@@ -1,21 +1,46 @@
+"use client";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { Box, Button, Flex, IconButton, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import Logo from "../../public/logo.svg";
 import CommonWrapper from "./CommonWrapper";
 
 const NavBar = () => {
+  const [navBackground, setNavBackground] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 80) {
+      setNavBackground(true);
+    } else {
+      setNavBackground(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [window]);
+
   return (
     <>
       <Box
         width={"100%"}
-        padding={{ base: "10px 0px", md: "25px 0px" }}
-        bg={"transparent"}
+        padding={{
+          base: "10px 0px",
+          md: navBackground ? "15px 0px" : "25px 0px",
+        }}
+        bg={navBackground ? "#FFFFFF" : "transparent"}
         position={"sticky"}
         top={0}
         zIndex={1}
+        boxShadow={navBackground && "rgba(33, 35, 38, 0.1) 0px 10px 10px -10px"}
+        transition={"0.4s all ease-in-out"}
+        // backdropFilter={navBackground && "blur(50px)"}
       >
         <CommonWrapper>
           <Flex align={"center"} justifyContent={"space-between"}>
@@ -34,6 +59,7 @@ const NavBar = () => {
                 <NavLink label={"Accounting"} to="/accounting" />
                 <NavLink label={"Restaurant"} />
                 <NavLink label={"Pricing"} to="/pricing" />
+                <NavLink label={"Blogs"} to="/blogs" />
                 <NavLink label={"Help"} to="/help" />
                 <NavLink label={"Contact us"} to="/contact" />
               </Flex>
