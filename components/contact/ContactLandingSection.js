@@ -15,11 +15,17 @@ const ContactLandingSection = () => {
         <Text
           sx={{
             color: "#3E399B",
-            fontSize: "46px",
+            fontSize: {
+              base: "30px",
+              lg: "46px",
+            },
             fontWeight: 700,
-            width: "683px",
+            width: {
+              base: "400px",
+              lg: "683px",
+            },
             textAlign: "center",
-            lineHeight: "60px",
+            lineHeight: { base: "normal", lg: "60px" },
           }}
         >
           Let&apos;s build something awesome for your startup
@@ -28,7 +34,24 @@ const ContactLandingSection = () => {
 
       <Box sx={{ paddingBlock: "51px" }}>
         <CommonWrapper type={"tight"}>
-          <Flex justifyContent={"center"} columnGap={"24px"}>
+          <Flex
+            sx={{
+              flexDirection: {
+                base: "column",
+                md: "row",
+              },
+
+              alignItems: {
+                base: "center",
+              },
+            }}
+            justifyContent={"center"}
+            columnGap={"24px"}
+            rowGap={{
+              base: "10px",
+              md: "0px",
+            }}
+          >
             {contact_data?.map(({ title }, index) => (
               <ContactCard title={title} key={index} />
             ))}

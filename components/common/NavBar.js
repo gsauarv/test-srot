@@ -1,16 +1,30 @@
 "use client";
 import { HamburgerIcon } from "@chakra-ui/icons";
-import { Box, Button, Flex, IconButton, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Drawer,
+  DrawerBody,
+  DrawerCloseButton,
+  DrawerContent,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerOverlay,
+  Flex,
+  Text,
+  useDisclosure,
+} from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Logo from "../../public/logo.svg";
 import CommonWrapper from "./CommonWrapper";
 
 const NavBar = () => {
   const [navBackground, setNavBackground] = useState(false);
-
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const btnRef = useRef();
   const handleScroll = () => {
     if (window.scrollY > 80) {
       setNavBackground(true);
@@ -25,6 +39,37 @@ const NavBar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [window]);
+
+  const toggleDrawer = () => {
+    setOpen((prev) => !prev);
+  };
+
+  const NAV_CONTS = [
+    {
+      label: "Accounting",
+      href: "/accounting",
+    },
+
+    {
+      label: "Restaurant",
+      href: "/restaurant",
+    },
+
+    {
+      label: "Pricing",
+      href: "/pricing",
+    },
+
+    {
+      label: "Help",
+      href: "/help",
+    },
+
+    {
+      label: "Contact us",
+      href: "/contact",
+    },
+  ];
 
   return (
     <>
@@ -56,12 +101,9 @@ const NavBar = () => {
                 align={"center"}
                 columnGap={"36px"}
               >
-                <NavLink label={"Accounting"} to="/accounting" />
-                <NavLink label={"Restaurant"} />
-                <NavLink label={"Pricing"} to="/pricing" />
-                {/* <NavLink label={"Blogs"} to="/blogs" /> */}
-                <NavLink label={"Help"} to="/help" />
-                <NavLink label={"Contact us"} to="/contact" />
+                {NAV_CONTS?.map(({ label, href }, index) => (
+                  <NavLink label={label} to={href} key={index} />
+                ))}
               </Flex>
             </Flex>
 
@@ -81,34 +123,80 @@ const NavBar = () => {
             </Flex>
 
             <Box display={{ base: "block", md: "none" }}>
-              <IconButton
-                backgroundColor={"white"}
-                border={"1px solid"}
-                borderColor={"brand.primary"}
-                width={"35px"}
-                height={"35px"}
-              >
-                <HamburgerIcon color={"brand.primary"} fontSize={"18px"} />
-              </IconButton>
+              <HamburgerIcon
+                color={"#436BC6"}
+                fontSize={"30px"}
+                onClick={onOpen}
+                ref={btnRef}
+                sx={{ cursor: "pointer" }}
+              />
             </Box>
           </Flex>
         </CommonWrapper>
       </Box>
+
+      <Drawer
+        isOpen={isOpen}
+        placement="right"
+        onClose={onClose}
+        finalFocusRef={btnRef}
+        size={"sm"}
+        sx={{ width: "100dvw", height: "100dvh" }}
+      >
+        <DrawerOverlay />
+        <DrawerContent sx={{ width: "100dvw", height: "100dvh" }}>
+          <DrawerCloseButton sx={{ fontSize: "16px" }} />
+          <DrawerHeader>
+            <Flex>
+              <Link href={"/"}>
+                <Image src={Logo} />
+              </Link>
+            </Flex>
+          </DrawerHeader>
+
+          <DrawerBody sx={{ width: "100dvw", paddingTop: "40px" }}>
+            <Flex sx={{ flexDirection: "column", rowGap: "24px" }}>
+              {NAV_CONTS?.map(({ label, href }, index) => (
+                <NavLink
+                  type={"mobile"}
+                  label={label}
+                  to={href}
+                  key={index}
+                  onClose={onClose}
+                />
+              ))}
+            </Flex>
+          </DrawerBody>
+
+          <DrawerFooter>
+            <Button
+              sx={{
+                width: "100%",
+                backgroundColor: "brand.primary",
+                height: "50px",
+                color: "#fff",
+                fontWeight: 700,
+              }}
+            >
+              Get Started
+            </Button>
+          </DrawerFooter>
+        </DrawerContent>
+      </Drawer>
     </>
   );
 };
 
 export default NavBar;
 
-const NavLink = ({ label, to = "" }) => {
+const NavLink = ({ label, to = "", type, onClose = () => {} }) => {
   const pathname = usePathname();
-  console.log({ pathname });
   return (
     <>
-      <Link href={to}>
+      <Link href={to} onClick={onClose}>
         <Text
           color={pathname === to ? "#4559BD" : "#4C4B63"}
-          fontSize={"14px"}
+          fontSize={type === "mobile" ? "18px" : "14px"}
           fontWeight={pathname === to ? 700 : "500"}
           cursor={"pointer"}
         >

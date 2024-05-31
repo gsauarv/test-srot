@@ -18,10 +18,16 @@ const ContactFormSection = () => {
             alignItems={"center"}
             columnGap={"42px"}
             justifyContent={"center"}
+            sx={{
+              flexDirection: {
+                base: "column",
+                md: "row",
+              },
+            }}
           >
             <Box
               sx={{
-                width: "474px",
+                width: { base: "100%", md: "474px" },
                 backgroundColor: "#FFFFFF",
                 minHeight: "648px",
                 borderRadius: "6px",
