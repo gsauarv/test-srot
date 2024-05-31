@@ -59,7 +59,7 @@ const NavBar = () => {
                 <NavLink label={"Accounting"} to="/accounting" />
                 <NavLink label={"Restaurant"} />
                 <NavLink label={"Pricing"} to="/pricing" />
-                <NavLink label={"Blogs"} to="/blogs" />
+                {/* <NavLink label={"Blogs"} to="/blogs" /> */}
                 <NavLink label={"Help"} to="/help" />
                 <NavLink label={"Contact us"} to="/contact" />
               </Flex>

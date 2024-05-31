@@ -1,4 +1,5 @@
 import { Box, Button, Flex, Grid, GridItem } from "@chakra-ui/react";
+import Link from "next/link";
 import { FiArrowRight } from "react-icons/fi";
 import CommonWrapper from "../common/CommonWrapper";
 import SectionTitle from "../common/SectionTitle";
@@ -34,22 +35,24 @@ const BlogSection = () => {
           </Box>
 
           <Flex align={"center"} justifyContent={"center"}>
-            <Button
-              rightIcon={<FiArrowRight />}
-              sx={{
-                color: "#496AD0",
-                fontSize: "15px",
-                fontWeight: 500,
-                marginTop: "50px",
-                width: "150px",
-                height: "40px",
-                borderRadius: "4px",
-                border: "1.2px solid #E5E5EB",
-              }}
-              variant={"outline"}
-            >
-              See more
-            </Button>
+            <Link href={"/blogs"}>
+              <Button
+                rightIcon={<FiArrowRight />}
+                sx={{
+                  color: "#496AD0",
+                  fontSize: "15px",
+                  fontWeight: 500,
+                  marginTop: "50px",
+                  width: "150px",
+                  height: "40px",
+                  borderRadius: "4px",
+                  border: "1.2px solid #E5E5EB",
+                }}
+                variant={"outline"}
+              >
+                See more
+              </Button>
+            </Link>
           </Flex>
         </CommonWrapper>
       </Box>

@@ -1,9 +1,45 @@
-import { Avatar, Box, Flex, Text } from "@chakra-ui/react";
+"use client";
+import CommonWrapper from "@/components/common/CommonWrapper";
+import { ArrowBackIcon } from "@chakra-ui/icons";
+import { Avatar, Box, Flex, IconButton, Text } from "@chakra-ui/react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const BlogDetailPage = () => {
+  const router = useRouter();
   return (
     <>
+      <Box
+        sx={{
+          backgroundColor: "#F6F6F8",
+          height: "441px",
+          position: "absolute",
+          width: "100%",
+          top: 0,
+          zIndex: -1,
+        }}
+      ></Box>
+      <Box sx={{ position: "absolute", top: 160 }}>
+        <CommonWrapper>
+          <IconButton
+            onClick={() => {
+              router.back();
+            }}
+            sx={{
+              minW: "23px",
+              maxW: "23px",
+
+              minH: "23px",
+              maxH: "23px",
+              borderRadius: "100%",
+              border: "1px solid #6C6B80",
+              backgroundColor: "transparent",
+              // marginTop: "71px",
+            }}
+            icon={<ArrowBackIcon sx={{ fontSize: "14px" }} />}
+          ></IconButton>
+        </CommonWrapper>
+      </Box>
       <Flex
         sx={{
           justifyContent: "center",
@@ -40,7 +76,11 @@ const BlogDetailPage = () => {
           </Box>
 
           <Flex
-            sx={{ paddingTop: "23px", columnGap: "12px", alignItems: "center" }}
+            sx={{
+              paddingTop: "23px",
+              columnGap: "12px",
+              alignItems: "center",
+            }}
           >
             <Avatar
               src="https://picsum.photos/600/600"
