@@ -94,7 +94,11 @@ const NavBar = () => {
             <Flex align={"center"} columnGap={"54px"}>
               <Box>
                 <Link href={"/"}>
-                  <Image src={pathname === "/restaurant" ? ResLogo : Logo} />
+                  <Image
+                    src={pathname === "/restaurant" ? ResLogo : Logo}
+                    width={80}
+                    height={80}
+                  />
                 </Link>
               </Box>
 
