@@ -159,7 +159,10 @@ const PricingLandingSection = () => {
               }}
             />
             <Box sx={{ paddingTop: "40px", paddingBottom: "88px" }}>
-              <PackageSection title={false} />
+              <PackageSection
+                title={false}
+                isRestaurantPage={selectedTab === 1}
+              />
             </Box>
           </Flex>
         </Box>

@@ -1,5 +1,6 @@
 import { Box, Button, Divider, Flex, Text } from "@chakra-ui/react";
 import { BsFillSendFill } from "react-icons/bs";
+import { FaBuilding, FaIdCardClip } from "react-icons/fa6";
 import { MdOutlineCheck } from "react-icons/md";
 import SectionTitle from "../common/SectionTitle";
 
@@ -30,13 +31,28 @@ const PackageSection = ({ title = true, isRestaurantPage }) => {
         columnGap={"32px"}
         paddingBlock={title ? "40px" : "0px"}
       >
-        <PackageCard title={title} isRestaurantPage={isRestaurantPage} />
+        <PackageCard
+          title={title}
+          isRestaurantPage={isRestaurantPage}
+          label={"Starter"}
+          description={"For new Freelancers"}
+          icon={<BsFillSendFill />}
+        />
         <PackageCard
           isRecommended
           title={title}
           isRestaurantPage={isRestaurantPage}
+          label={"Professional"}
+          description={"For established solopreneurs"}
+          icon={<FaIdCardClip />}
         />
-        <PackageCard title={title} isRestaurantPage={isRestaurantPage} />
+        <PackageCard
+          title={title}
+          isRestaurantPage={isRestaurantPage}
+          label={"Enterprise"}
+          description={"For the enterprices"}
+          icon={<FaBuilding />}
+        />
       </Flex>
     </>
   );
@@ -44,7 +60,14 @@ const PackageSection = ({ title = true, isRestaurantPage }) => {
 
 export default PackageSection;
 
-const PackageCard = ({ isRecommended = false, title, isRestaurantPage }) => {
+const PackageCard = ({
+  isRecommended = false,
+  title,
+  isRestaurantPage,
+  label,
+  description,
+  icon,
+}) => {
   return (
     <>
       <Box
@@ -89,14 +112,14 @@ const PackageCard = ({ isRecommended = false, title, isRestaurantPage }) => {
             sx={{
               flexDirection: "column",
               alignItems: "center",
-            }}
-          >
-            <BsFillSendFill
-              style={{
+
+              "& svg": {
                 color: isRestaurantPage ? "#FD8432" : "#38AEBA",
                 fontSize: "28px",
-              }}
-            />
+              },
+            }}
+          >
+            {icon}
 
             <Text
               sx={{
@@ -106,7 +129,7 @@ const PackageCard = ({ isRecommended = false, title, isRestaurantPage }) => {
                 color: "#383751",
               }}
             >
-              Starter
+              {label}
             </Text>
 
             <Text
@@ -117,7 +140,7 @@ const PackageCard = ({ isRecommended = false, title, isRestaurantPage }) => {
                 color: "#6C6B80",
               }}
             >
-              For new Freelancers
+              {description}
             </Text>
 
             <Box sx={{ paddingTop: "13px" }}>
