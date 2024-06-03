@@ -19,3 +19,46 @@
   background-size: cover;
   
 }
+
+
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure full viewport height */
+  background-color: #f0f0f0; /* Light gray background */
+  font-family: sans-serif; /* Use a generic sans-serif font */
+  margin: 0; /* Remove default margin */
+  padding: 2rem; /* Add some padding */
+}
+
+.not-found-container h1 {
+  font-size: 5rem; /* Large heading */
+  margin-bottom: 1rem; /* Add space below heading */
+}
+
+.not-found-container h2 {
+  font-size: 2rem; /* Medium heading */
+  margin-bottom: 1rem; /* Add space below heading */
+}
+
+.not-found-container p {
+  font-size: 1.2rem; /* Regular paragraph size */
+  line-height: 1.5; /* Improve readability */
+  margin-bottom: 2rem; /* Add space below paragraph */
+}
+
+.not-found-container a {
+  background-color: #333; /* Dark background for button */
+  color: #fff; /* White text for button */
+  text-decoration: none; /* Remove underline */
+  padding: 0.8rem 1.5rem; /* Button padding */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Indicate clickable button */
+  transition: background-color 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+.not-found-container a:hover {
+  background-color: #444; /* Darken background on hover */
+}

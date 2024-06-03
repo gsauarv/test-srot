@@ -3,7 +3,7 @@ import { BsFillSendFill } from "react-icons/bs";
 import { MdOutlineCheck } from "react-icons/md";
 import SectionTitle from "../common/SectionTitle";
 
-const PackageSection = ({ title = true }) => {
+const PackageSection = ({ title = true, isRestaurantPage }) => {
   return (
     <>
       <Flex sx={{ justifyContent: "center", paddingBlock: title && "45px" }}>
@@ -30,9 +30,13 @@ const PackageSection = ({ title = true }) => {
         columnGap={"32px"}
         paddingBlock={title ? "40px" : "0px"}
       >
-        <PackageCard title={title} />
-        <PackageCard isRecommended title={title} />
-        <PackageCard title={title} />
+        <PackageCard title={title} isRestaurantPage={isRestaurantPage} />
+        <PackageCard
+          isRecommended
+          title={title}
+          isRestaurantPage={isRestaurantPage}
+        />
+        <PackageCard title={title} isRestaurantPage={isRestaurantPage} />
       </Flex>
     </>
   );
@@ -40,12 +44,12 @@ const PackageSection = ({ title = true }) => {
 
 export default PackageSection;
 
-const PackageCard = ({ isRecommended = false, title }) => {
+const PackageCard = ({ isRecommended = false, title, isRestaurantPage }) => {
   return (
     <>
       <Box
         sx={{
-          backgroundColor: "#F8FAFC",
+          backgroundColor: isRestaurantPage ? "#FDF6EE" : "#F8FAFC",
           width: "312px",
           minH: "518px",
           height: "100%",
@@ -63,7 +67,7 @@ const PackageCard = ({ isRecommended = false, title }) => {
             sx={{
               width: "100%",
               height: "46px",
-              backgroundColor: "#38AEBA",
+              backgroundColor: isRestaurantPage ? "#FD8432" : "#38AEBA",
               marginBottom: "30px",
             }}
           >
@@ -87,7 +91,12 @@ const PackageCard = ({ isRecommended = false, title }) => {
               alignItems: "center",
             }}
           >
-            <BsFillSendFill style={{ color: "#38AEBA", fontSize: "28px" }} />
+            <BsFillSendFill
+              style={{
+                color: isRestaurantPage ? "#FD8432" : "#38AEBA",
+                fontSize: "28px",
+              }}
+            />
 
             <Text
               sx={{
@@ -113,7 +122,11 @@ const PackageCard = ({ isRecommended = false, title }) => {
 
             <Box sx={{ paddingTop: "13px" }}>
               <Text
-                sx={{ fontSize: "26px", fontWeight: 800, color: "#496AD0" }}
+                sx={{
+                  fontSize: "26px",
+                  fontWeight: 800,
+                  color: isRestaurantPage ? "#FD8432" : "#496AD0",
+                }}
               >
                 Rs 1200{" "}
                 <Text
@@ -154,7 +167,9 @@ const PackageCard = ({ isRecommended = false, title }) => {
 
             <Button
               sx={{
-                backgroundColor: "#4E8AF4",
+                background: isRestaurantPage
+                  ? "linear-gradient(280.48deg, #F31255 -238.37%, #FF9E2A 106.98%)"
+                  : "#4E8AF4",
                 width: "100%",
                 fontSize: "14px",
                 fontWeight: 700,

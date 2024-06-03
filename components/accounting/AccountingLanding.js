@@ -1,10 +1,11 @@
 import AccountingImage from "@/public/accounting.svg";
+import RestaurantImage from "@/public/landingimage1.svg";
 import { Box, Button, Flex, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import { MdSlowMotionVideo } from "react-icons/md";
 import CommonWrapper from "../common/CommonWrapper";
 
-const AccountingLanding = () => {
+const AccountingLanding = ({ isRestaurantPage = false }) => {
   return (
     <>
       <Box
@@ -15,7 +16,7 @@ const AccountingLanding = () => {
       >
         <Box
           sx={{
-            backgroundColor: "#F7F5F2",
+            backgroundColor: isRestaurantPage ? "#F7EFE5" : "#F7F5F2",
             position: "absolute",
             top: 0,
             w: "100%",
@@ -40,10 +41,12 @@ const AccountingLanding = () => {
                   variant={"outline"}
                   sx={{
                     backgroundColor: "#F5F8FF",
-                    color: "#496AD0",
+                    color: isRestaurantPage ? "#FF4D00" : "#496AD0",
                     fontSize: "12px",
                     height: "30px",
-                    border: "1px solid #CCD9F8",
+                    border: `1px solid ${
+                      isRestaurantPage ? "#E4D5C4" : "#CCD9F8"
+                    } `,
                     // padding: "10px",
                   }}
                 >
@@ -52,7 +55,7 @@ const AccountingLanding = () => {
 
                 <Text
                   sx={{
-                    color: "#2019A2",
+                    color: isRestaurantPage ? "#150E07" : "#2019A2",
                     fontSize: "46px",
                     fontWeight: 700,
                     lineHeight: "60px",
@@ -88,7 +91,10 @@ const AccountingLanding = () => {
                         backgroundColor: "brand.hover",
                       }}
                       sx={{
-                        backgroundColor: "brand.primary",
+                        background: isRestaurantPage
+                          ? "linear-gradient(277.8deg, #F31255 -81.61%, #FF9E2A 105.38%)"
+                          : "brand.primary",
+
                         color: "white",
                         fontSize: "16px",
                         fontWeight: 500,
@@ -109,6 +115,7 @@ const AccountingLanding = () => {
                         width: "152px",
                         height: "48px",
                         borderRadius: "4px",
+                        backgroundColor: isRestaurantPage && "#FFFFFF",
                       }}
                     >
                       Watch Video
@@ -129,7 +136,10 @@ const AccountingLanding = () => {
               </Box>
 
               <Box w={"850px"} position={"relative"} h={650}>
-                <Image src={AccountingImage} fill />
+                <Image
+                  src={isRestaurantPage ? RestaurantImage : AccountingImage}
+                  fill
+                />
               </Box>
             </Flex>
           </CommonWrapper>

@@ -19,12 +19,18 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import Logo from "../../public/logo.svg";
+import ResLogo from "../../public/reslogo.svg";
+
 import CommonWrapper from "./CommonWrapper";
 
 const NavBar = () => {
   const [navBackground, setNavBackground] = useState(false);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef();
+  const pathname = usePathname();
+
+  console.log({ pathname });
+
   const handleScroll = () => {
     if (window.scrollY > 80) {
       setNavBackground(true);
@@ -39,10 +45,6 @@ const NavBar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [window]);
-
-  const toggleDrawer = () => {
-    setOpen((prev) => !prev);
-  };
 
   const NAV_CONTS = [
     {
@@ -92,7 +94,7 @@ const NavBar = () => {
             <Flex align={"center"} columnGap={"54px"}>
               <Box>
                 <Link href={"/"}>
-                  <Image src={Logo} />
+                  <Image src={pathname === "/restaurant" ? ResLogo : Logo} />
                 </Link>
               </Box>
 

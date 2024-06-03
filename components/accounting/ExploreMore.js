@@ -3,12 +3,13 @@ import ExploreAcc from "@/public/exploreacc.svg";
 import Inventory from "@/public/inventory.svg";
 
 import MoreAccountingImage from "@/public/moreaccounting.svg";
+import MoreRestaurantImage from "@/public/morerestaurant.svg";
 import { Box, Flex, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import CommonWrapper from "../common/CommonWrapper";
 import SectionTitle from "../common/SectionTitle";
 
-const ExploreMore = () => {
+const ExploreMore = ({ isRestaurantPage = false }) => {
   const card_data = [
     {
       title: "Accounting",
@@ -48,7 +49,13 @@ const ExploreMore = () => {
     <>
       <Flex justifyContent={"center"}>
         <Box sx={{ width: "471.98px", textAlign: "center" }}>
-          <SectionTitle title={"Explore More About Accounting"} />
+          <SectionTitle
+            title={
+              isRestaurantPage
+                ? "Some feature about Srot Restaurant"
+                : "Explore More About Accounting"
+            }
+          />
         </Box>
       </Flex>
 
@@ -74,7 +81,10 @@ const ExploreMore = () => {
           </Flex>
 
           <Box sx={{ width: "300px", height: "550px", position: "relative" }}>
-            <Image src={MoreAccountingImage} fill />
+            <Image
+              src={isRestaurantPage ? MoreRestaurantImage : MoreAccountingImage}
+              fill
+            />
           </Box>
 
           <Flex

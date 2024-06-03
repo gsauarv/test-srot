@@ -11,7 +11,7 @@ import CommonWrapper from "../common/CommonWrapper";
 import SectionTitle from "../common/SectionTitle";
 import SeeMoreButton from "../common/SeeMoreButton";
 
-const FeaturesSection = () => {
+const FeaturesSection = ({ isRestaurantPage }) => {
   const feature_data = [
     {
       title: "Invoicing",
@@ -88,7 +88,13 @@ const FeaturesSection = () => {
       >
         <Flex sx={{ textAlign: "center" }} justifyContent={"center"}>
           <Box sx={{ width: "471px" }}>
-            <SectionTitle title={"What Else Can You Get In Srot Accounting"} />
+            <SectionTitle
+              title={
+                isRestaurantPage
+                  ? "What else can you get in srot Resaturant"
+                  : "What Else Can You Get In Srot Accounting"
+              }
+            />
           </Box>
         </Flex>
 
