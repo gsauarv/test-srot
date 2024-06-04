@@ -110,22 +110,36 @@ const HelpLandingSection = () => {
         >
           <Text
             sx={{
-              fontSize: "46px",
+              fontSize: {
+                base: "32px",
+                md: "46px",
+              },
               fontWeight: 700,
               color: "#3E399B",
+              textAlign: "center",
             }}
           >
             How can we help you?
           </Text>
 
-          <Flex sx={{ paddingTop: "32px" }}>
+          <Flex
+            sx={{
+              paddingTop: {
+                base: "25px",
+                md: "32px",
+              },
+            }}
+          >
             <InputGroup sx={{ height: "52px" }}>
               <InputLeftElement pointerEvents="none" sx={{ height: "100%" }}>
                 <Search2Icon color="#9D9CAF" />
               </InputLeftElement>
               <Input
                 sx={{
-                  width: "536px",
+                  width: {
+                    base: "380px",
+                    md: "536px",
+                  },
                   boxShadow: "0px 4px 24px 0px #2348C91A",
                   height: "100%",
                   borderRadius: "4px",
@@ -150,6 +164,16 @@ const HelpLandingSection = () => {
             alignItems={"center"}
             justifyContent={"center"}
             paddingTop={"60px"}
+            sx={{
+              flexDirection: {
+                base: "column",
+                md: "row",
+              },
+
+              rowGap: {
+                base: "20px",
+              },
+            }}
           >
             {help_data?.map(({ links, title, icon }) => (
               <HelpCard icon={icon} title={title} links={links} />
@@ -168,7 +192,10 @@ const HelpCard = ({ icon, title, links = [] }) => {
     <>
       <Box
         sx={{
-          width: "270px",
+          width: {
+            base: "100%",
+            md: "270px",
+          },
           backgroundColor: "#fff",
           boxShadow: "0px 4px 24px 0px #2348C91A",
           height: "316px",

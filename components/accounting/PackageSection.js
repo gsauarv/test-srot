@@ -30,6 +30,16 @@ const PackageSection = ({ title = true, isRestaurantPage }) => {
         alignItems={"center"}
         columnGap={"32px"}
         paddingBlock={title ? "40px" : "0px"}
+        sx={{
+          flexDirection: {
+            base: "column",
+            md: "row",
+          },
+          rowGap: {
+            base: "32px",
+            md: "0px",
+          },
+        }}
       >
         <PackageCard
           title={title}

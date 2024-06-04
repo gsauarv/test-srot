@@ -1,13 +1,28 @@
 "use client";
 import { Box, Flex, Text } from "@chakra-ui/react";
-import { IoMdCall, IoMdMail } from "react-icons/io";
+import { IoIosMap, IoMdCall, IoMdMail } from "react-icons/io";
 import CommonWrapper from "../common/CommonWrapper";
 
 const ContactLandingSection = () => {
   const contact_data = [
-    { title: "Sales Details" },
-    { title: "Support Details" },
-    { title: "Address" },
+    {
+      title: "Sales Details",
+      details: [
+        { value: "bill.sanders@example.com", icon: <IoMdMail /> },
+        { value: "(+977) 98526374185", icon: <IoMdCall /> },
+      ],
+    },
+    {
+      title: "Support Details",
+      details: [
+        { value: "bill.sanders@example.com", icon: <IoMdMail /> },
+        { value: "(+977) 98526374185", icon: <IoMdCall /> },
+      ],
+    },
+    {
+      title: "Address",
+      details: [{ value: "Kalikasthan , Kathmandu", icon: <IoIosMap /> }],
+    },
   ];
   return (
     <>
@@ -52,8 +67,8 @@ const ContactLandingSection = () => {
               md: "0px",
             }}
           >
-            {contact_data?.map(({ title }, index) => (
-              <ContactCard title={title} key={index} />
+            {contact_data?.map(({ title, details }, index) => (
+              <ContactCard title={title} key={index} details={details} />
             ))}
           </Flex>
         </CommonWrapper>
@@ -64,12 +79,13 @@ const ContactLandingSection = () => {
 
 export default ContactLandingSection;
 
-const ContactCard = ({ title }) => {
+const ContactCard = ({ title, details = [] }) => {
   return (
     <>
       <Box
         sx={{
           width: "327px",
+          height: "170px",
           backgroundColor: "#F6F6F8",
           padding: "29px 28px",
           borderRadius: "16px",
@@ -80,8 +96,9 @@ const ContactCard = ({ title }) => {
         </Text>
 
         <Flex sx={{ paddingTop: "21px", flexDir: "column", rowGap: "15px" }}>
-          <ContactItem icon={<IoMdMail />} text={"bill.sanders@example.com"} />
-          <ContactItem icon={<IoMdCall />} text={"(+977) 98526374185"} />
+          {details?.map(({ value, icon }, index) => (
+            <ContactItem icon={icon} text={value} key={index} />
+          ))}
         </Flex>
       </Box>
     </>

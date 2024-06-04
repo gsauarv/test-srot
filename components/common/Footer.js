@@ -88,6 +88,10 @@ const Footer = () => {
               alignItems: "flex-start",
               columnGap: "200px",
               paddingBottom: "42px",
+              flexDirection: {
+                base: "column",
+                md: "row",
+              },
             }}
           >
             <Box sx={{ width: "200px" }}>
@@ -170,8 +174,20 @@ const Footer = () => {
             </Box>
 
             <Grid
-              templateColumns="repeat(3, 1fr)"
-              gap={"120px"}
+              templateColumns={{
+                base: "repeat(2, 1fr)",
+                md: "repeat(3, 1fr)",
+              }}
+              gap={{
+                base: "40px",
+                md: "120px",
+              }}
+              sx={{
+                marginTop: {
+                  base: "40px",
+                  md: "0px",
+                },
+              }}
               //   sx={{ width: "100%" }}
             >
               {footer_section?.map(({ title, links }) => (

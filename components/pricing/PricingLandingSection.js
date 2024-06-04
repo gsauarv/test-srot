@@ -21,19 +21,37 @@ const PricingLandingSection = () => {
         <Text
           sx={{
             color: "#3E399B",
-            fontSize: "46px",
+            fontSize: {
+              base: "40px",
+              md: "46px",
+            },
             fontWeight: 700,
             textAlign: "center",
+            lineHeight: {
+              base: "45px",
+              md: "normal",
+            },
           }}
         >
           Flexible Pricing Options
         </Text>
 
-        <Flex sx={{ justifyContent: "center", paddingTop: "8px" }}>
+        <Flex
+          sx={{
+            justifyContent: "center",
+            paddingTop: {
+              base: "15px",
+              md: "8px",
+            },
+          }}
+        >
           <Text
             sx={{
               textAlign: "center",
-              width: "554px",
+              width: {
+                base: "350px",
+                md: "554px",
+              },
               fontWeight: 300,
               fontSize: "15px",
               color: "#6C6B80",

@@ -19,7 +19,15 @@ const BlogDetailPage = () => {
           zIndex: -1,
         }}
       ></Box>
-      <Box sx={{ position: "absolute", top: 160 }}>
+      <Box
+        sx={{
+          position: "absolute",
+          top: {
+            base: 20,
+            md: 160,
+          },
+        }}
+      >
         <CommonWrapper>
           <IconButton
             onClick={() => {
@@ -35,6 +43,10 @@ const BlogDetailPage = () => {
               border: "1px solid #6C6B80",
               backgroundColor: "transparent",
               // marginTop: "71px",
+              // display: {
+              //   base: "none",
+              //   md: "block",
+              // },
             }}
             icon={<ArrowBackIcon sx={{ fontSize: "14px" }} />}
           ></IconButton>
@@ -46,9 +58,20 @@ const BlogDetailPage = () => {
           marginBlock: "60px",
           flexDirection: "column",
           alignItems: "center",
+          padding: {
+            base: "0px 25px",
+            md: "0px",
+          },
         }}
       >
-        <Box sx={{ width: "802px" }}>
+        <Box
+          sx={{
+            width: {
+              base: "100%",
+              md: "802px",
+            },
+          }}
+        >
           <Text
             sx={{
               color: "#3E399B",

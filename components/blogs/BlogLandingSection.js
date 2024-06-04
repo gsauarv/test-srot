@@ -68,6 +68,10 @@ const BlogLandingSection = () => {
             fontSize: "16px",
             fontWeight: 400,
             textAlign: "center",
+            width: {
+              base: "300px",
+              md: "100%",
+            },
           }}
         >
           Take your business to the next level with our cutting-edge.
@@ -76,10 +80,14 @@ const BlogLandingSection = () => {
 
       <CommonWrapper type={"tight"}>
         <Grid
-          templateColumns="repeat(3, 1fr)"
+          templateColumns={{
+            base: "repeat(1, 1fr)",
+            md: "repeat(3, 1fr)",
+          }}
           rowGap={"42px"}
           columnGap={"26px"}
           paddingBlock={"50px 0px"}
+          placeItems={"center"}
         >
           {blogs_data?.map(({ title, author, content, date, id }) => (
             <Link key={id} href={`blogs/${id}`}>

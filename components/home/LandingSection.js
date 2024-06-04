@@ -2,14 +2,14 @@
 import CommonWrapper from "@/components/common/CommonWrapper";
 import BackImage from "@/public/background.svg";
 import LandingImage from "@/public/landingimage.svg";
-import LandingImage1 from "@/public/landingimage1.svg";
+import LandingImage2 from "@/public/landingres.svg";
 
 import { Box, Button, Flex, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import { useState } from "react";
 import { MdSlowMotionVideo } from "react-icons/md";
 
-const images_array = [LandingImage, LandingImage1];
+const images_array = [LandingImage, LandingImage2];
 
 const LandingSection = () => {
   const [selectedImage, setSelectedImage] = useState(0);

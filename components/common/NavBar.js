@@ -146,8 +146,8 @@ const NavBar = () => {
         placement="right"
         onClose={onClose}
         finalFocusRef={btnRef}
-        size={"sm"}
-        sx={{ width: "100dvw", height: "100dvh" }}
+        size={"xs"}
+        sx={{ height: "100dvh" }}
       >
         <DrawerOverlay />
         <DrawerContent sx={{ width: "100dvw", height: "100dvh" }}>

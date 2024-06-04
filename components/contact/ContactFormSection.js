@@ -31,7 +31,10 @@ const ContactFormSection = () => {
                 backgroundColor: "#FFFFFF",
                 minHeight: "648px",
                 borderRadius: "6px",
-                padding: "49px 51px",
+                padding: {
+                  base: "30px 25px",
+                  md: "49px 51px",
+                },
                 boxShadow: "0px 4px 24px 0px #2348C91A",
               }}
             >
@@ -87,10 +90,14 @@ const ContactFormSection = () => {
 
             <Box
               sx={{
-                width: "502px",
+                width: { base: "100%", md: "502px" },
                 minHeight: "649px",
                 border: "6px solid #fff",
                 borderRadius: "6px",
+                marginTop: {
+                  base: "40px",
+                  md: "0px",
+                },
               }}
             >
               <iframe

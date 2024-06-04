@@ -67,7 +67,7 @@ const FaqsSection = () => {
 
   return (
     <Box sx={{ paddingBlock: "35px" }}>
-      <Flex sx={{ justifyContent: "center" }}>
+      <Flex sx={{ justifyContent: "center", textAlign: "center" }}>
         <SectionTitle title={"Frequently asked question"} />
       </Flex>
       <CommonWrapper type={"tight"}>
