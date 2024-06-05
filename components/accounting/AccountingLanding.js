@@ -11,7 +11,10 @@ const AccountingLanding = ({ isRestaurantPage = false }) => {
       <Box
         sx={{
           width: "100%",
-          height: "75dvh",
+          height: {
+            base: "100dvh",
+            md: "75dvh",
+          },
         }}
       >
         <Box
@@ -34,9 +37,28 @@ const AccountingLanding = ({ isRestaurantPage = false }) => {
             <Flex
               justifyContent={"space-between"}
               alignItems={"center"}
-              sx={{ paddingBottom: "40px" }}
+              sx={{
+                paddingBottom: "40px",
+                flexDirection: {
+                  base: "column",
+                  md: "row",
+                },
+
+                rowGap: { base: "0px", md: "0px" },
+              }}
             >
-              <Box sx={{ width: "497px" }}>
+              <Box
+                sx={{
+                  width: {
+                    base: "100%",
+                    md: "497px",
+                  },
+
+                  paddingBlock: {
+                    base: "50px",
+                  },
+                }}
+              >
                 <Button
                   variant={"outline"}
                   sx={{
@@ -56,10 +78,15 @@ const AccountingLanding = ({ isRestaurantPage = false }) => {
                 <Text
                   sx={{
                     color: isRestaurantPage ? "#150E07" : "#2019A2",
-                    fontSize: "46px",
+                    fontSize: {
+                      base: "34px",
+                      md: "46px",
+                    },
                     fontWeight: 700,
-                    lineHeight: "60px",
-
+                    lineHeight: {
+                      base: "45px",
+                      md: "60px",
+                    },
                     paddingTop: "10px",
                   }}
                 >
@@ -135,10 +162,20 @@ const AccountingLanding = ({ isRestaurantPage = false }) => {
                 </Box>
               </Box>
 
-              <Box w={"850px"} position={"relative"} h={650}>
+              <Box
+                w={{ base: "100%", md: "850px" }}
+                position={"relative"}
+                h={{ base: 400, md: 650 }}
+                // sx={{
+                //   marginTop: {
+                //     base: "30px",
+                //   },
+                // }}
+              >
                 <Image
                   src={isRestaurantPage ? RestaurantImage : AccountingImage}
                   fill
+                  // objectFit="cover"
                 />
               </Box>
             </Flex>

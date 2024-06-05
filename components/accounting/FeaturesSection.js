@@ -9,7 +9,6 @@ import { Box, Flex, Grid, GridItem, IconButton, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import CommonWrapper from "../common/CommonWrapper";
 import SectionTitle from "../common/SectionTitle";
-import SeeMoreButton from "../common/SeeMoreButton";
 
 const FeaturesSection = ({ isRestaurantPage }) => {
   const feature_data = [
@@ -87,7 +86,14 @@ const FeaturesSection = ({ isRestaurantPage }) => {
         }}
       >
         <Flex sx={{ textAlign: "center" }} justifyContent={"center"}>
-          <Box sx={{ width: "471px" }}>
+          <Box
+            sx={{
+              width: {
+                base: "100%",
+                md: "471px",
+              },
+            }}
+          >
             <SectionTitle
               title={
                 isRestaurantPage
@@ -100,7 +106,14 @@ const FeaturesSection = ({ isRestaurantPage }) => {
 
         <CommonWrapper type={"tight"}>
           <Box sx={{ paddingBlock: "80px 0px" }}>
-            <Grid templateColumns="repeat(3, 1fr)" rowGap={"68px"}>
+            <Grid
+              templateColumns={{
+                base: "repeat(1, 1fr)",
+                md: "repeat(3, 1fr)",
+              }}
+              rowGap={"68px"}
+              sx={{ placeItems: "center" }}
+            >
               {feature_data?.map(({ description, title, icon, color }) => (
                 <GridItem>
                   <FeatureCards
@@ -115,9 +128,9 @@ const FeaturesSection = ({ isRestaurantPage }) => {
           </Box>
         </CommonWrapper>
 
-        <Flex sx={{ justifyContent: "center" }}>
+        {/* <Flex sx={{ justifyContent: "center" }}>
           <SeeMoreButton title="See all Features" />
-        </Flex>
+        </Flex> */}
       </Box>
     </>
   );

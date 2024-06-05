@@ -48,7 +48,15 @@ const ExploreMore = ({ isRestaurantPage = false }) => {
   return (
     <>
       <Flex justifyContent={"center"}>
-        <Box sx={{ width: "471.98px", textAlign: "center" }}>
+        <Box
+          sx={{
+            width: {
+              base: "100%",
+              md: "471.98px",
+            },
+            textAlign: "center",
+          }}
+        >
           <SectionTitle
             title={
               isRestaurantPage
@@ -64,7 +72,17 @@ const ExploreMore = ({ isRestaurantPage = false }) => {
           justifyContent={"center"}
           columnGap={"24px"}
           paddingBlock={"46px"}
-          alignItems={"flex-end"}
+          sx={{
+            flexDirection: {
+              base: "column",
+              md: "row",
+            },
+
+            alignItems: {
+              base: "center",
+              md: "flex-end",
+            },
+          }}
         >
           <Flex
             flexDirection={"column"}
@@ -80,7 +98,17 @@ const ExploreMore = ({ isRestaurantPage = false }) => {
             ))}
           </Flex>
 
-          <Box sx={{ width: "300px", height: "550px", position: "relative" }}>
+          <Box
+            sx={{
+              width: "300px",
+              height: "550px",
+              position: "relative",
+              marginTop: {
+                base: "40px",
+                md: "0px",
+              },
+            }}
+          >
             <Image
               src={isRestaurantPage ? MoreRestaurantImage : MoreAccountingImage}
               fill
