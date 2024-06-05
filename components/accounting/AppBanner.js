@@ -36,7 +36,17 @@ const AppBanner = ({ isRestaurantPage = false }) => {
               w: "100%",
             }}
           >
-            <Box sx={{ position: "absolute", left: 0, bottom: 0 }}>
+            <Box
+              sx={{
+                position: "absolute",
+                left: 0,
+                bottom: 0,
+                display: {
+                  base: "none",
+                  md: "block",
+                },
+              }}
+            >
               <Image
                 src={isRestaurantPage ? Res2 : AccountingImage1}
                 // height={320}
@@ -49,9 +59,12 @@ const AppBanner = ({ isRestaurantPage = false }) => {
 
             <Box sx={{ width: "641.88px" }}>
               <Text
-                style={{
+                sx={{
                   textAlign: "center",
-                  fontSize: "38px",
+                  fontSize: {
+                    base: "30px",
+                    md: "38px",
+                  },
                   color: "#181380",
                   fontWeight: 700,
                 }}
@@ -78,7 +91,17 @@ const AppBanner = ({ isRestaurantPage = false }) => {
                 <Image src={AppStoreImage} height={"44px"} width={160} />
               </Flex>
             </Box>
-            <Box sx={{ position: "absolute", right: 0, bottom: 0 }}>
+            <Box
+              sx={{
+                position: "absolute",
+                right: 0,
+                bottom: 0,
+                display: {
+                  base: "none",
+                  md: "block",
+                },
+              }}
+            >
               <Image
                 src={isRestaurantPage ? Res1 : AccountingImage2}
                 width={isRestaurantPage ? 250 : 310}

@@ -9,7 +9,15 @@ const PackageSection = ({ title = true, isRestaurantPage }) => {
     <>
       <Flex sx={{ justifyContent: "center", paddingBlock: title && "45px" }}>
         {title && (
-          <Box sx={{ width: "471.98px", textAlign: "center" }}>
+          <Box
+            sx={{
+              width: {
+                base: "400px",
+                md: "471.98px",
+              },
+              textAlign: "center",
+            }}
+          >
             <SectionTitle title={"Our Suitable Package For Your Need"} />
             <Text
               sx={{

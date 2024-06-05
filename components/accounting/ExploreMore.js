@@ -67,7 +67,7 @@ const ExploreMore = ({ isRestaurantPage = false }) => {
         </Box>
       </Flex>
 
-      <CommonWrapper>
+      <CommonWrapper type={"tight"}>
         <Flex
           justifyContent={"center"}
           columnGap={"24px"}
@@ -118,7 +118,9 @@ const ExploreMore = ({ isRestaurantPage = false }) => {
           <Flex
             flexDirection={"column"}
             rowGap={"24px"}
-            sx={{ paddingTop: "36px" }}
+            sx={{
+              paddingTop: "36px",
+            }}
           >
             {card_data?.slice(3)?.map(({ title, description, image }) => (
               <ExploreMoreCard
@@ -141,7 +143,10 @@ const ExploreMoreCard = ({ title, description, image }) => {
     <>
       <Box
         sx={{
-          width: "424px",
+          width: {
+            base: "100%",
+            md: "424px",
+          },
           minHeight: "137px",
           backgroundColor: "#F8FAFC",
           borderRadius: "14px",
