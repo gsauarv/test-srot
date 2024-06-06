@@ -72,7 +72,14 @@ const FaqsSection = () => {
       </Flex>
       <CommonWrapper type={"tight"}>
         <Box sx={{ paddingTop: "56px" }}>
-          <Accordion allowToggle>
+          <Accordion
+            allowToggle
+            sx={{
+              _focus: {
+                backgroundColor: "#fff",
+              },
+            }}
+          >
             {datas?.map(({ question, answer }, index) => (
               <AccordionItemRow
                 question={question}
@@ -97,6 +104,7 @@ const AccordionItemRow = ({ question, answer }) => {
         sx={{
           borderTop: "none",
           borderBottom: "1px solid #1211271F",
+
           _focus: {
             backgroundColor: "#fff",
           },
@@ -104,7 +112,10 @@ const AccordionItemRow = ({ question, answer }) => {
       >
         <AccordionButton
           sx={{
-            padding: "25px 0px",
+            padding: "25px 5px",
+            _hover: {
+              backgroundColor: "#F3F3F380",
+            },
             _focus: {
               backgroundColor: "#fff",
             },
