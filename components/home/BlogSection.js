@@ -25,7 +25,13 @@ const BlogSection = () => {
           </Flex>
 
           <Box sx={{ paddingTop: "43px" }}>
-            <Grid templateColumns="repeat(3, 1fr)" gap={6}>
+            <Grid
+              templateColumns={{
+                base: "repeat(1, 1fr)",
+                md: "repeat(3, 1fr)",
+              }}
+              gap={6}
+            >
               {[...Array(3)]?.map((item) => (
                 <GridItem>
                   <BlogCard />

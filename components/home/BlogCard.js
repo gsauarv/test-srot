@@ -6,7 +6,10 @@ const BlogCard = () => {
     <>
       <Box
         sx={{
-          width: "344px",
+          width: {
+            base: "100%",
+            md: "344px",
+          },
           height: "503px",
 
           borderRadius: "12px",

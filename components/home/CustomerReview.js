@@ -125,7 +125,7 @@ const ReviewCard = () => {
             boxShadow: "0px 5px 18px 0px #5890FF1A,0px 0px 1.5px 0px #3B6CEB1A",
             maxWidth: "100%",
             width: "100%",
-            height: "422px",
+            height: "100%",
             borderRadius: "12px",
             padding: "44px",
           }}
