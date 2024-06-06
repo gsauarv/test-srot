@@ -27,11 +27,14 @@ const WhyChooseSection = () => {
         <Text
           sx={{
             width: {
-              base: "400px",
+              base: "100%",
               md: "642.63px",
             },
             lineHeight: "46px",
-            fontSize: "38px",
+            fontSize: {
+              base: "30px",
+              md: "38px",
+            },
             fontWeight: 700,
             paddingTop: "16px",
             textAlign: "center",
@@ -212,7 +215,7 @@ const WhyChooseUsCard = ({ image, title, description, type = "large" }) => {
           <Image
             src={image}
             layout="responsive"
-            height={"286px"}
+            // height={"286px"}
             // fill
             width={"100%"}
             objectFit="contain"

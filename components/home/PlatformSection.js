@@ -1,7 +1,15 @@
 import accountImg from "@/public/account.svg";
 import restaurantImg from "@/public/restaurant.svg";
 
-import { Box, Button, Flex, IconButton, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  Grid,
+  GridItem,
+  IconButton,
+  Text,
+} from "@chakra-ui/react";
 import Image from "next/image";
 import { FaCreditCard } from "react-icons/fa6";
 import { FiArrowRight, FiBox } from "react-icons/fi";
@@ -97,11 +105,55 @@ const PlatformDetailCard = ({ title, type = "" }) => {
               </Text>
             </Box>
 
-            <Flex
+            <Grid
+              templateColumns={{
+                base: "repeat(2, 1fr)",
+                md: "repeat(3, 1fr)",
+              }}
+              rowGap={"68px"}
               sx={{
+                placeItems: "center",
+                rowGap: {
+                  base: "25px",
+                  md: "0px",
+                },
+
+                columnGap: {
+                  base: "20px",
+                },
+
                 paddingTop: "32px",
                 borderTop: "1px solid #F3F3F6",
                 marginTop: "30px",
+              }}
+            >
+              <GridItem>
+                <PlatformCard
+                  color="#71AAFF"
+                  icon={<TbPercentage />}
+                  title="Accounting"
+                />
+              </GridItem>
+
+              <GridItem>
+                <PlatformCard
+                  color="#F9A362"
+                  icon={<FiBox />}
+                  title="Inventory Management"
+                />
+              </GridItem>
+
+              <GridItem>
+                <PlatformCard
+                  color="#F1A3DB"
+                  icon={<FaCreditCard />}
+                  title="Cheque Management"
+                />
+              </GridItem>
+            </Grid>
+
+            {/* <Flex
+              sx={{
                 width: "fit-content",
 
                 rowGap: {
@@ -136,7 +188,7 @@ const PlatformDetailCard = ({ title, type = "" }) => {
                 icon={<FaCreditCard />}
                 title="Cheque Management"
               />
-            </Flex>
+            </Flex> */}
 
             <Button
               rightIcon={<FiArrowRight />}
@@ -191,7 +243,7 @@ const PlatformCard = ({ color, icon, title }) => {
             color: "#383751",
             fontSize: "16px",
             fontWeight: 700,
-            textWrap: "no-wrap",
+            // textWrap: "no-wrap",
           }}
         >
           {title}

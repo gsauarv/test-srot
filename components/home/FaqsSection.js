@@ -99,7 +99,14 @@ const AccordionItemRow = ({ question, answer }) => {
           borderBottom: "1px solid #1211271F",
         }}
       >
-        <AccordionButton sx={{ padding: "25px 0px" }}>
+        <AccordionButton
+          sx={{
+            padding: "25px 0px",
+            _focus: {
+              backgroundColor: "#fff",
+            },
+          }}
+        >
           <Box as="span" flex="1" textAlign="left">
             <Text
               sx={{

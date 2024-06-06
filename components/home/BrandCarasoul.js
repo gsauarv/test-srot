@@ -57,7 +57,14 @@ const BrandCarasoul = () => {
         <CommonWrapper type={"tight"}>
           <Divider />
           <Flex justifyContent={"center"} paddingTop={"68px"}>
-            <Text sx={{ color: "#121127", fontSize: "20px", fontWeight: 600 }}>
+            <Text
+              sx={{
+                color: "#121127",
+                fontSize: "20px",
+                fontWeight: 600,
+                textAlign: "center",
+              }}
+            >
               Trusted by over 39,000 forward-thinking companies
             </Text>
           </Flex>
