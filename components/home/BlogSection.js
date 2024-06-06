@@ -8,7 +8,7 @@ import BlogCard from "./BlogCard";
 const BlogSection = () => {
   return (
     <>
-      <Box sx={{ padding: "69px 0px" }}>
+      <Flex sx={{ padding: "69px 0px" }} justifyContent={"center"}>
         <CommonWrapper type={"tight"}>
           <Flex
             flexDir={"column"}
@@ -55,7 +55,7 @@ const BlogSection = () => {
             </Link>
           </Flex>
         </CommonWrapper>
-      </Box>
+      </Flex>
     </>
   );
 };

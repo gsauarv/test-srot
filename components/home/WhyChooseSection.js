@@ -26,7 +26,10 @@ const WhyChooseSection = () => {
 
         <Text
           sx={{
-            width: "642.63px",
+            width: {
+              base: "400px",
+              md: "642.63px",
+            },
             lineHeight: "46px",
             fontSize: "38px",
             fontWeight: 700,
@@ -51,13 +54,28 @@ const WhyChooseSection = () => {
         </Text>
       </Flex>
 
-      <Flex justifyContent={"center"}>
+      <Flex
+        justifyContent={"center"}
+        sx={{
+          padding: {
+            base: "0px 30px",
+            md: "0px",
+          },
+        }}
+      >
         <Box sx={{ paddingBlock: "54px" }}>
           <Flex
             sx={{
               alignItems: "center",
               columnGap: "26px",
               justifyContent: "center",
+              flexDirection: {
+                base: "column",
+                md: "row",
+              },
+              rowGap: {
+                base: "40px",
+              },
             }}
           >
             <WhyChooseUsCard
@@ -83,6 +101,14 @@ const WhyChooseSection = () => {
               columnGap: "26px",
               justifyContent: "center",
               paddingTop: "30px",
+              flexDirection: {
+                base: "column",
+                md: "row",
+              },
+
+              rowGap: {
+                base: "40px",
+              },
             }}
           >
             <WhyChooseUsCard
@@ -157,23 +183,39 @@ const WhyChooseUsCard = ({ image, title, description, type = "large" }) => {
           //   height: "429px",
           padding: "0px 31px",
           borderRadius: "6px",
-          width: "fit-content",
+          // width: "fit-content",
           // overflow: "hidden",
-          width: type === "large" ? "640px" : type !== "sm" ? "419px" : "343px",
+          width: {
+            base: "100%",
+            md: type === "large" ? "640px" : type !== "sm" ? "419px" : "343px",
+          },
         }}
       >
         <CardHeader title={title} description={description} />
 
         <Flex
           justifyContent={"flex-start"}
-          sx={{ paddingTop: "36px", width: "fit-content" }}
+          sx={{
+            // mt: "10px",
+            paddingTop: "36px",
+            width: { base: "100%", md: "100%" },
+            position: {
+              base: "relative",
+              md: "relative",
+            },
+            height: {
+              // base: "400px",
+              md: "300px",
+            },
+          }}
         >
           <Image
             src={image}
-            // layout="responsive"
-            // height={"286px"}
+            layout="responsive"
+            height={"286px"}
+            // fill
             width={"100%"}
-            objectFit="cover"
+            objectFit="contain"
             objectPosition="center"
           />
         </Flex>

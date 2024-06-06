@@ -28,13 +28,30 @@ const ReasonSrot = () => {
             There are more than 10,000 reasons why srot
           </Text>
 
-          <Flex align={"center"} justifyContent={"center"}>
+          <Flex
+            align={"center"}
+            justifyContent={"center"}
+            sx={{ width: "100%" }}
+          >
             <Grid
-              templateColumns="repeat(5, 1fr)"
+              autoColumns
+              autoFlow={"row"}
+              templateColumns={{
+                base: "repeat(2, 1fr)",
+                md: "repeat(5, 1fr)",
+              }}
               placeItems={"center"}
               sx={{
                 marginTop: "40px",
-                width: "1005px",
+                width: {
+                  base: "100%",
+                  md: "1005px",
+                },
+                rowGap: "25px",
+                justifyContent: "center",
+                alignItems: "center",
+                // placeContent: "center",
+                // placeItems: "center",
               }}
             >
               <GridItem>
@@ -69,7 +86,12 @@ const ReasonSrot = () => {
                 />
               </GridItem>
 
-              <GridItem>
+              <GridItem
+                colSpan={{
+                  base: 2,
+                  md: "auto",
+                }}
+              >
                 <ReasonCard
                   color={"#F1A3DB"}
                   icon={<HiOutlineDocumentReport />}
@@ -88,11 +110,17 @@ export default ReasonSrot;
 
 const ReasonCard = ({ color, icon, text }) => {
   return (
-    <>
+    <Box>
       <Flex
         align={"center"}
         flexDirection={"column"}
-        sx={{ width: "161.83px" }}
+        justifyContent={"center"}
+        sx={{
+          width: {
+            base: "150px",
+            md: "161.83px",
+          },
+        }}
       >
         <IconButton
           icon={icon}
@@ -110,7 +138,10 @@ const ReasonCard = ({ color, icon, text }) => {
         ></IconButton>
         <Text
           sx={{
-            width: "161.83px",
+            width: {
+              base: "100%",
+              md: "161.83px",
+            },
             fontSize: "15px",
             fontWeight: 600,
             color: "#383751",
@@ -121,6 +152,6 @@ const ReasonCard = ({ color, icon, text }) => {
           {text}
         </Text>
       </Flex>
-    </>
+    </Box>
   );
 };

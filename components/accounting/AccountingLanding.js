@@ -13,6 +13,7 @@ const AccountingLanding = ({ isRestaurantPage = false }) => {
           width: "100%",
           height: {
             base: "120dvh",
+            sm: "101dvh",
             md: "75dvh",
           },
         }}

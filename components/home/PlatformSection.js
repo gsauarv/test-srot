@@ -33,8 +33,19 @@ const PlatformDetailCard = ({ title, type = "" }) => {
           columnGap: type?.toLowerCase() === "restaurant" ? "150px" : "150px",
 
           justifyContent: "center",
-          flexDirection:
-            type?.toLowerCase() === "restaurant" ? "row-reverse" : "row",
+
+          rowGap: {
+            base: "20px",
+            md: "0px",
+          },
+          flexDirection: {
+            md: type?.toLowerCase() === "restaurant" ? "row-reverse" : "row",
+            base: "column",
+          },
+          padding: {
+            base: "100px 30px 0px 30px",
+            md: "107px 0px 0px 0px",
+          },
         }}
       >
         <Box sx={{ width: "fit-content" }}>
@@ -61,8 +72,13 @@ const PlatformDetailCard = ({ title, type = "" }) => {
                   color: "#181380",
                   fontWeight: 700,
                   lineHeight: "46px",
-                  width:
-                    type?.toLowerCase() !== "restaurant" ? "541.43px" : "600px",
+                  width: {
+                    base: "100%",
+                    md:
+                      type?.toLowerCase() !== "restaurant"
+                        ? "541.43px"
+                        : "600px",
+                  },
                 }}
               >
                 {title}
@@ -87,6 +103,20 @@ const PlatformDetailCard = ({ title, type = "" }) => {
                 borderTop: "1px solid #F3F3F6",
                 marginTop: "30px",
                 width: "fit-content",
+
+                rowGap: {
+                  base: "20px",
+                  md: "0px",
+                },
+
+                flexDirection: {
+                  base: "row",
+                  md: "row",
+                },
+                flexWrap: {
+                  base: "wrap",
+                  md: "nowrap",
+                },
               }}
               alignItems={"center"}
               columnGap={"40px"}
