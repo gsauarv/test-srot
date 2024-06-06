@@ -97,6 +97,9 @@ const AccordionItemRow = ({ question, answer }) => {
         sx={{
           borderTop: "none",
           borderBottom: "1px solid #1211271F",
+          _focus: {
+            backgroundColor: "#fff",
+          },
         }}
       >
         <AccordionButton
