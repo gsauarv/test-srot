@@ -19,11 +19,13 @@ const LandingSection = () => {
       <Box
         sx={{
           h: {
-            base: "90vh",
-            md: "80vh",
-            lg: "85vh",
+            base: "90dvh",
+            md: "80dvh",
+            lg: "85dvh",
             xl: "75dvh",
           },
+
+          overflow: "hidden",
         }}
       >
         <Box
@@ -31,9 +33,9 @@ const LandingSection = () => {
           // height={"80dvh"}
           sx={{
             h: {
-              base: "90vh",
-              md: "80vh",
-              lg: "85vh",
+              base: "90dvh",
+              md: "80dvh",
+              lg: "85dvh",
               xl: "75dvh",
             },
           }}
@@ -81,20 +83,36 @@ const LandingSection = () => {
                 flexDirection={"column"}
                 alignItems={"center"}
               >
+                {/* <Box
+                  sx={{
+                    width: {
+                      lg: "800px",
+                      xl: "100%",
+                    },
+                    height: {
+                      lg: "600px",
+                      xl: "100%",
+                    },
+                    position: "relative",
+                  }}
+                > */}
                 <Image
                   src={image}
-                  // layout="responsive"
+                  layout="responsive"
                   // objectFit="cover"
-                  width={900}
+                  // fill
+                  width={800}
                   height={500}
                 />
+                {/* </Box> */}
 
                 <Flex
                   align={"center"}
                   justify={"center"}
                   columnGap={"10px"}
                   marginLeft={"120px"}
-                  marginTop={"-30px"}
+                  marginTop={"-90px"}
+                  zIndex={100}
                 >
                   <Box
                     sx={{

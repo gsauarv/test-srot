@@ -22,8 +22,8 @@ const CustomerReview = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 2,
+    slidesToShow: 3,
+    slidesToScroll: 3,
     arrows: false,
     dots: false,
 
@@ -57,7 +57,7 @@ const CustomerReview = () => {
   return (
     <>
       <Box sx={{ backgroundColor: "#F6F6F8", padding: "71px 0px" }}>
-        <CommonWrapper type={"tight"}>
+        <CommonWrapper>
           <Flex sx={{ alignItems: "center", justifyContent: "space-between" }}>
             <Box sx={{ width: "408px" }}>
               <SectionTitle title={"Words from our customer"} />
