@@ -82,7 +82,7 @@ const Footer = () => {
   return (
     <>
       <Box sx={{ padding: "50px 0px" }}>
-        <CommonWrapper type={"tight"}>
+        <CommonWrapper>
           <Flex
             sx={{
               alignItems: "flex-start",

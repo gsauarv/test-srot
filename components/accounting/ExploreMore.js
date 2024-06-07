@@ -67,7 +67,7 @@ const ExploreMore = ({ isRestaurantPage = false }) => {
         </Box>
       </Flex>
 
-      <CommonWrapper type={"tight"}>
+      <CommonWrapper>
         <Flex
           justifyContent={"center"}
           columnGap={"24px"}
