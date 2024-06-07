@@ -106,25 +106,27 @@ const FeaturesSection = ({ isRestaurantPage }) => {
 
         <CommonWrapper type={"tight"}>
           <Box sx={{ paddingBlock: "80px 0px" }}>
-            <Grid
-              templateColumns={{
-                base: "repeat(1, 1fr)",
-                md: "repeat(3, 1fr)",
-              }}
-              rowGap={"68px"}
-              sx={{ placeItems: "center" }}
-            >
-              {feature_data?.map(({ description, title, icon, color }) => (
-                <GridItem>
-                  <FeatureCards
-                    icon={icon}
-                    title={title}
-                    description={description}
-                    color={color}
-                  />
-                </GridItem>
-              ))}
-            </Grid>
+            <Flex justifyContent={"center"}>
+              <Grid
+                templateColumns={{
+                  base: "repeat(1, 1fr)",
+                  md: "repeat(3, 1fr)",
+                }}
+                rowGap={"68px"}
+                sx={{ placeItems: "center" }}
+              >
+                {feature_data?.map(({ description, title, icon, color }) => (
+                  <GridItem>
+                    <FeatureCards
+                      icon={icon}
+                      title={title}
+                      description={description}
+                      color={color}
+                    />
+                  </GridItem>
+                ))}
+              </Grid>
+            </Flex>
           </Box>
         </CommonWrapper>
 
