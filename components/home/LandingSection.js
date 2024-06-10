@@ -98,10 +98,10 @@ const LandingSection = () => {
                 > */}
                 <Image
                   src={image}
-                  layout="responsive"
+                  // layout="responsive"
                   // objectFit="cover"
                   // fill
-                  width={800}
+                  width={950}
                   height={500}
                 />
                 {/* </Box> */}

@@ -62,10 +62,10 @@ const NavBar = () => {
       href: "/pricing",
     },
 
-    {
-      label: "Help",
-      href: "/help",
-    },
+    // {
+    //   label: "Help",
+    //   href: "/help",
+    // },
 
     {
       label: "Contact us",

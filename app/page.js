@@ -1,3 +1,4 @@
+import AppBanner from "@/components/accounting/AppBanner";
 import BlogSection from "@/components/home/BlogSection";
 import BrandCarasoul from "@/components/home/BrandCarasoul";
 import CustomerReview from "@/components/home/CustomerReview";
@@ -20,6 +21,7 @@ export default function Home() {
       <BlogSection />
       <BrandCarasoul />
       <FaqsSection />
+      <AppBanner />
     </>
   );
 }
