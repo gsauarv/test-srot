@@ -21,7 +21,7 @@ const LandingSection = () => {
           h: {
             base: "90dvh",
             md: "80dvh",
-            lg: "85dvh",
+            lg: "95dvh",
             xl: "75dvh",
           },
 
@@ -35,7 +35,7 @@ const LandingSection = () => {
             h: {
               base: "90dvh",
               md: "80dvh",
-              lg: "85dvh",
+              lg: "95dvh",
               xl: "75dvh",
             },
           }}
@@ -101,8 +101,8 @@ const LandingSection = () => {
                   // layout="responsive"
                   // objectFit="cover"
                   // fill
-                  width={950}
-                  height={500}
+                  width={750}
+                  height={400}
                 />
                 {/* </Box> */}
 
@@ -188,7 +188,7 @@ const LandingSection = () => {
                         // padding: "10px",
                       }}
                     >
-                     Cloud Based: Accounting & Restaurant Software
+                      Cloud Based: Accounting & Restaurant Software
                     </Button>
 
                     <Text
@@ -207,25 +207,25 @@ const LandingSection = () => {
                         paddingTop: "16px",
                       }}
                     >
-                       Manage your business with our advanced cloud based 
+                      Manage your business with our advanced cloud based
                     </Text>
                     <Text
-                  sx={{
-                    fontSize: {
-                      base: "34px",
-                      md: "34px",
-                    },
-                    fontWeight: 800,
-                    lineHeight: {
-                      base: "45px",
-                      md: "45px",
-                    },
-                    paddingTop: "10px",
-                    color: "#4068C0"
-                  }}
-                >
-                    Accounting & Restaurant Handling Software
-                </Text>
+                      sx={{
+                        fontSize: {
+                          base: "34px",
+                          md: "34px",
+                        },
+                        fontWeight: 800,
+                        lineHeight: {
+                          base: "45px",
+                          md: "45px",
+                        },
+                        paddingTop: "10px",
+                        color: "#4068C0",
+                      }}
+                    >
+                      Accounting & Restaurant Handling Software
+                    </Text>
 
                     <Text
                       sx={{
@@ -235,7 +235,8 @@ const LandingSection = () => {
                         fontWeight: 300,
                       }}
                     >
-                      Take your business to the next level through our cutting-edge, cloud-based platform.
+                      Take your business to the next level through our
+                      cutting-edge, cloud-based platform.
                     </Text>
 
                     <Flex
@@ -285,7 +286,8 @@ const LandingSection = () => {
                         fontWeight: 500,
                       }}
                     >
-                      Free 30 days trial / Exclusive support / Zero Installation Fee
+                      Free 30 days trial / Exclusive support / Zero Installation
+                      Fee
                     </Text>
                   </Box>
                 </Box>

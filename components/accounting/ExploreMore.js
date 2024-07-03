@@ -10,7 +10,43 @@ import CommonWrapper from "../common/CommonWrapper";
 import SectionTitle from "../common/SectionTitle";
 
 const ExploreMore = ({ isRestaurantPage = false }) => {
-  const card_data = [
+  const accounting_card_data = [
+    {
+      title: "Accounting",
+      description: "Effortlessly record all your accounting transaction.",
+      image: ExploreAcc,
+    },
+
+    {
+      title: "Inventory",
+      description:
+        "Track all your inventory location,  transfer between warehouse and manage your services / products.",
+      image: Inventory,
+    },
+
+    {
+      title: "Documents",
+      description: "Effortlessly record all your accounting transaction.",
+      image: Document,
+    },
+    {
+      title: "Reports",
+      description: "Effortlessly record all your accounting transaction.",
+      image: Document,
+    },
+    {
+      title: "Productivity",
+      description: "Effortlessly record all your accounting transaction.",
+      image: Document,
+    },
+    {
+      title: "Speedy Transaction",
+      description: "Effortlessly record all your accounting transaction.",
+      image: Document,
+    },
+  ];
+
+  const res_card_data = [
     {
       title: "Accounting",
       description: "Effortlessly record all your accounting transaction.",
@@ -89,13 +125,25 @@ const ExploreMore = ({ isRestaurantPage = false }) => {
             rowGap={"24px"}
             sx={{ paddingTop: "36px" }}
           >
-            {card_data?.slice(0, 3)?.map(({ title, description, image }) => (
-              <ExploreMoreCard
-                title={title}
-                description={description}
-                image={image}
-              />
-            ))}
+            {isRestaurantPage
+              ? res_card_data
+                  ?.slice(0, 3)
+                  ?.map(({ title, description, image }) => (
+                    <ExploreMoreCard
+                      title={title}
+                      description={description}
+                      image={image}
+                    />
+                  ))
+              : accounting_card_data
+                  ?.slice(0, 3)
+                  ?.map(({ title, description, image }) => (
+                    <ExploreMoreCard
+                      title={title}
+                      description={description}
+                      image={image}
+                    />
+                  ))}
           </Flex>
 
           <Box
@@ -122,13 +170,25 @@ const ExploreMore = ({ isRestaurantPage = false }) => {
               paddingTop: "36px",
             }}
           >
-            {card_data?.slice(3)?.map(({ title, description, image }) => (
-              <ExploreMoreCard
-                title={title}
-                description={description}
-                image={image}
-              />
-            ))}
+            {isRestaurantPage
+              ? res_card_data
+                  ?.slice(3)
+                  ?.map(({ title, description, image }) => (
+                    <ExploreMoreCard
+                      title={title}
+                      description={description}
+                      image={image}
+                    />
+                  ))
+              : accounting_card_data
+                  ?.slice(3)
+                  ?.map(({ title, description, image }) => (
+                    <ExploreMoreCard
+                      title={title}
+                      description={description}
+                      image={image}
+                    />
+                  ))}
           </Flex>
         </Flex>
       </CommonWrapper>

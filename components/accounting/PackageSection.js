@@ -5,6 +5,57 @@ import { MdOutlineCheck } from "react-icons/md";
 import SectionTitle from "../common/SectionTitle";
 
 const PackageSection = ({ title = true, isRestaurantPage }) => {
+  const accountingData = [
+    {
+      name: "Starter",
+      subtitle: "For new Freelancers",
+      price: "1200",
+      items: ["Invoicing & Payment", "Cheque Management"],
+      icon: <BsFillSendFill />,
+    },
+
+    {
+      name: "Starter",
+      subtitle: "For new Freelancers",
+      price: "1200",
+      items: ["Invoicing & Payment", "Cheque Management"],
+      icon: <FaIdCardClip />,
+    },
+
+    {
+      name: "Starter",
+      subtitle: "For new Freelancers",
+      price: "1600",
+      items: ["Invoicing & Payment", "Cheque Management"],
+      icon: <FaBuilding />,
+    },
+  ];
+
+  const resData = [
+    {
+      name: "Starter",
+      subtitle: "For new Freelancers",
+      price: "120000",
+      items: ["Invoicing & Payment", "Cheque Management"],
+      icon: <BsFillSendFill />,
+    },
+
+    {
+      name: "Starter",
+      subtitle: "For new Freelancers",
+      price: "1200",
+      items: ["Invoicing & Payment", "Cheque Management"],
+      icon: <FaIdCardClip />,
+    },
+
+    {
+      name: "Starter",
+      subtitle: "For new Freelancers",
+      price: "1600",
+      items: ["Invoicing & Payment", "Cheque Management"],
+      icon: <FaBuilding />,
+    },
+  ];
   return (
     <>
       <Flex sx={{ justifyContent: "center", paddingBlock: title && "45px" }}>
@@ -49,28 +100,29 @@ const PackageSection = ({ title = true, isRestaurantPage }) => {
           },
         }}
       >
-        <PackageCard
-          title={title}
-          isRestaurantPage={isRestaurantPage}
-          label={"Starter"}
-          description={"For new Freelancers"}
-          icon={<BsFillSendFill />}
-        />
-        <PackageCard
-          isRecommended
-          title={title}
-          isRestaurantPage={isRestaurantPage}
-          label={"Professional"}
-          description={"For established solopreneurs"}
-          icon={<FaIdCardClip />}
-        />
-        <PackageCard
-          title={title}
-          isRestaurantPage={isRestaurantPage}
-          label={"Enterprise"}
-          description={"For the enterprices"}
-          icon={<FaBuilding />}
-        />
+        {isRestaurantPage
+          ? resData?.map((item) => (
+              <PackageCard
+                title={title}
+                label={item?.name}
+                description={item?.subtitle}
+                icon={item?.icon}
+                isRestaurantPage={isRestaurantPage}
+                price={item?.price}
+                included={item?.items}
+              />
+            ))
+          : accountingData?.map((item) => (
+              <PackageCard
+                title={title}
+                label={item?.name}
+                description={item?.subtitle}
+                icon={item?.icon}
+                isRestaurantPage={isRestaurantPage}
+                price={item?.price}
+                included={item?.items}
+              />
+            ))}
       </Flex>
     </>
   );
@@ -85,6 +137,8 @@ const PackageCard = ({
   label,
   description,
   icon,
+  price,
+  included = [],
 }) => {
   return (
     <>
@@ -169,7 +223,7 @@ const PackageCard = ({
                   color: isRestaurantPage ? "#FD8432" : "#496AD0",
                 }}
               >
-                Rs 1200{" "}
+                Rs {price}{" "}
                 <Text
                   as={"span"}
                   sx={{ fontSize: "14px", fontWeight: 500, color: "#9D9CAF" }}
@@ -200,10 +254,9 @@ const PackageCard = ({
                 paddingBlock: "16px 0px",
               }}
             >
-              <FeatureText title={"Invoicing & Payment"} />
-              <FeatureText title={"Cheque Management"} />
-              <FeatureText title={"1000 Transaction"} />
-              <FeatureText title={"20Gb Storage"} />
+              {included?.map((item) => (
+                <FeatureText title={item} />
+              ))}
             </Flex>
 
             <Button

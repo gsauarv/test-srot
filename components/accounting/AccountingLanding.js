@@ -6,6 +6,21 @@ import { MdSlowMotionVideo } from "react-icons/md";
 import CommonWrapper from "../common/CommonWrapper";
 
 const AccountingLanding = ({ isRestaurantPage = false }) => {
+  const accountingData = {
+    buttonText: "Cloud Based: Accounting Platform",
+    title: "Accounting Platform",
+    subtitle: "Simplify your business through our all-inclusive",
+    bottomSubtitle:
+      "Take your business to the next level through our cutting-edge, cloud-based platform.",
+  };
+
+  const restaurantData = {
+    buttonText: "Cloud Based: Accounting Platform",
+    title: "Rees Platform",
+    subtitle: "Simplify your business through our all-inclusive",
+    bottomSubtitle:
+      "Take your business to the next level through our cutting-edge, cloud-based platform.",
+  };
   return (
     <>
       <Box
@@ -77,7 +92,9 @@ const AccountingLanding = ({ isRestaurantPage = false }) => {
                     // padding: "10px",
                   }}
                 >
-                  Cloud Based: Accounting Platform
+                  {isRestaurantPage
+                    ? restaurantData?.buttonText
+                    : accountingData?.buttonText}
                 </Button>
 
                 <Text
@@ -95,7 +112,9 @@ const AccountingLanding = ({ isRestaurantPage = false }) => {
                     paddingTop: "10px",
                   }}
                 >
-                  Simplify your business through our all-inclusive 
+                  {isRestaurantPage
+                    ? restaurantData?.subtitle
+                    : accountingData?.subtitle}
                 </Text>
                 <Text
                   sx={{
@@ -110,10 +129,12 @@ const AccountingLanding = ({ isRestaurantPage = false }) => {
                       md: "49px",
                     },
                     paddingTop: "10px",
-                    color: "#4068C0"
+                    color: "#4068C0",
                   }}
                 >
-                  Accounting Platform
+                  {isRestaurantPage
+                    ? restaurantData?.title
+                    : accountingData?.title}
                 </Text>
 
                 <Text
@@ -124,7 +145,9 @@ const AccountingLanding = ({ isRestaurantPage = false }) => {
                     paddingTop: "10px",
                   }}
                 >
-                  Take your business to the next level through our cutting-edge, cloud-based platform.
+                  {isRestaurantPage
+                    ? restaurantData?.bottomSubtitle
+                    : accountingData?.bottomSubtitle}
                 </Text>
 
                 <Box>
@@ -179,7 +202,8 @@ const AccountingLanding = ({ isRestaurantPage = false }) => {
                       fontWeight: 500,
                     }}
                   >
-                    Free 30 days trial / Exclusive support / Zero Installation Charge
+                    Free 30 days trial / Exclusive support / Zero Installation
+                    Charge
                   </Text>
                 </Box>
               </Box>

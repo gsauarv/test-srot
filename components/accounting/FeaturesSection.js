@@ -11,7 +11,73 @@ import CommonWrapper from "../common/CommonWrapper";
 import SectionTitle from "../common/SectionTitle";
 
 const FeaturesSection = ({ isRestaurantPage }) => {
-  const feature_data = [
+  const accounting_feature_data = [
+    {
+      title: "Invoicing",
+      description: "We bring expertise and ingenuity to every project.",
+      icon: Invoicing,
+      color: "#F56D0C",
+    },
+
+    {
+      title: "Bank Feeds",
+      description:
+        "We adhere to the highest standards of quality in every aspect of our work.",
+      icon: Bank,
+      color: "#4C7CE5",
+    },
+    {
+      title: "Expenses",
+      description:
+        "We prioritize clear communication, transparency, and collaboration.",
+      icon: Expenses,
+      color: "#10B981",
+    },
+    {
+      title: "GST & VAT",
+      description:
+        "We leverage cutting-edge technologies and sustainable practices.",
+      icon: Gst,
+      color: "#EF4444",
+    },
+    {
+      title: "Inventory",
+      description:
+        "We understand the importance of deadlines. With meticulous planning.",
+      icon: Bank,
+      color: "#8B5CF6",
+    },
+    {
+      title: "Capture & organize receipts",
+      description:
+        "Our pricing is transparent and competitive. We strive to eliminate hidden costs.",
+      icon: Receipts,
+      color: "#EC4899",
+    },
+    {
+      title: "Mobile App",
+      description:
+        "We leverage cutting-edge technologies and sustainable practices.",
+      icon: Gst,
+      color: "#3B9B2B",
+    },
+    {
+      title: "Insights and reports",
+      description:
+        "We understand the importance of deadlines. With meticulous planning.",
+      icon: Insights,
+      color: "#49A68A",
+    },
+    {
+      title: "Security",
+      description:
+        "Our pricing is transparent and competitive. We strive to eliminate hidden costs.",
+      icon: Receipts,
+      color: "#FEB527",
+    },
+  ];
+
+  const res_feature_data = [
     {
       title: "Invoicing",
       description: "We bring expertise and ingenuity to every project.",
@@ -115,16 +181,31 @@ const FeaturesSection = ({ isRestaurantPage }) => {
                 rowGap={"68px"}
                 sx={{ placeItems: "center" }}
               >
-                {feature_data?.map(({ description, title, icon, color }) => (
-                  <GridItem>
-                    <FeatureCards
-                      icon={icon}
-                      title={title}
-                      description={description}
-                      color={color}
-                    />
-                  </GridItem>
-                ))}
+                {isRestaurantPage
+                  ? res_feature_data?.map(
+                      ({ description, title, icon, color }) => (
+                        <GridItem>
+                          <FeatureCards
+                            icon={icon}
+                            title={title}
+                            description={description}
+                            color={color}
+                          />
+                        </GridItem>
+                      )
+                    )
+                  : accounting_feature_data?.map(
+                      ({ description, title, icon, color }) => (
+                        <GridItem>
+                          <FeatureCards
+                            icon={icon}
+                            title={title}
+                            description={description}
+                            color={color}
+                          />
+                        </GridItem>
+                      )
+                    )}
               </Grid>
             </Flex>
           </Box>

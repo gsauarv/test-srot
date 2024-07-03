@@ -33,6 +33,51 @@ const PlatformSection = () => {
 export default PlatformSection;
 
 const PlatformDetailCard = ({ title, type = "" }) => {
+  const accountingData = [
+    {
+      title: "Accounting",
+      icon: <TbPercentage />,
+      description: "Simplify cash flow, revenue, and balance sheet",
+      color: "#71AAFF",
+    },
+
+    {
+      title: "Inventory Management",
+      icon: <FiBox />,
+      description: "Keep track of inventory within your business",
+      color: "#F9A362",
+    },
+
+    {
+      title: "Assets Management",
+      icon: <FaCreditCard />,
+      description: "Manage your assets and calculate depreciation",
+      color: "#F1A3DB",
+    },
+  ];
+
+  const resData = [
+    {
+      title: "Accounting",
+      icon: <TbPercentage />,
+      description: "Simplify cash flow, revenue, and balance sheet",
+      color: "#71AAFF",
+    },
+
+    {
+      title: "Inventory Management",
+      icon: <FiBox />,
+      description: "Keep track of inventory within your business",
+      color: "#F9A362",
+    },
+
+    {
+      title: "Assets Management",
+      icon: <FaCreditCard />,
+      description: "Manage your assets and calculate depreciation",
+      color: "#F1A3DB",
+    },
+  ];
   return (
     <>
       <Flex
@@ -126,32 +171,27 @@ const PlatformDetailCard = ({ title, type = "" }) => {
                 marginTop: "30px",
               }}
             >
-              <GridItem>
-                <PlatformCard
-                  color="#71AAFF"
-                  icon={<TbPercentage />}
-                  title="Accounting"
-                  text="Simplify cash flow, revenue, and balance sheet"
-                />
-              </GridItem>
-
-              <GridItem>
-                <PlatformCard
-                  color="#F9A362"
-                  icon={<FiBox />}
-                  title="Inventory Management"
-                  text= "Keep track of inventory within your business"
-                />
-              </GridItem>
-
-              <GridItem>
-                <PlatformCard
-                  color="#F1A3DB"
-                  icon={<FaCreditCard />}
-                  title="Assets Management"
-                  text = "Manage your assets and calculate depreciation"
-                />
-              </GridItem>
+              {type?.toLowerCase() === "restaurant"
+                ? resData?.map((item) => (
+                    <GridItem>
+                      <PlatformCard
+                        color={item?.color}
+                        icon={item?.icon}
+                        title={item?.title}
+                        text={item?.description}
+                      />
+                    </GridItem>
+                  ))
+                : accountingData?.map((item) => (
+                    <GridItem>
+                      <PlatformCard
+                        color={item?.color}
+                        icon={item?.icon}
+                        title={item?.title}
+                        text={item?.description}
+                      />
+                    </GridItem>
+                  ))}
             </Grid>
 
             {/* <Flex
