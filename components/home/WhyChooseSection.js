@@ -83,17 +83,17 @@ const WhyChooseSection = () => {
           >
             <WhyChooseUsCard
               image={why1}
-              title={"Accessibility and Convenience"}
+              title={"Availability on any Device"}
               description={
-                "Allows clients to access their accounting data from anywhere with an internet connection"
+                "You can access your system from any device: Mobile, Desktop, or Tablet from any corner of the country with the help of just an internet connection."
               }
             />
 
             <WhyChooseUsCard
               image={why2}
-              title={"Real-time Collaboration"}
+              title={"Data Backup and Security"}
               description={
-                "Facilitate seamless collaboration for distributed teams and external accountants"
+                "We backup your data every day on our secure cloud server and help you with its recovery even if you damage your device."
               }
               type="md"
             />
@@ -116,27 +116,26 @@ const WhyChooseSection = () => {
           >
             <WhyChooseUsCard
               image={why3}
-              title={"Automatic Updates and Maintenance"}
+              title={"Free Updates, Maintainaince, & Support"}
               description={
-                "Enjoy automated updates & maintenance-free software."
+                "Any issues or updates in our system will be resolved or updated for free for our existing users."
               }
               type="sm"
             />
 
             <WhyChooseUsCard
               image={why4}
-              title={"Data Security and Backup"}
-              description={
-                "Cloud-based accounting offers strong security features, such as data encryption, controlled access, & consistent backups."
+              title={"Multiple User Access and Control"}
+              description={"Give access to multiple users (Accountants, Auditors) as you can control what access to give them."
               }
               type="sm"
             />
 
             <WhyChooseUsCard
               image={why5}
-              title={"Reduced IT Overhead"}
+              title={"Easy for Navigation and Entry"}
               description={
-                "Reduces the need for onsite servers & IT upkeep as cloud providers manage updates & maintenance."
+                "Our automated system will make it easy for business owners with no accounting background to navigate and add entries to the system."
               }
               type="sm"
             />

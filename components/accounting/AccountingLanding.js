@@ -77,25 +77,43 @@ const AccountingLanding = ({ isRestaurantPage = false }) => {
                     // padding: "10px",
                   }}
                 >
-                  All In One: Accounting & Restaurant
+                  Cloud Based: Accounting Platform
                 </Button>
 
                 <Text
                   sx={{
                     color: isRestaurantPage ? "#150E07" : "#2019A2",
                     fontSize: {
-                      base: "34px",
-                      md: "46px",
+                      base: "25px",
+                      md: "25px",
                     },
-                    fontWeight: 700,
+                    fontWeight: 500,
                     lineHeight: {
-                      base: "45px",
-                      md: "60px",
+                      base: "37px",
+                      md: "37px",
                     },
                     paddingTop: "10px",
                   }}
                 >
-                  Manage your Finances and achieve financial freedom
+                  Simplify your business through our all-inclusive 
+                </Text>
+                <Text
+                  sx={{
+                    color: isRestaurantPage ? "#150E07" : "#2019A2",
+                    fontSize: {
+                      base: "41px",
+                      md: "41px",
+                    },
+                    fontWeight: 800,
+                    lineHeight: {
+                      base: "49px",
+                      md: "49px",
+                    },
+                    paddingTop: "10px",
+                    color: "#4068C0"
+                  }}
+                >
+                  Accounting Platform
                 </Text>
 
                 <Text
@@ -106,8 +124,7 @@ const AccountingLanding = ({ isRestaurantPage = false }) => {
                     paddingTop: "10px",
                   }}
                 >
-                  Take your business to the next level with our cutting-edge,
-                  cloud-based solutions.
+                  Take your business to the next level through our cutting-edge, cloud-based platform.
                 </Text>
 
                 <Box>
@@ -162,7 +179,7 @@ const AccountingLanding = ({ isRestaurantPage = false }) => {
                       fontWeight: 500,
                     }}
                   >
-                    Free 30 days trial / Exclusive support / No fees
+                    Free 30 days trial / Exclusive support / Zero Installation Charge
                   </Text>
                 </Box>
               </Box>

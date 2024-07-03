@@ -25,7 +25,7 @@ const ReasonSrot = () => {
               textAlign: "center",
             }}
           >
-            There are more than 10,000 reasons why srot
+              More reasons to use Srot:
           </Text>
 
           <Flex
@@ -58,7 +58,7 @@ const ReasonSrot = () => {
                 <ReasonCard
                   color={"#71AAFF"}
                   icon={<FaRegFile />}
-                  text="Easy Create & Invoicing"
+                  text="Quick Create Bills & Invoices"
                 />
               </GridItem>
 
@@ -66,7 +66,7 @@ const ReasonSrot = () => {
                 <ReasonCard
                   color={"#FF9371"}
                   icon={<FiPieChart />}
-                  text="Get Powerful Analytics"
+                  text="Get 100+ Reports & Analytics"
                 />
               </GridItem>
 
@@ -74,7 +74,7 @@ const ReasonSrot = () => {
                 <ReasonCard
                   color={"#F9A362"}
                   icon={<HiOutlineTrendingUp />}
-                  text="Easy To Analyze Your Data"
+                  text="Easy To Navigate Dashboard"
                 />
               </GridItem>
 
@@ -82,7 +82,7 @@ const ReasonSrot = () => {
                 <ReasonCard
                   color={"#4EDEA2"}
                   icon={<FiGitPullRequest />}
-                  text="Easy Converse With Your Data"
+                  text="Easy to Access From Any Device"
                 />
               </GridItem>
 
@@ -95,7 +95,7 @@ const ReasonSrot = () => {
                 <ReasonCard
                   color={"#F1A3DB"}
                   icon={<HiOutlineDocumentReport />}
-                  text="Edit and View Your Reports"
+                  text="Data Protection & Cloud Backup"
                 />
               </GridItem>
             </Grid>

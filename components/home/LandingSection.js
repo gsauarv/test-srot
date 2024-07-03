@@ -188,27 +188,44 @@ const LandingSection = () => {
                         // padding: "10px",
                       }}
                     >
-                      All In One: Accounting & Restaurant
+                     Cloud Based: Accounting & Restaurant Software
                     </Button>
 
                     <Text
                       sx={{
                         fontSize: {
-                          base: "35px",
-                          md: "52px",
+                          base: "25px",
+                          md: "25px",
                         },
                         lineHeight: {
-                          base: "45px",
-                          md: "56px",
+                          base: "37px",
+                          md: "37px",
                         },
-                        fontWeight: 700,
+                        fontWeight: 500,
                         color: "#122E93",
 
                         paddingTop: "16px",
                       }}
                     >
-                      One Platform to Streamline Entire Business
+                       Manage your business with our advanced cloud based 
                     </Text>
+                    <Text
+                  sx={{
+                    fontSize: {
+                      base: "34px",
+                      md: "34px",
+                    },
+                    fontWeight: 800,
+                    lineHeight: {
+                      base: "45px",
+                      md: "45px",
+                    },
+                    paddingTop: "10px",
+                    color: "#4068C0"
+                  }}
+                >
+                    Accounting & Restaurant Handling Software
+                </Text>
 
                     <Text
                       sx={{
@@ -218,8 +235,7 @@ const LandingSection = () => {
                         fontWeight: 300,
                       }}
                     >
-                      Take your business to the next level with our
-                      cutting-edge, cloud-based solutions.
+                      Take your business to the next level through our cutting-edge, cloud-based platform.
                     </Text>
 
                     <Flex
@@ -269,7 +285,7 @@ const LandingSection = () => {
                         fontWeight: 500,
                       }}
                     >
-                      Free 30 days trial / Exclusive support / No fees
+                      Free 30 days trial / Exclusive support / Zero Installation Fee
                     </Text>
                   </Box>
                 </Box>

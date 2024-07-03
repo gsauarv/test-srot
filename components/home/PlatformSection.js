@@ -19,11 +19,11 @@ const PlatformSection = () => {
   return (
     <>
       <PlatformDetailCard
-        title="We make it extremely easy for all your Invoicing & Accounting work"
-        type="Account"
+        title="Clear Financial Picture: Effortless Accounting at Your Fingertips "
+        type="Accounting"
       />
       <PlatformDetailCard
-        title="We make it extremely easy for all your Restaurant ordering & Billing work"
+        title="Simplify Restaurant Management: Make Ordering, Billing, Reporting easy"
         type="Restaurant"
       />
     </>
@@ -100,8 +100,7 @@ const PlatformDetailCard = ({ title, type = "" }) => {
                   paddingTop: "8px",
                 }}
               >
-                Take your business to the next level with our cutting-edge,
-                cloud-based solutions.
+                Billing, Invoicing, Inventory, Reporting made easy.
               </Text>
             </Box>
 
@@ -132,6 +131,7 @@ const PlatformDetailCard = ({ title, type = "" }) => {
                   color="#71AAFF"
                   icon={<TbPercentage />}
                   title="Accounting"
+                  text="Simplify cash flow, revenue, and balance sheet"
                 />
               </GridItem>
 
@@ -140,6 +140,7 @@ const PlatformDetailCard = ({ title, type = "" }) => {
                   color="#F9A362"
                   icon={<FiBox />}
                   title="Inventory Management"
+                  text= "Keep track of inventory within your business"
                 />
               </GridItem>
 
@@ -147,7 +148,8 @@ const PlatformDetailCard = ({ title, type = "" }) => {
                 <PlatformCard
                   color="#F1A3DB"
                   icon={<FaCreditCard />}
-                  title="Cheque Management"
+                  title="Assets Management"
+                  text = "Manage your assets and calculate depreciation"
                 />
               </GridItem>
             </Grid>
@@ -221,7 +223,7 @@ const PlatformDetailCard = ({ title, type = "" }) => {
   );
 };
 
-const PlatformCard = ({ color, icon, title }) => {
+const PlatformCard = ({ color, icon, title, text }) => {
   return (
     <Box>
       <IconButton
@@ -258,7 +260,7 @@ const PlatformCard = ({ color, icon, title }) => {
             width: "163px",
           }}
         >
-          It simplifies budgeting and forecasting
+          {text}
         </Text>
       </Box>
     </Box>
