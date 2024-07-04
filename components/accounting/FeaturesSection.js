@@ -80,7 +80,7 @@ const FeaturesSection = ({ isRestaurantPage }) => {
   const res_feature_data = [
     {
       title: "Ordering & Billing",
-      description: "We bring expertise and ingenuity to every project.",
+      description: "Streamline order taking and billing processes efficiently.",
       icon: Invoicing,
       color: "#F56D0C",
     },
@@ -88,49 +88,49 @@ const FeaturesSection = ({ isRestaurantPage }) => {
     {
       title: "KOT/BOT Management",
       description:
-        "We adhere to the highest standards of quality in every aspect of our work.",
+        "Manage Kitchen Order Tickets (KOT) and Bar Order Tickets (BOT) seamlessly.",
       icon: Bank,
       color: "#4C7CE5",
     },
     {
       title: "Multiple Users & Roles",
       description:
-        "We prioritize clear communication, transparency, and collaboration.",
+        "Assign different roles and permissions to multiple users.",
       icon: Expenses,
       color: "#10B981",
     },
     {
       title: "Menu Management",
       description:
-        "We leverage cutting-edge technologies and sustainable practices.",
+        "Easily update and manage your menu items",
       icon: Gst,
       color: "#EF4444",
     },
     {
       title: "Inventory Tracking",
       description:
-        "We understand the importance of deadlines. With meticulous planning.",
+        "Keep tabs on your stock in real-time.",
       icon: Bank,
       color: "#8B5CF6",
     },
     {
       title: "Day Book Entry",
       description:
-        "Our pricing is transparent and competitive. We strive to eliminate hidden costs.",
+        "Record daily financial transactions effortlessly.",
       icon: Receipts,
       color: "#EC4899",
     },
     {
       title: "Track Cashier Session",
       description:
-        "We leverage cutting-edge technologies and sustainable practices.",
+        "Monitor and manage cashier activities and sessions.",
       icon: Gst,
       color: "#3B9B2B",
     },
     {
       title: "Easy Account Integration",
       description:
-        "We understand the importance of deadlines. With meticulous planning.",
+        "Integrate with accounting software for smooth financial management.",
       icon: Insights,
       color: "#49A68A",
     },
