@@ -14,64 +14,64 @@ const FeaturesSection = ({ isRestaurantPage }) => {
   const accounting_feature_data = [
     {
       title: "Invoicing",
-      description: "We bring expertise and ingenuity to every project.",
+      description: "Create and manage invoices quickly and accurately.",
       icon: Invoicing,
       color: "#F56D0C",
     },
 
     {
-      title: "Bank Feeds",
+      title: "Purchase Bills",
       description:
-        "We adhere to the highest standards of quality in every aspect of our work.",
+        "Easily record and track all purchase bills.",
       icon: Bank,
       color: "#4C7CE5",
     },
     {
       title: "Expenses",
       description:
-        "We prioritize clear communication, transparency, and collaboration.",
+        "Track and manage all business expenses efficiently.",
       icon: Expenses,
       color: "#10B981",
     },
     {
-      title: "GST & VAT",
+      title: "VAT & TDS",
       description:
-        "We leverage cutting-edge technologies and sustainable practices.",
+        "Automate VAT and TDS calculations for hassle-free compliance.",
       icon: Gst,
       color: "#EF4444",
     },
     {
-      title: "Inventory",
+      title: "Inventory Traching",
       description:
-        "We understand the importance of deadlines. With meticulous planning.",
+        "Keep tabs on your stock in real-time and also add multiple warehouses",
       icon: Bank,
       color: "#8B5CF6",
     },
     {
-      title: "Capture & organize receipts",
+      title: "Excise and Custom Duty",
       description:
-        "Our pricing is transparent and competitive. We strive to eliminate hidden costs.",
+        "Manage excise and customs duties with ease.",
       icon: Receipts,
       color: "#EC4899",
     },
     {
-      title: "Mobile App",
+      title: "Cheque Management",
       description:
-        "We leverage cutting-edge technologies and sustainable practices.",
+        "Simplify cheque tracking and management.",
       icon: Gst,
       color: "#3B9B2B",
     },
     {
-      title: "Insights and reports",
+      title: "Documents Numbering",
       description:
-        "We understand the importance of deadlines. With meticulous planning.",
+        "Automatically number your documents for easy organization.",
       icon: Insights,
       color: "#49A68A",
     },
     {
-      title: "Security",
+      title: "Custom Fields",
       description:
-        "Our pricing is transparent and competitive. We strive to eliminate hidden costs.",
+        " Add custom fields to add specific data for your invoice and bills",
       icon: Receipts,
       color: "#FEB527",
     },
@@ -79,63 +79,63 @@ const FeaturesSection = ({ isRestaurantPage }) => {
 
   const res_feature_data = [
     {
-      title: "Invoicing",
+      title: "Ordering & Billing",
       description: "We bring expertise and ingenuity to every project.",
       icon: Invoicing,
       color: "#F56D0C",
     },
 
     {
-      title: "Bank Feeds",
+      title: "KOT/BOT Management",
       description:
         "We adhere to the highest standards of quality in every aspect of our work.",
       icon: Bank,
       color: "#4C7CE5",
     },
     {
-      title: "Expenses",
+      title: "Multiple Users & Roles",
       description:
         "We prioritize clear communication, transparency, and collaboration.",
       icon: Expenses,
       color: "#10B981",
     },
     {
-      title: "GST & VAT",
+      title: "Menu Management",
       description:
         "We leverage cutting-edge technologies and sustainable practices.",
       icon: Gst,
       color: "#EF4444",
     },
     {
-      title: "Inventory",
+      title: "Inventory Tracking",
       description:
         "We understand the importance of deadlines. With meticulous planning.",
       icon: Bank,
       color: "#8B5CF6",
     },
     {
-      title: "Capture & organize receipts",
+      title: "Day Book Entry",
       description:
         "Our pricing is transparent and competitive. We strive to eliminate hidden costs.",
       icon: Receipts,
       color: "#EC4899",
     },
     {
-      title: "Mobile App",
+      title: "Track Cashier Session",
       description:
         "We leverage cutting-edge technologies and sustainable practices.",
       icon: Gst,
       color: "#3B9B2B",
     },
     {
-      title: "Insights and reports",
+      title: "Easy Account Integration",
       description:
         "We understand the importance of deadlines. With meticulous planning.",
       icon: Insights,
       color: "#49A68A",
     },
     {
-      title: "Security",
+      title: "Manage Delivery Partners",
       description:
         "Our pricing is transparent and competitive. We strive to eliminate hidden costs.",
       icon: Receipts,

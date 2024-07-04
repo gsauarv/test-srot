@@ -13,70 +13,70 @@ const ExploreMore = ({ isRestaurantPage = false }) => {
   const accounting_card_data = [
     {
       title: "Accounting",
-      description: "Effortlessly record all your accounting transaction.",
+      description: "Simplify cash flow, revenue, balance sheet, and profit/loss",
       image: ExploreAcc,
     },
 
     {
-      title: "Inventory",
+      title: "Inventory Tracking",
       description:
-        "Track all your inventory location,  transfer between warehouse and manage your services / products.",
+        "Keep track of inventory within your business (FIFO/Weighted)",
       image: Inventory,
     },
 
     {
       title: "Documents",
-      description: "Effortlessly record all your accounting transaction.",
+      description: "Keep all the documents related to the bills and reports with our adequate storage",
       image: Document,
     },
     {
-      title: "Reports",
-      description: "Effortlessly record all your accounting transaction.",
+      title: "Insightful Reports",
+      description: "Get 100+ Reports like Balance Sheet, Income Statement, Cashflow and so on.",
       image: Document,
     },
     {
-      title: "Productivity",
-      description: "Effortlessly record all your accounting transaction.",
+      title: "Assets Management",
+      description: "Manage your assets and calculate customizable depreciation ",
       image: Document,
     },
     {
-      title: "Speedy Transaction",
-      description: "Effortlessly record all your accounting transaction.",
+      title: "Payroll Management",
+      description: "Manage your Employees data and calculate payroll with Deduction and Taxes",
       image: Document,
     },
   ];
 
   const res_card_data = [
     {
-      title: "Accounting",
+      title: "Table Management",
       description: "Effortlessly record all your accounting transaction.",
       image: ExploreAcc,
     },
 
     {
-      title: "Inventory",
+      title: "100% Leakage Control",
       description:
         "Track all your inventory location,  transfer between warehouse and manage your services / products.",
       image: Inventory,
     },
 
     {
-      title: "Documents",
+      title: "Real Time Analytics",
       description: "Effortlessly record all your accounting transaction.",
       image: Document,
     },
     {
-      title: "Reports",
+      title: "50+ Insightful Reports",
       description: "Effortlessly record all your accounting transaction.",
       image: Document,
     },
     {
-      title: "Productivity",
+      title: "Multiple Outlet Billing",
       description: "Effortlessly record all your accounting transaction.",
       image: Document,
     },
     {
-      title: "Speedy Transaction",
+      title: "Record Customer Credit",
       description: "Effortlessly record all your accounting transaction.",
       image: Document,
     },

@@ -16,10 +16,10 @@ const AccountingLanding = ({ isRestaurantPage = false }) => {
 
   const restaurantData = {
     buttonText: "Cloud Based: Accounting Platform",
-    title: "Rees Platform",
-    subtitle: "Simplify your business through our all-inclusive",
+    title: "Restaurant Handling Platform",
+    subtitle: "Manage your restaurant through our all-inclusive",
     bottomSubtitle:
-      "Take your business to the next level through our cutting-edge, cloud-based platform.",
+      "Kick start your restaurant business to the digital future ",
   };
   return (
     <>
