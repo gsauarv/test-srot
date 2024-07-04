@@ -1,7 +1,7 @@
 import { Box, Button, Divider, Flex, Text } from "@chakra-ui/react";
 import { BsFillSendFill } from "react-icons/bs";
 import { FaBuilding, FaIdCardClip } from "react-icons/fa6";
-import { MdOutlineCheck } from "react-icons/md";
+import { MdClear, MdOutlineCheck } from "react-icons/md";
 import SectionTitle from "../common/SectionTitle";
 
 const PackageSection = ({ title = true, isRestaurantPage }) => {
@@ -10,7 +10,10 @@ const PackageSection = ({ title = true, isRestaurantPage }) => {
       name: "Starter",
       subtitle: "For new Freelancers",
       price: "1200",
-      items: ["Invoicing & Payment", "Cheque Management"],
+      items: [
+        { title: "Invoicing & Payment", included: false },
+        { title: "Invoicing & Payment", included: true },
+      ],
       icon: <BsFillSendFill />,
     },
 
@@ -18,7 +21,10 @@ const PackageSection = ({ title = true, isRestaurantPage }) => {
       name: "Starter",
       subtitle: "For new Freelancers",
       price: "1200",
-      items: ["Invoicing & Payment", "Cheque Management"],
+      items: [
+        { title: "Invoicing & Payment", included: false },
+        { title: "Invoicing & Payment", included: true },
+      ],
       icon: <FaIdCardClip />,
     },
 
@@ -26,7 +32,10 @@ const PackageSection = ({ title = true, isRestaurantPage }) => {
       name: "Starter",
       subtitle: "For new Freelancers",
       price: "1600",
-      items: ["Invoicing & Payment", "Cheque Management"],
+      items: [
+        { title: "Invoicing & Payment", included: false },
+        { title: "Invoicing & Payment", included: true },
+      ],
       icon: <FaBuilding />,
     },
   ];
@@ -36,7 +45,10 @@ const PackageSection = ({ title = true, isRestaurantPage }) => {
       name: "Starter",
       subtitle: "For new Freelancers",
       price: "120000",
-      items: ["Invoicing & Payment", "Cheque Management"],
+      items: [
+        { title: "Invoicing & Payment", included: false },
+        { title: "Invoicing & Payment", included: true },
+      ],
       icon: <BsFillSendFill />,
     },
 
@@ -44,7 +56,10 @@ const PackageSection = ({ title = true, isRestaurantPage }) => {
       name: "Starter",
       subtitle: "For new Freelancers",
       price: "1200",
-      items: ["Invoicing & Payment", "Cheque Management"],
+      items: [
+        { title: "Invoicing & Payment", included: false },
+        { title: "Invoicing & Payment", included: true },
+      ],
       icon: <FaIdCardClip />,
     },
 
@@ -52,7 +67,10 @@ const PackageSection = ({ title = true, isRestaurantPage }) => {
       name: "Starter",
       subtitle: "For new Freelancers",
       price: "1600",
-      items: ["Invoicing & Payment", "Cheque Management"],
+      items: [
+        { title: "Invoicing & Payment", included: false },
+        { title: "Invoicing & Payment", included: true },
+      ],
       icon: <FaBuilding />,
     },
   ];
@@ -255,7 +273,7 @@ const PackageCard = ({
               }}
             >
               {included?.map((item) => (
-                <FeatureText title={item} />
+                <FeatureText title={item?.title} isIncluded={item?.included} />
               ))}
             </Flex>
 
@@ -285,11 +303,15 @@ const PackageCard = ({
   );
 };
 
-const FeatureText = ({ title }) => {
+const FeatureText = ({ title, isIncluded = true }) => {
   return (
     <>
       <Flex sx={{ alignItems: "center", columnGap: "8px" }}>
-        <MdOutlineCheck style={{ color: "#22AD01" }} />
+        {isIncluded ? (
+          <MdOutlineCheck style={{ color: "#22AD01" }} />
+        ) : (
+          <MdClear style={{ color: "#FF0000" }} />
+        )}
         <Text sx={{ fontSize: "14px", color: "#383751", fontWeight: 500 }}>
           {title}
         </Text>
