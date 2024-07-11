@@ -1,17 +1,25 @@
 "use client";
-import Docker from "@/public/docker.svg";
-import Google from "@/public/google.svg";
-import Medium from "@/public/medium.svg";
-import Netflix from "@/public/netflix.svg";
-import Vercel from "@/public/vercel.svg";
-import Youtube from "@/public/youtube.svg";
+import Fint from "@/public/fint.jpeg";
+import Kimchi from "@/public/kimchi.jpeg";
+import Setobagh from "@/public/setobagh.jpg";
+import Wings from "@/public/wings.jpeg";
+
 import { Box, Divider, Flex, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import Slider from "react-slick";
 import CommonWrapper from "../common/CommonWrapper";
 
 const BrandCarasoul = () => {
-  const image_array = [Netflix, Medium, Google, Youtube, Vercel, Docker];
+  const image_array = [
+    Kimchi,
+    Setobagh,
+    Wings,
+    Fint,
+    Kimchi,
+    Setobagh,
+    Wings,
+    Fint,
+  ];
   const settings = {
     dots: false,
     infinite: true,
@@ -76,11 +84,11 @@ const BrandCarasoul = () => {
                   <Box
                     sx={{
                       width: "101px",
-                      height: "27px",
+                      height: "80px",
                       position: "relative",
                     }}
                   >
-                    <Image src={item} key={index} fill />
+                    <Image src={item} key={index} fill objectFit="contain" />
                   </Box>
                 ))}
               </Slider>

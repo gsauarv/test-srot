@@ -57,8 +57,7 @@ const PricingLandingSection = () => {
               color: "#6C6B80",
             }}
           >
-            Whether you&apos;re a startup, a growing business, or an enterprise,
-            our pricing plans are designed to accommodate various requirements.
+            Pricing Plans Designed to Fit Your Business, from Startup to Enterprise
           </Text>
         </Flex>
 

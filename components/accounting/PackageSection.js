@@ -1,58 +1,113 @@
 import { Box, Button, Divider, Flex, Text } from "@chakra-ui/react";
 import { BsFillSendFill } from "react-icons/bs";
 import { FaBuilding, FaIdCardClip } from "react-icons/fa6";
-import { MdOutlineCheck } from "react-icons/md";
+import { MdClear, MdOutlineCheck } from "react-icons/md";
 import SectionTitle from "../common/SectionTitle";
 
 const PackageSection = ({ title = true, isRestaurantPage }) => {
   const accountingData = [
     {
-      name: "Starter",
-      subtitle: "For new Freelancers",
-      price: "1200",
-      items: ["Invoicing & Payment", "Cheque Management"],
+      name: "Standard",
+      subtitle: "For new startups & service based",
+      price: "15,000",
+      items: [
+        { title: "Unlimited User", included: true },
+        { title: "10GB Storage", included: true },
+        { title: "Double-entry book keeping", included: true },
+        { title: "Track Sales, Purchase, Returns, Voids", included: true },
+        { title: "Documents & Files Manager", included: true },
+        { title: "Add Unlimited Services", included: true },
+        { title: "Assets and Depriciation Management", included: true },
+        { title: "Transactions limit 15,000/year", included: true },
+        { title: "Free Remote Training & Support", included: true },
+        { title: "Inventory Management & Tracking", included: false },
+        { title: "Warehouse Management", included: false },
+        { title: "Payroll Management", included: false },
+        { title: "Landing Cost Calculation (Excise Duty, Customs, etc.)", included: false },
+      ],
       icon: <BsFillSendFill />,
     },
 
     {
-      name: "Starter",
-      subtitle: "For new Freelancers",
-      price: "1200",
-      items: ["Invoicing & Payment", "Cheque Management"],
+      name: "Premium",
+      subtitle: "For enterprise and trading based",
+      price: "30,000",
+      items: [
+        { title: "Unlimited User", included: true },
+        { title: "10GB Storage", included: true },
+        { title: "Double-entry book keeping", included: true },
+        { title: "Track Sales, Purchase, Returns, Voids", included: true },
+        { title: "Documents & Files Manager", included: true },
+        { title: "Add Unlimited Services", included: true },
+        { title: "Assets and Depriciation Management", included: true },
+        { title: "Transactions limit 15,000/year", included: true },
+        { title: "Free Remote/Office Training & Remote Support", included: true },
+        { title: "Inventory Management & Tracking", included: true },
+        { title: "Warehouse Management", included: true },
+        { title: "Payroll Management", included: true },
+        { title: "Landing Cost Calculation (Excise Duty, Customs, etc.)", included: true },
+      ],
       icon: <FaIdCardClip />,
     },
 
     {
-      name: "Starter",
-      subtitle: "For new Freelancers",
-      price: "1600",
-      items: ["Invoicing & Payment", "Cheque Management"],
+      name: "Custom Plan",
+      subtitle: "For enterprise with premium addons",
+      price: "",
+      items: [
+        { title: "Invoicing & Payment", included: false },
+        { title: "Invoicing & Payment", included: true },
+      ],
       icon: <FaBuilding />,
     },
   ];
 
   const resData = [
     {
-      name: "Starter",
-      subtitle: "For new Freelancers",
-      price: "120000",
-      items: ["Invoicing & Payment", "Cheque Management"],
+      name: "Standard",
+      subtitle: "For small restaurants and cafe",
+      price: "15,000",
+      items: [
+        { title: "10GB Storage", included: true },
+        { title: "Upto 3 Users", included: true },
+        {title:"Table Management", included: true},
+        {title:"Real Time Analytics", included: true},
+        {title:"50+ Insightful Reports", included: true},
+        {title:"Multiple Outlet Billings", included: true},
+        {title:"Record Customer Credit", included: true},
+        {title:"Manage Delivery Partners", included: true},
+        {title:"Leakage Control & Inventory Tracking", included: false}
+        
+      ],
       icon: <BsFillSendFill />,
     },
 
     {
-      name: "Starter",
-      subtitle: "For new Freelancers",
-      price: "1200",
-      items: ["Invoicing & Payment", "Cheque Management"],
+      name: "Premium",
+      subtitle: "For enterprise restaurants and cafe",
+      price: "30,000",
+      items: [
+        { title: "Unlimited Storage", included: true },
+        { title: "Unlimited User", included: true },
+        {title:"Table Management", included: true},
+        {title:"Real Time Analytics", included: true},
+        {title:"50+ Insightful Reports", included: true},
+        {title:"Multiple Outlet Billings", included: true},
+        {title:"Record Customer Credit", included: true},
+        {title:"Manage Delivery Partners", included: true},
+        {title:"Leakage Control & Inventory Tracking", included: true}
+      ],
       icon: <FaIdCardClip />,
     },
 
     {
-      name: "Starter",
+      name: "Premium Plus",
       subtitle: "For new Freelancers",
-      price: "1600",
-      items: ["Invoicing & Payment", "Cheque Management"],
+      price: "50,000",
+      items: [
+        { title: "Invoicing & Payment", included: false },
+        { title: "Invoicing & Payment", included: true },
+      ],
       icon: <FaBuilding />,
     },
   ];
@@ -255,7 +310,7 @@ const PackageCard = ({
               }}
             >
               {included?.map((item) => (
-                <FeatureText title={item} />
+                <FeatureText title={item?.title} isIncluded={item?.included} />
               ))}
             </Flex>
 
@@ -285,11 +340,15 @@ const PackageCard = ({
   );
 };
 
-const FeatureText = ({ title }) => {
+const FeatureText = ({ title, isIncluded = true }) => {
   return (
     <>
       <Flex sx={{ alignItems: "center", columnGap: "8px" }}>
-        <MdOutlineCheck style={{ color: "#22AD01" }} />
+        {isIncluded ? (
+          <MdOutlineCheck style={{ color: "#22AD01" }} />
+        ) : (
+          <MdClear style={{ color: "#FF0000" }} />
+        )}
         <Text sx={{ fontSize: "14px", color: "#383751", fontWeight: 500 }}>
           {title}
         </Text>

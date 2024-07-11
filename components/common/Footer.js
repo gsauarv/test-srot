@@ -133,7 +133,7 @@ const Footer = () => {
                 <Text
                   sx={{ color: "#4C4B63", fontSize: "14px", fontWeight: 500 }}
                 >
-                  +977 9852415236
+                  +977 9802304368
                 </Text>
               </Flex>
 
@@ -142,7 +142,7 @@ const Footer = () => {
                 <Text
                   sx={{ color: "#4C4B63", fontSize: "14px", fontWeight: 500 }}
                 >
-                  example@gmail.com
+                  sales@srotcloud.com
                 </Text>
               </Flex>
 
@@ -159,7 +159,7 @@ const Footer = () => {
                 <Text
                   sx={{ color: "#4C4B63", fontSize: "14px", fontWeight: 500 }}
                 >
-                  +977 9852415236
+                  +977 9841587582
                 </Text>
               </Flex>
 
@@ -168,7 +168,7 @@ const Footer = () => {
                 <Text
                   sx={{ color: "#4C4B63", fontSize: "14px", fontWeight: 500 }}
                 >
-                  example@gmail.com
+                  support@srotcloud.com
                 </Text>
               </Flex>
             </Box>
@@ -236,7 +236,7 @@ const Footer = () => {
               paddingTop: "24px",
             }}
           >
-            &copy; 2020 Srot. All rights reserved
+            &copy; 2024 SROT. All rights reserved
           </Text>
         </CommonWrapper>
       </Box>

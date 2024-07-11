@@ -14,39 +14,32 @@ import SectionTitle from "../common/SectionTitle";
 const FaqsSection = () => {
   const datas = [
     {
-      question: "What is the purpose of this product?",
-      answer:
-        "This product is designed to help users efficiently manage their tasks and improve productivity through a variety of tools and features.",
+      question: "What is a cloud based accounting/restaurant software?",
+      answer:"Online Accounting Systems, sometimes called cloud-based solutions, allows you to create, store, and send Bills and Invoices from any device. With SROT, you can get into your browser or mobile application, sign in and use it. All data are stored in the cloud and can be accessible from any place with the help of an internet connection. Your data are saved securely in the cloud and can be accessed anytime."
     },
     {
-      question: "How do I create an account?",
-      answer:
-        "To create an account, click on the 'Sign Up' button on the homepage, fill out the required information, and follow the instructions to verify your email address.",
+      question: "How long will the installation take for SROT?",
+      answer: "The good thing about a cloud-based system is that there is no installation. Just get into your device's web browser and register from our website. We will activate your account within 10 minutes and start using SROT. It is applicable for both accounting and restaurant.      "
     },
     {
-      question: "What is the refund policy?",
-      answer:
-        "We offer a 30-day money-back guarantee. If you are not satisfied with the product within the first 30 days, you can request a full refund by contacting our support team.",
+      question: "I am not from accounting background, Can I use SROT?",
+      answer: "Obviously! SROT started to solve the same issue. Even if you don't have a basic understanding of accounting or do not have accountants in your office, the software was programmed keeping in mind that anyone can get a hold of it.      "
     },
     {
-      question: "Can I use the product on multiple devices?",
-      answer:
-        "Yes, our product is accessible on multiple devices including smartphones, tablets, and computers. Simply log in with your account credentials to access your data from any device.",
+      question: "Can I use my software in multiple devices?",
+      answer: "Yes, SROT is accessible on mobiles, tablets, and computers. Sign in with your account credentials to access your data from any device."
     },
     {
-      question: "Is there a mobile app available?",
-      answer:
-        "Yes, we offer a mobile app for both iOS and Android devices. You can download the app from the App Store or Google Play Store.",
+      question: "Is there a mobile app of SROT available?",
+      answer: "Yes, we offer a mobile app for both iOS and Android devices. You can download the app from the App Store or Google Play Store."
     },
     {
-      question: "How can I reset my password?",
-      answer:
-        "To reset your password, click on the 'Forgot Password' link on the login page, enter your registered email address, and follow the instructions sent to your email to reset your password.",
+      question: "Is there a trial period and how can I signup for it?",
+      answer:"Yes! We do offer a trial period. Currently, we provide 1 Month (30 Days) of Free Trial Period."
     },
     {
-      question: "What kind of customer support do you offer?",
-      answer:
-        "We offer 24/7 customer support through various channels including email, live chat, and phone. Our support team is always ready to assist you with any queries or issues.",
+      question: "How long will it take to switch to SROT from other softwares?",
+      answer:"We will be able to switch within a day. Our representative will be there to help you for the whole day to help you shift from other software to SROT."
     },
     // {
     //   question: "Are there any tutorials or user guides available?",

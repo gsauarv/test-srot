@@ -53,13 +53,18 @@ const ContactFormSection = () => {
                 >
                   <FormInput
                     label={"Full Name"}
-                    placeholder="Elon Musk"
+                    placeholder="Name"
                     name={"full_name"}
                   />
                   <FormInput
                     label={"Email address"}
-                    placeholder="email@gmail.com"
+                    placeholder="Email Address"
                     name={"email_address"}
+                  />
+                  <FormInput
+                    label={"Phone Number"}
+                    placeholder="Phone Number"
+                    name={"phone_number"}
                   />
                   <FormTextArea
                     label={"Leave us a message"}
@@ -111,7 +116,7 @@ const ContactFormSection = () => {
                   //   height: "100%",
                   minHeight: "649px",
                 }}
-                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=kATHMANDU+(SROT)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Scodus%20In[…]ons)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
               ></iframe>
             </Box>
           </Flex>
