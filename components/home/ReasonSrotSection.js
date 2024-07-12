@@ -10,8 +10,8 @@ const ReasonSrot = () => {
       <Box
         as="section"
         paddingTop={{
-          base: "20px",
-          md: "180px",
+          base: "40px",
+          md: "50px",
         }}
       >
         <CommonWrapper>
@@ -25,7 +25,7 @@ const ReasonSrot = () => {
               textAlign: "center",
             }}
           >
-              More reasons to use Srot:
+            More reasons to use Srot:
           </Text>
 
           <Flex

@@ -1,4 +1,5 @@
 "use client";
+import BurgerHouse from "@/public/burgerhouse.jpeg";
 import Fint from "@/public/fint.jpeg";
 import Kimchi from "@/public/kimchi.jpeg";
 import Setobagh from "@/public/setobagh.jpg";
@@ -16,9 +17,11 @@ const BrandCarasoul = () => {
     Wings,
     Fint,
     Kimchi,
+    BurgerHouse,
     Setobagh,
     Wings,
     Fint,
+    BurgerHouse,
   ];
   const settings = {
     dots: false,

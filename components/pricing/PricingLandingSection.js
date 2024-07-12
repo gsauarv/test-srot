@@ -57,7 +57,8 @@ const PricingLandingSection = () => {
               color: "#6C6B80",
             }}
           >
-            Pricing Plans Designed to Fit Your Business, from Startup to Enterprise
+            Pricing Plans Designed to Fit Your Business, from Startup to
+            Enterprise
           </Text>
         </Flex>
 
@@ -110,32 +111,7 @@ const PricingLandingSection = () => {
               >
                 Restaurant
               </Tab>
-
-              {/* <Tab
-                sx={{
-                  color: "#6C6B80",
-                  width: "fit-content",
-                  height: "37px",
-                  borderRadius: "4px",
-                  fontSize: "15px",
-                  fontWeight: 600,
-                }}
-                _selected={{
-                  backgroundColor: "#4C7CE5",
-                  color: "#fff",
-                }}
-              >
-                Retail
-              </Tab> */}
             </TabList>
-            {/* <TabPanels>
-              <TabPanel>
-                <p>one!</p>
-              </TabPanel>
-              <TabPanel>
-                <p>two!</p>
-              </TabPanel>
-            </TabPanels> */}
           </Tabs>
         </Flex>
       </Box>

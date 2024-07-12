@@ -1,8 +1,8 @@
-import why1 from "@/public/why1.svg";
-import why2 from "@/public/why2.svg";
-import why3 from "@/public/why3.svg";
-import why4 from "@/public/why4.svg";
-import why5 from "@/public/why5.svg";
+import why1 from "@/public/why1.png";
+import why2 from "@/public/why2.png";
+import why3 from "@/public/why3.png";
+import why4 from "@/public/why4.png";
+import why5 from "@/public/why5.png";
 
 import { Box, Button, Flex, Text } from "@chakra-ui/react";
 import Image from "next/image";
@@ -126,7 +126,8 @@ const WhyChooseSection = () => {
             <WhyChooseUsCard
               image={why4}
               title={"Multiple User Access and Control"}
-              description={"Give access to multiple users (Accountants, Auditors) as you can control what access to give them."
+              description={
+                "Give access to multiple users (Accountants, Auditors) as you can control what access to give them."
               }
               type="sm"
             />

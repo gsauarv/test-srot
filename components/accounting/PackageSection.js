@@ -23,7 +23,10 @@ const PackageSection = ({ title = true, isRestaurantPage }) => {
         { title: "Inventory Management & Tracking", included: false },
         { title: "Warehouse Management", included: false },
         { title: "Payroll Management", included: false },
-        { title: "Landing Cost Calculation (Excise Duty, Customs, etc.)", included: false },
+        {
+          title: "Landing Cost Calculation (Excise Duty, Customs, etc.)",
+          included: false,
+        },
       ],
       icon: <BsFillSendFill />,
     },
@@ -41,22 +44,34 @@ const PackageSection = ({ title = true, isRestaurantPage }) => {
         { title: "Add Unlimited Services", included: true },
         { title: "Assets and Depriciation Management", included: true },
         { title: "Transactions limit 15,000/year", included: true },
-        { title: "Free Remote/Office Training & Remote Support", included: true },
+        {
+          title: "Free Remote/Office Training & Remote Support",
+          included: true,
+        },
         { title: "Inventory Management & Tracking", included: true },
         { title: "Warehouse Management", included: true },
         { title: "Payroll Management", included: true },
-        { title: "Landing Cost Calculation (Excise Duty, Customs, etc.)", included: true },
+        {
+          title: "Landing Cost Calculation (Excise Duty, Customs, etc.)",
+          included: true,
+        },
       ],
       icon: <FaIdCardClip />,
     },
 
     {
-      name: "Custom Plan",
+      name: "Enterprise",
       subtitle: "For enterprise with premium addons",
       price: "",
-      items: [
-        { title: "Invoicing & Payment", included: false },
-        { title: "Invoicing & Payment", included: true },
+      // items: [
+      //   { title: "Invoicing & Payment", included: false },
+      //   { title: "Invoicing & Payment", included: true },
+      // ],
+
+      enterprise_description: [
+        "Enterprise grade security",
+        "Scalability and priority support",
+        "Contact us if any further enquiries",
       ],
       icon: <FaBuilding />,
     },
@@ -70,14 +85,13 @@ const PackageSection = ({ title = true, isRestaurantPage }) => {
       items: [
         { title: "10GB Storage", included: true },
         { title: "Upto 3 Users", included: true },
-        {title:"Table Management", included: true},
-        {title:"Real Time Analytics", included: true},
-        {title:"50+ Insightful Reports", included: true},
-        {title:"Multiple Outlet Billings", included: true},
-        {title:"Record Customer Credit", included: true},
-        {title:"Manage Delivery Partners", included: true},
-        {title:"Leakage Control & Inventory Tracking", included: false}
-        
+        { title: "Table Management", included: true },
+        { title: "Real Time Analytics", included: true },
+        { title: "50+ Insightful Reports", included: true },
+        { title: "Multiple Outlet Billings", included: true },
+        { title: "Record Customer Credit", included: true },
+        { title: "Manage Delivery Partners", included: true },
+        { title: "Leakage Control & Inventory Tracking", included: false },
       ],
       icon: <BsFillSendFill />,
     },
@@ -89,13 +103,13 @@ const PackageSection = ({ title = true, isRestaurantPage }) => {
       items: [
         { title: "Unlimited Storage", included: true },
         { title: "Unlimited User", included: true },
-        {title:"Table Management", included: true},
-        {title:"Real Time Analytics", included: true},
-        {title:"50+ Insightful Reports", included: true},
-        {title:"Multiple Outlet Billings", included: true},
-        {title:"Record Customer Credit", included: true},
-        {title:"Manage Delivery Partners", included: true},
-        {title:"Leakage Control & Inventory Tracking", included: true}
+        { title: "Table Management", included: true },
+        { title: "Real Time Analytics", included: true },
+        { title: "50+ Insightful Reports", included: true },
+        { title: "Multiple Outlet Billings", included: true },
+        { title: "Record Customer Credit", included: true },
+        { title: "Manage Delivery Partners", included: true },
+        { title: "Leakage Control & Inventory Tracking", included: true },
       ],
       icon: <FaIdCardClip />,
     },
@@ -165,6 +179,7 @@ const PackageSection = ({ title = true, isRestaurantPage }) => {
                 isRestaurantPage={isRestaurantPage}
                 price={item?.price}
                 included={item?.items}
+                enterprise_description={item?.enterprise_description}
               />
             ))
           : accountingData?.map((item) => (
@@ -176,6 +191,7 @@ const PackageSection = ({ title = true, isRestaurantPage }) => {
                 isRestaurantPage={isRestaurantPage}
                 price={item?.price}
                 included={item?.items}
+                enterprise_description={item?.enterprise_description}
               />
             ))}
       </Flex>
@@ -194,6 +210,7 @@ const PackageCard = ({
   icon,
   price,
   included = [],
+  enterprise_description,
 }) => {
   return (
     <>
@@ -270,23 +287,25 @@ const PackageCard = ({
               {description}
             </Text>
 
-            <Box sx={{ paddingTop: "13px" }}>
-              <Text
-                sx={{
-                  fontSize: "26px",
-                  fontWeight: 800,
-                  color: isRestaurantPage ? "#FD8432" : "#496AD0",
-                }}
-              >
-                Rs {price}{" "}
+            {!enterprise_description && (
+              <Box sx={{ paddingTop: "13px" }}>
                 <Text
-                  as={"span"}
-                  sx={{ fontSize: "14px", fontWeight: 500, color: "#9D9CAF" }}
+                  sx={{
+                    fontSize: "26px",
+                    fontWeight: 800,
+                    color: isRestaurantPage ? "#FD8432" : "#496AD0",
+                  }}
                 >
-                  /year
+                  Rs {price}{" "}
+                  <Text
+                    as={"span"}
+                    sx={{ fontSize: "14px", fontWeight: 500, color: "#9D9CAF" }}
+                  >
+                    /year
+                  </Text>
                 </Text>
-              </Text>
-            </Box>
+              </Box>
+            )}
 
             <Divider
               sx={{
@@ -298,21 +317,37 @@ const PackageCard = ({
           </Flex>
 
           <Box sx={{ padding: "0px 46px" }}>
-            <Text sx={{ color: "#201F37", fontSize: "14px", fontWeight: 700 }}>
-              Included in starter :
-            </Text>
+            {!enterprise_description && (
+              <Text
+                sx={{ color: "#201F37", fontSize: "14px", fontWeight: 700 }}
+              >
+                Included in starter :
+              </Text>
+            )}
 
-            <Flex
-              sx={{
-                flexDirection: "column",
-                rowGap: "12px",
-                paddingBlock: "16px 0px",
-              }}
-            >
-              {included?.map((item) => (
-                <FeatureText title={item?.title} isIncluded={item?.included} />
-              ))}
-            </Flex>
+            {!enterprise_description && (
+              <Flex
+                sx={{
+                  flexDirection: "column",
+                  rowGap: "12px",
+                  paddingBlock: "16px 0px",
+                }}
+              >
+                {included?.map((item) => (
+                  <FeatureText
+                    title={item?.title}
+                    isIncluded={item?.included}
+                  />
+                ))}
+              </Flex>
+            )}
+
+            {/* {enterprise_description &&
+              enterprise_description?.map((item) => (
+              
+                  {item}
+                </Flex>
+              ))} */}
 
             <Button
               sx={{
@@ -325,6 +360,7 @@ const PackageCard = ({
                 color: "#fff",
                 marginTop: "53px",
                 height: "42px",
+                marginBottom: "30px",
 
                 _hover: {
                   backgroundColor: "brand.hover",

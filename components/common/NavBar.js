@@ -81,7 +81,13 @@ const NavBar = () => {
           base: "10px 0px",
           md: navBackground ? "15px 0px" : "25px 0px",
         }}
-        bg={navBackground ? "#FFFFFF" : "transparent"}
+        bg={
+          navBackground
+            ? "#FFFFFF"
+            : pathname === "/"
+            ? "#d1e0ff"
+            : "transparent"
+        }
         position={"sticky"}
         top={0}
         zIndex={1}
