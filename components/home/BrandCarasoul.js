@@ -76,7 +76,7 @@ const BrandCarasoul = () => {
                 textAlign: "center",
               }}
             >
-              Trusted by over 39,000 forward-thinking companies
+              Trusted by over 100+ forward-thinking companies
             </Text>
           </Flex>
 
