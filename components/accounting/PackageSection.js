@@ -160,7 +160,7 @@ const PackageSection = ({ title = true, isRestaurantPage }) => {
 
       <Flex
         justifyContent={"center"}
-        alignItems={"center"}
+        alignItems={"start"}
         columnGap={"32px"}
         paddingBlock={title ? "40px" : "0px"}
         sx={{
@@ -235,6 +235,7 @@ const PackageCard = ({
           paddingBottom: isRecommended && "37px",
           paddingTop: !isRecommended && "46px",
           boxShadow: !title && "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
+          marginTop: !isRecommended && "46px",
         }}
       >
         {isRecommended && (
