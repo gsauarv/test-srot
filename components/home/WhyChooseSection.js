@@ -1,9 +1,9 @@
 "use client";
-import why1 from "@/public/why1.png";
-import why2 from "@/public/why2.png";
-import why3 from "@/public/why3.png";
-import why4 from "@/public/why4.png";
-import why5 from "@/public/why5.png";
+import why1 from "@/public/Why1.png";
+import why2 from "@/public/Why2.png";
+import why3 from "@/public/Why3.png";
+import why4 from "@/public/Why4.png";
+import why5 from "@/public/Why5.png";
 
 import { Box, Button, Flex, Text } from "@chakra-ui/react";
 import Image from "next/image";
