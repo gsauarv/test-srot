@@ -1,5 +1,6 @@
 import { Box, Button, Divider, Flex, Text } from "@chakra-ui/react";
 import { BsFillSendFill } from "react-icons/bs";
+import { FaCrown } from "react-icons/fa";
 import { FaBuilding, FaIdCardClip } from "react-icons/fa6";
 import { MdClear, MdOutlineCheck } from "react-icons/md";
 import SectionTitle from "../common/SectionTitle";
@@ -35,6 +36,7 @@ const PackageSection = ({ title = true, isRestaurantPage }) => {
       name: "Premium",
       subtitle: "For enterprise and trading based",
       price: "30,000",
+      isRecommended: true,
       items: [
         { title: "Unlimited User", included: true },
         { title: "10GB Storage", included: true },
@@ -100,6 +102,7 @@ const PackageSection = ({ title = true, isRestaurantPage }) => {
       name: "Premium",
       subtitle: "For enterprise restaurants and cafe",
       price: "30,000",
+      isRecommended: true,
       items: [
         { title: "Unlimited Storage", included: true },
         { title: "Unlimited User", included: true },
@@ -118,11 +121,13 @@ const PackageSection = ({ title = true, isRestaurantPage }) => {
       name: "Premium Plus",
       subtitle: "For new Freelancers",
       price: "50,000",
+      deducted_price: "60,000",
+
       items: [
         { title: "Invoicing & Payment", included: false },
         { title: "Invoicing & Payment", included: true },
       ],
-      icon: <FaBuilding />,
+      icon: <FaCrown />,
     },
   ];
   return (
@@ -180,6 +185,8 @@ const PackageSection = ({ title = true, isRestaurantPage }) => {
                 price={item?.price}
                 included={item?.items}
                 enterprise_description={item?.enterprise_description}
+                isRecommended={item?.isRecommended}
+                deducted_price={item?.deducted_price}
               />
             ))
           : accountingData?.map((item) => (
@@ -190,8 +197,10 @@ const PackageSection = ({ title = true, isRestaurantPage }) => {
                 icon={item?.icon}
                 isRestaurantPage={isRestaurantPage}
                 price={item?.price}
+                isRecommended={item?.isRecommended}
                 included={item?.items}
                 enterprise_description={item?.enterprise_description}
+                deducted_price={item?.deducted_price}
               />
             ))}
       </Flex>
@@ -211,12 +220,13 @@ const PackageCard = ({
   price,
   included = [],
   enterprise_description,
+  deducted_price,
 }) => {
   return (
     <>
       <Box
         sx={{
-          backgroundColor: isRestaurantPage ? "#FDF6EE" : "#F8FAFC",
+          backgroundColor: isRestaurantPage ? "#F8FAFC" : "#F8FAFC",
           width: "312px",
           minH: "518px",
           height: "100%",
@@ -259,7 +269,7 @@ const PackageCard = ({
 
               "& svg": {
                 color: isRestaurantPage ? "#FD8432" : "#38AEBA",
-                fontSize: "28px",
+                fontSize: "42px",
               },
             }}
           >
@@ -304,6 +314,31 @@ const PackageCard = ({
                     /year
                   </Text>
                 </Text>
+
+                {deducted_price && (
+                  <Flex justify={"center"}>
+                    <Text
+                      sx={{
+                        textAlign: "center",
+                        textDecoration: "line-through",
+                        fontSize: "16px",
+                      }}
+                    >
+                      Rs {deducted_price}
+                    </Text>
+
+                    <Text
+                      as={"span"}
+                      sx={{
+                        fontSize: "16px",
+                        fontWeight: 500,
+                        color: "#9D9CAF",
+                      }}
+                    >
+                      /year
+                    </Text>
+                  </Flex>
+                )}
               </Box>
             )}
 
@@ -325,7 +360,7 @@ const PackageCard = ({
               </Text>
             )}
 
-            {!enterprise_description && (
+            {!enterprise_description ? (
               <Flex
                 sx={{
                   flexDirection: "column",
@@ -340,35 +375,93 @@ const PackageCard = ({
                   />
                 ))}
               </Flex>
+            ) : (
+              enterprise_description?.map((item) => (
+                <Text
+                  sx={{
+                    fontSize: "14px",
+                    color: "#383751",
+                    fontWeight: 500,
+                    paddingBlock: "3px",
+                    textAlign: "center",
+                  }}
+                >
+                  {item}
+                </Text>
+              ))
             )}
 
-            {/* {enterprise_description &&
-              enterprise_description?.map((item) => (
-              
-                  {item}
-                </Flex>
-              ))} */}
+            {enterprise_description ? (
+              <>
+                <Button
+                  sx={{
+                    border: `2px solid ${
+                      isRestaurantPage
+                        ? "linear-gradient(280.48deg, #F31255 -238.37%, #FF9E2A 106.98%)"
+                        : "#4E8AF4"
+                    }`,
+                    width: "100%",
 
-            <Button
-              sx={{
-                background: isRestaurantPage
-                  ? "linear-gradient(280.48deg, #F31255 -238.37%, #FF9E2A 106.98%)"
-                  : "#4E8AF4",
-                width: "100%",
-                fontSize: "14px",
-                fontWeight: 700,
-                color: "#fff",
-                marginTop: "53px",
-                height: "42px",
-                marginBottom: "30px",
+                    fontSize: "14px",
+                    fontWeight: 700,
+                    color: "#4E8AF4",
+                    marginTop: "53px",
+                    backgroundColor: "#FFF",
 
-                _hover: {
-                  backgroundColor: "brand.hover",
-                },
-              }}
-            >
-              Get Subscription
-            </Button>
+                    height: "42px",
+                    marginBottom: "10px",
+
+                    _hover: {
+                      // backgroundColor: "brand.hover",
+                    },
+                  }}
+                >
+                  Contact Us
+                </Button>
+
+                <Button
+                  sx={{
+                    background: isRestaurantPage
+                      ? "linear-gradient(280.48deg, #F31255 -238.37%, #FF9E2A 106.98%)"
+                      : "#4E8AF4",
+                    width: "100%",
+                    fontSize: "14px",
+                    fontWeight: 700,
+                    color: "#fff",
+                    // marginTop: "53px",
+                    height: "42px",
+                    marginBottom: "30px",
+
+                    _hover: {
+                      backgroundColor: "brand.hover",
+                    },
+                  }}
+                >
+                  Get A Quote
+                </Button>
+              </>
+            ) : (
+              <Button
+                sx={{
+                  background: isRestaurantPage
+                    ? "linear-gradient(280.48deg, #F31255 -238.37%, #FF9E2A 106.98%)"
+                    : "#4E8AF4",
+                  width: "100%",
+                  fontSize: "14px",
+                  fontWeight: 700,
+                  color: "#fff",
+                  marginTop: "53px",
+                  height: "42px",
+                  marginBottom: "30px",
+
+                  _hover: {
+                    backgroundColor: "brand.hover",
+                  },
+                }}
+              >
+                Get Subscription
+              </Button>
+            )}
           </Box>
         </Box>
       </Box>
@@ -379,12 +472,19 @@ const PackageCard = ({
 const FeatureText = ({ title, isIncluded = true }) => {
   return (
     <>
-      <Flex sx={{ alignItems: "center", columnGap: "8px" }}>
-        {isIncluded ? (
-          <MdOutlineCheck style={{ color: "#22AD01" }} />
-        ) : (
-          <MdClear style={{ color: "#FF0000" }} />
-        )}
+      <Flex
+        sx={{
+          alignItems: "start",
+          columnGap: "8px",
+        }}
+      >
+        <div className="min-w-[20px]">
+          {isIncluded ? (
+            <MdOutlineCheck style={{ color: "#22AD01", fontSize: "18px" }} />
+          ) : (
+            <MdClear style={{ color: "#FF0000", fontSize: "18px" }} />
+          )}
+        </div>
         <Text sx={{ fontSize: "14px", color: "#383751", fontWeight: 500 }}>
           {title}
         </Text>
