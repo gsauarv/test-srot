@@ -8,15 +8,15 @@ const ContactLandingSection = () => {
     {
       title: "Sales Details",
       details: [
-        { value: "bill.sanders@example.com", icon: <IoMdMail /> },
-        { value: "(+977) 98526374185", icon: <IoMdCall /> },
+        { value: "sales@srotcloud.com", icon: <IoMdMail /> },
+        { value: "(+977) 9802304368", icon: <IoMdCall /> },
       ],
     },
     {
       title: "Support Details",
       details: [
-        { value: "bill.sanders@example.com", icon: <IoMdMail /> },
-        { value: "(+977) 98526374185", icon: <IoMdCall /> },
+        { value: "support@srotcloud.com", icon: <IoMdMail /> },
+        { value: "(+977) 9841587582", icon: <IoMdCall /> },
       ],
     },
     {

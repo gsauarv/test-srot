@@ -13,7 +13,8 @@ const ExploreMore = ({ isRestaurantPage = false }) => {
   const accounting_card_data = [
     {
       title: "Accounting",
-      description: "Simplify cash flow, revenue, balance sheet, and profit/loss",
+      description:
+        "Simplify cash flow, revenue, balance sheet, and profit/loss",
       image: ExploreAcc,
     },
 
@@ -26,22 +27,26 @@ const ExploreMore = ({ isRestaurantPage = false }) => {
 
     {
       title: "Documents",
-      description: "Keep all the documents related to the bills and reports with our adequate storage",
+      description:
+        "Keep all the documents related to the bills and reports with our adequate storage",
       image: Document,
     },
     {
       title: "Insightful Reports",
-      description: "Get 100+ Reports like Balance Sheet, Income Statement, Cashflow and so on.",
+      description:
+        "Get 100+ Reports like Balance Sheet, Income Statement, Cashflow and so on.",
       image: Document,
     },
     {
       title: "Assets Management",
-      description: "Manage your assets and calculate customizable depreciation ",
+      description:
+        "Manage your assets and calculate customizable depreciation ",
       image: Document,
     },
     {
       title: "Payroll Management",
-      description: "Manage your Employees data and calculate payroll with Deduction and Taxes",
+      description:
+        "Manage your Employees data and calculate payroll with Deduction and Taxes",
       image: Document,
     },
   ];
@@ -49,35 +54,37 @@ const ExploreMore = ({ isRestaurantPage = false }) => {
   const res_card_data = [
     {
       title: "Table Management",
-      description: "Effortlessly record all your accounting transaction.",
+      description: "Manage tables and floors properly for your restaurant.",
       image: ExploreAcc,
     },
 
     {
       title: "100% Leakage Control",
       description:
-        "Track all your inventory location,  transfer between warehouse and manage your services / products.",
+        "Track all your inventories and manage cash sales efficiently.",
       image: Inventory,
     },
 
     {
       title: "Real Time Analytics",
-      description: "Effortlessly record all your accounting transaction.",
+      description:
+        "Analyze sales, orders, and credit in real time for quick decision-making.",
       image: Document,
     },
     {
       title: "50+ Insightful Reports",
-      description: "Effortlessly record all your accounting transaction.",
+      description:
+        "Access over 50 comprehensive reports on sales, inventory, and credits.",
       image: Document,
     },
     {
       title: "Multiple Outlet Billing",
-      description: "Effortlessly record all your accounting transaction.",
+      description: "Manage multiple outlets seamlessly on a single platform.",
       image: Document,
     },
     {
       title: "Record Customer Credit",
-      description: "Effortlessly record all your accounting transaction.",
+      description: "Effortlessly record all customer transactions and credits.",
       image: Document,
     },
   ];

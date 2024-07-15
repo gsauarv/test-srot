@@ -44,37 +44,38 @@ const PlatformDetailCard = ({ title, type = "" }) => {
     {
       title: "Inventory Management",
       icon: <FiBox />,
-      description: "Keep track of inventory within your business",
+      description: "Keep track of inventory and warehouse within your business",
       color: "#F9A362",
     },
 
     {
       title: "Assets Management",
       icon: <FaCreditCard />,
-      description: "Manage your assets and calculate depreciation",
+      description: "Automate asset management and calculate depreciation.",
       color: "#F1A3DB",
     },
   ];
 
   const resData = [
     {
-      title: "Accounting",
+      title: "Table Management",
       icon: <TbPercentage />,
-      description: "Simplify cash flow, revenue, and balance sheet",
+      description: "Manage tables and floors properly for your restaurant.",
       color: "#71AAFF",
     },
 
     {
-      title: "Inventory Management",
+      title: "100% Leakage Control",
       icon: <FiBox />,
-      description: "Keep track of inventory within your business",
+      description:
+        "Track all your inventories and manage cash sales efficiently.",
       color: "#F9A362",
     },
 
     {
-      title: "Assets Management",
+      title: "Record Customer Credit",
       icon: <FaCreditCard />,
-      description: "Manage your assets and calculate depreciation",
+      description: "Effortlessly record all customer transactions and credits.",
       color: "#F1A3DB",
     },
   ];

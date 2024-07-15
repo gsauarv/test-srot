@@ -13,13 +13,13 @@ const PackageSection = ({ title = true, isRestaurantPage }) => {
       price: "15,000",
       items: [
         { title: "Unlimited User", included: true },
-        { title: "10GB Storage", included: true },
+        { title: "5GB Storage", included: true },
         { title: "Double-entry book keeping", included: true },
         { title: "Track Sales, Purchase, Returns, Voids", included: true },
         { title: "Documents & Files Manager", included: true },
         { title: "Add Unlimited Services", included: true },
         { title: "Assets and Depriciation Management", included: true },
-        { title: "Transactions limit 15,000/year", included: true },
+        { title: "Transactions limit 10,000/year", included: true },
         { title: "Free Remote Training & Support", included: true },
         { title: "Inventory Management & Tracking", included: false },
         { title: "Warehouse Management", included: false },
@@ -39,13 +39,13 @@ const PackageSection = ({ title = true, isRestaurantPage }) => {
       isRecommended: true,
       items: [
         { title: "Unlimited User", included: true },
-        { title: "10GB Storage", included: true },
+        { title: "15GB Storage", included: true },
         { title: "Double-entry book keeping", included: true },
         { title: "Track Sales, Purchase, Returns, Voids", included: true },
         { title: "Documents & Files Manager", included: true },
         { title: "Add Unlimited Services", included: true },
         { title: "Assets and Depriciation Management", included: true },
-        { title: "Transactions limit 15,000/year", included: true },
+        { title: "Transactions limit 30,000/year", included: true },
         {
           title: "Free Remote/Office Training & Remote Support",
           included: true,
@@ -85,7 +85,7 @@ const PackageSection = ({ title = true, isRestaurantPage }) => {
       subtitle: "For small restaurants and cafe",
       price: "15,000",
       items: [
-        { title: "10GB Storage", included: true },
+        { title: "Unlimited Storage", included: true },
         { title: "Upto 3 Users", included: true },
         { title: "Table Management", included: true },
         { title: "Real Time Analytics", included: true },
@@ -100,7 +100,7 @@ const PackageSection = ({ title = true, isRestaurantPage }) => {
 
     {
       name: "Premium",
-      subtitle: "For enterprise restaurants and cafe",
+      subtitle: "For large restaurants and cafe",
       price: "30,000",
       isRecommended: true,
       items: [
@@ -119,13 +119,24 @@ const PackageSection = ({ title = true, isRestaurantPage }) => {
 
     {
       name: "Premium Plus",
-      subtitle: "For new Freelancers",
+      subtitle: "For large restaurants",
       price: "50,000",
       deducted_price: "60,000",
 
       items: [
-        { title: "Invoicing & Payment", included: false },
-        { title: "Invoicing & Payment", included: true },
+        {
+          title: "Includes all features of premium accounting.",
+          included: true,
+        },
+        {
+          title: "Includes all features of premium restaurant.",
+          included: true,
+        },
+        {
+          title:
+            "Seamless integration with restaurant management and accounting systems.",
+          included: true,
+        },
       ],
       icon: <FaCrown />,
     },
@@ -363,7 +374,7 @@ const PackageCard = ({
               <Text
                 sx={{ color: "#201F37", fontSize: "14px", fontWeight: 700 }}
               >
-                Included in starter :
+                Included in package :
               </Text>
             )}
 

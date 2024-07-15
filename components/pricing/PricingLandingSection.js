@@ -22,14 +22,13 @@ const PricingLandingSection = () => {
 
   const ACCOUNTING_TERMS_AND_CON = [
     "13% VAT is applicable in all prices unless otherwise specified.",
-    "Lifetime subscription will cover 10 Years period.",
     "Active transactions refers to all transactions in which accounting entry are effected.",
     "All payments have to be made in advance without any deduction or set-off (except for Tax withholding if applicable).",
   ];
 
   const RES_TERMS_AND_CON = [
     "13% VAT is applicable in all prices unless otherwise specified.",
-    "Lifetime subscription will cover 10 Years period.",
+    "The prices mentioned above apply to individual restaurant outlets.",
   ];
   return (
     <>
