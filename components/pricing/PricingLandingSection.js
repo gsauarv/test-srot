@@ -184,7 +184,13 @@ const PricingLandingSection = () => {
 
       <Box sx={{ paddingBlock: "80px", backgroundColor: "#fff" }}>
         <CommonWrapper type={"tight"}>
-          <Text sx={{ fontSize: "24px", color: "#2019A2", fontWeight: 600 }}>
+          <Text
+            sx={{
+              fontSize: "24px",
+              color: selectedTab === 0 ? "#2019A2" : "#FD8332",
+              fontWeight: 600,
+            }}
+          >
             Terms and Conditions
           </Text>
 
