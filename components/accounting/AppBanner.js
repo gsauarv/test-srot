@@ -20,7 +20,7 @@ const AppBanner = ({ isRestaurantPage = false }) => {
 
           height: "320px",
           width: "100%",
-          marginBlock: "20px",
+          // marginBlock: "20px",
 
           //   backgroundColor: "red",
         }}

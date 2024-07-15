@@ -132,7 +132,13 @@ const PackageSection = ({ title = true, isRestaurantPage }) => {
   ];
   return (
     <>
-      <Flex sx={{ justifyContent: "center", paddingBlock: title && "45px" }}>
+      <Flex
+        sx={{
+          justifyContent: "center",
+          paddingBlock: title && "45px",
+          // paddingBottom: "100px",
+        }}
+      >
         {title && (
           <Box
             sx={{

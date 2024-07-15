@@ -1,5 +1,14 @@
 "use client";
-import { Box, Flex, Tab, TabList, Tabs, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  ListItem,
+  Tab,
+  TabList,
+  Tabs,
+  Text,
+  UnorderedList,
+} from "@chakra-ui/react";
 import { useState } from "react";
 import PackageSection from "../accounting/PackageSection";
 import CommonWrapper from "../common/CommonWrapper";
@@ -10,6 +19,18 @@ const PricingLandingSection = () => {
   const handleTabs = (index) => {
     setSelectedTab(index);
   };
+
+  const ACCOUNTING_TERMS_AND_CON = [
+    "13% VAT is applicable in all prices unless otherwise specified.",
+    "Lifetime subscription will cover 10 Years period.",
+    "Active transactions refers to all transactions in which accounting entry are effected.",
+    "All payments have to be made in advance without any deduction or set-off (except for Tax withholding if applicable).",
+  ];
+
+  const RES_TERMS_AND_CON = [
+    "13% VAT is applicable in all prices unless otherwise specified.",
+    "Lifetime subscription will cover 10 Years period.",
+  ];
   return (
     <>
       <Box
@@ -160,6 +181,35 @@ const PricingLandingSection = () => {
           </Flex>
         </Box>
       </CommonWrapper>
+
+      <Box sx={{ paddingBlock: "80px", backgroundColor: "#fff" }}>
+        <CommonWrapper type={"tight"}>
+          <Text sx={{ fontSize: "24px", color: "#2019A2", fontWeight: 600 }}>
+            Terms and Conditions
+          </Text>
+
+          <Box sx={{ marginTop: "30px" }}>
+            <UnorderedList spacing={5}>
+              {(selectedTab === 0
+                ? ACCOUNTING_TERMS_AND_CON
+                : RES_TERMS_AND_CON
+              )?.map((item, index) => (
+                <ListItem key={index}>
+                  <Text
+                    sx={{
+                      fontWeight: 500,
+                      fontSize: "18px",
+                      color: "#383751",
+                    }}
+                  >
+                    {item}
+                  </Text>
+                </ListItem>
+              ))}
+            </UnorderedList>
+          </Box>
+        </CommonWrapper>
+      </Box>
     </>
   );
 };
