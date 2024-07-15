@@ -1,3 +1,4 @@
+"use client";
 import why1 from "@/public/why1.png";
 import why2 from "@/public/why2.png";
 import why3 from "@/public/why3.png";
