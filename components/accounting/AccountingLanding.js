@@ -27,7 +27,7 @@ const AccountingLanding = ({ isRestaurantPage = false }) => {
         sx={{
           width: "100%",
           height: {
-            base: "120dvh",
+            base: "125dvh",
             sm: "101dvh",
             md: "85dvh",
           },
@@ -211,8 +211,7 @@ const AccountingLanding = ({ isRestaurantPage = false }) => {
               <Box
                 w={{ base: "100%", md: "850px" }}
                 position={"relative"}
-                h={{ base: 400, md: 650 }}
-                // sx={{
+                h={{ base: 350, md: 650 }} // sx={{
                 //   marginTop: {
                 //     base: "30px",
                 //   },
