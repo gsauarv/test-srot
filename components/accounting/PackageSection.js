@@ -136,6 +136,7 @@ const PackageSection = ({ title = true, isRestaurantPage }) => {
         sx={{
           justifyContent: "center",
           paddingBlock: title && "45px",
+
           // paddingBottom: "100px",
         }}
       >
@@ -166,7 +167,7 @@ const PackageSection = ({ title = true, isRestaurantPage }) => {
 
       <Flex
         justifyContent={"center"}
-        alignItems={"start"}
+        alignItems={{ base: "center", md: "start" }}
         columnGap={"32px"}
         paddingBlock={title ? "40px" : "0px"}
         sx={{

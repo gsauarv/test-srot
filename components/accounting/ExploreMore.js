@@ -13,7 +13,8 @@ const ExploreMore = ({ isRestaurantPage = false }) => {
   const accounting_card_data = [
     {
       title: "Accounting",
-      description: "Simplify cash flow, revenue, balance sheet, and profit/loss",
+      description:
+        "Simplify cash flow, revenue, balance sheet, and profit/loss",
       image: ExploreAcc,
     },
 
@@ -26,22 +27,26 @@ const ExploreMore = ({ isRestaurantPage = false }) => {
 
     {
       title: "Documents",
-      description: "Keep all the documents related to the bills and reports with our adequate storage",
+      description:
+        "Keep all the documents related to the bills and reports with our adequate storage",
       image: Document,
     },
     {
       title: "Insightful Reports",
-      description: "Get 100+ Reports like Balance Sheet, Income Statement, Cashflow and so on.",
+      description:
+        "Get 100+ Reports like Balance Sheet, Income Statement, Cashflow and so on.",
       image: Document,
     },
     {
       title: "Assets Management",
-      description: "Manage your assets and calculate customizable depreciation ",
+      description:
+        "Manage your assets and calculate customizable depreciation ",
       image: Document,
     },
     {
       title: "Payroll Management",
-      description: "Manage your Employees data and calculate payroll with Deduction and Taxes",
+      description:
+        "Manage your Employees data and calculate payroll with Deduction and Taxes",
       image: Document,
     },
   ];
@@ -83,7 +88,15 @@ const ExploreMore = ({ isRestaurantPage = false }) => {
   ];
   return (
     <>
-      <Flex justifyContent={"center"}>
+      <Flex
+        justifyContent={"center"}
+        sx={{
+          mt: {
+            base: "40px",
+            md: "0px",
+          },
+        }}
+      >
         <Box
           sx={{
             width: {
