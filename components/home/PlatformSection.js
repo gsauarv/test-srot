@@ -11,6 +11,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import Image from "next/image";
+import Link from "next/link";
 import { FaCreditCard } from "react-icons/fa6";
 import { FiArrowRight, FiBox } from "react-icons/fi";
 import { TbPercentage } from "react-icons/tb";
@@ -232,22 +233,24 @@ const PlatformDetailCard = ({ title, type = "" }) => {
               />
             </Flex> */}
 
-            <Button
-              rightIcon={<FiArrowRight />}
-              sx={{
-                color: "#496AD0",
-                fontSize: "15px",
-                fontWeight: 500,
-                marginTop: "44px",
-                width: "150px",
-                height: "40px",
-                borderRadius: "4px",
-                border: "1.2px solid #E5E5EB",
-              }}
-              variant={"outline"}
-            >
-              See more
-            </Button>
+            <Link href={type === "Accounting" ? "/accounting" : "/restaurant"}>
+              <Button
+                rightIcon={<FiArrowRight />}
+                sx={{
+                  color: "#496AD0",
+                  fontSize: "15px",
+                  fontWeight: 500,
+                  marginTop: "44px",
+                  width: "150px",
+                  height: "40px",
+                  borderRadius: "4px",
+                  border: "1.2px solid #E5E5EB",
+                }}
+                variant={"outline"}
+              >
+                See more
+              </Button>
+            </Link>
           </Box>
         </Box>
 

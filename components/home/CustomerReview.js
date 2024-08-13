@@ -8,6 +8,25 @@ import Slider from "react-slick";
 import CommonWrapper from "../common/CommonWrapper";
 import SectionTitle from "../common/SectionTitle";
 
+const REVIEW_DATA = [
+  {
+    review:
+      "SROT Accounting made my business finances so easy to manage. Their tools helped me track expenses and profits effortlessly. I can now focus more on growing my business without worrying about accounting.",
+    author: "Rabin Pokharel - Fintrust",
+  },
+
+  {
+    review:
+      "Using SROT Accounting has been a game-changer for my company. It simplified our bookkeeping, saving us both time and money. Highly recommend it to anyone looking for reliable accounting support",
+    author: "Ashim Sitaula - Seto Bagh",
+  },
+
+  {
+    review:
+      "SROT's restaurant management system has truly transformed how we run our business. It streamlines orders, inventory, and staff scheduling, making everything so much easier to manage. Our operations are now smoother, and customer satisfaction has improved significantly.",
+    author: "Wings Factory - Rupesh Niraula",
+  },
+];
 const CustomerReview = () => {
   let sliderRef = useRef(null);
 
@@ -101,10 +120,9 @@ const CustomerReview = () => {
               }}
               {...settings}
             >
-              <ReviewCard />
-              <ReviewCard />
-              <ReviewCard />
-              <ReviewCard />
+              {REVIEW_DATA?.map((item, index) => (
+                <ReviewCard key={index} item={item} />
+              ))}
             </Slider>
           </Box>
         </CommonWrapper>
@@ -115,7 +133,7 @@ const CustomerReview = () => {
 
 export default CustomerReview;
 
-const ReviewCard = () => {
+const ReviewCard = ({ item }) => {
   return (
     <>
       <Box sx={{ margin: "10px" }}>
@@ -126,6 +144,7 @@ const ReviewCard = () => {
             maxWidth: "100%",
             width: "100%",
             height: "100%",
+            minH: "400px",
             borderRadius: "12px",
             padding: "44px",
           }}
@@ -145,7 +164,7 @@ const ReviewCard = () => {
                   //   letterSpacing: "0.5px",
                 }}
               >
-                Cameron Williamson
+                {item?.author}
               </Text>
 
               <Text
@@ -170,13 +189,7 @@ const ReviewCard = () => {
                 lineHeight: "33px",
               }}
             >
-              {" "}
-              The modern outlook and easy to use nature of Tigg had
-              exceptionally pleased us. We were quite impressed with the
-              numerous reports that it produced and how easy it was for new
-              user. It has saved us a lot of time and the fact that is
-              accessible from anywhere; being a cloud-based platform is an extra
-              add-on.
+              {item?.review}
             </Text>
           </Box>
 

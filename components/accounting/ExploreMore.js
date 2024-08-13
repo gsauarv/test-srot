@@ -109,7 +109,7 @@ const ExploreMore = ({ isRestaurantPage = false }) => {
           <SectionTitle
             title={
               isRestaurantPage
-                ? "Some feature about Srot Restaurant"
+                ? "Some feature about SROT Restaurant"
                 : "Explore More About Accounting"
             }
           />

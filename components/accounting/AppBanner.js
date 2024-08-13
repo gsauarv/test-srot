@@ -69,7 +69,7 @@ const AppBanner = ({ isRestaurantPage = false }) => {
                   fontWeight: 700,
                 }}
               >
-                Get started with srot today
+                Get started with SROT today
               </Text>
 
               <Text
