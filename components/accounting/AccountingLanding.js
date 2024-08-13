@@ -2,7 +2,6 @@ import AccountingImage from "@/public/accounting.svg";
 import RestaurantImage from "@/public/landingimage1.svg";
 import { Box, Button, Flex, Text } from "@chakra-ui/react";
 import Image from "next/image";
-import { MdSlowMotionVideo } from "react-icons/md";
 import CommonWrapper from "../common/CommonWrapper";
 
 const AccountingLanding = ({ isRestaurantPage = false }) => {
@@ -177,7 +176,7 @@ const AccountingLanding = ({ isRestaurantPage = false }) => {
                     >
                       Get Started
                     </Button>
-                    <Button
+                    {/* <Button
                       leftIcon={<MdSlowMotionVideo />}
                       sx={{
                         // backgroundColor: "brand.primary",
@@ -191,7 +190,7 @@ const AccountingLanding = ({ isRestaurantPage = false }) => {
                       }}
                     >
                       Watch Video
-                    </Button>
+                    </Button> */}
                   </Flex>
 
                   <Text
