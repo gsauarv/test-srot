@@ -69,7 +69,7 @@ const AppBanner = ({ isRestaurantPage = false }) => {
                   fontWeight: 700,
                 }}
               >
-                Get started with srot today
+                Get started with SROT today
               </Text>
 
               <Text
@@ -87,8 +87,25 @@ const AppBanner = ({ isRestaurantPage = false }) => {
               </Text>
 
               <Flex align={"center"} justifyContent={"center"}>
-                <Image src={PlaystoreImage} height={44} width={180} />
-                <Image src={AppStoreImage} height={"44px"} width={160} />
+                <a
+                  target="_blank"
+                  href={
+                    isRestaurantPage &&
+                    "https://play.google.com/store/apps/details?id=com.srot.hospitality.app&pcampaignid=web_share"
+                  }
+                >
+                  <Image src={PlaystoreImage} height={44} width={180} />
+                </a>
+
+                <a
+                  target="_blank"
+                  href={
+                    isRestaurantPage &&
+                    "https://apps.apple.com/np/app/srot/id6502585007"
+                  }
+                >
+                  <Image src={AppStoreImage} height={"44px"} width={160} />
+                </a>
               </Flex>
             </Box>
             <Box

@@ -147,6 +147,7 @@ const PackageSection = ({ title = true, isRestaurantPage }) => {
         sx={{
           justifyContent: "center",
           paddingBlock: title && "45px",
+
           // paddingBottom: "100px",
         }}
       >

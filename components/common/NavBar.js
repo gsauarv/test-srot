@@ -29,8 +29,6 @@ const NavBar = () => {
   const btnRef = useRef();
   const pathname = usePathname();
 
-  console.log({ pathname });
-
   const handleScroll = () => {
     if (window.scrollY > 80) {
       setNavBackground(true);
@@ -90,9 +88,9 @@ const NavBar = () => {
         }
         position={"sticky"}
         top={0}
-        zIndex={1}
+        zIndex={50}
         boxShadow={navBackground && "rgba(33, 35, 38, 0.1) 0px 10px 10px -10px"}
-        transition={"0.4s all ease-in-out"}
+        transition={"0.04s all ease-in-out"}
         // backdropFilter={navBackground && "blur(50px)"}
       >
         <CommonWrapper>

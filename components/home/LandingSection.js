@@ -127,23 +127,25 @@ const LandingSection = () => {
                     columnGap: "16px",
                   }}
                 >
-                  <Button
-                    _hover={{
-                      backgroundColor: "brand.hover",
-                    }}
-                    sx={{
-                      backgroundColor: "brand.primary",
-                      color: "white",
-                      fontSize: "16px",
-                      fontWeight: 500,
-                      width: "152px",
-                      height: "48px",
-                      borderRadius: "4px",
-                    }}
-                  >
-                    Get Started
-                  </Button>
-                  <Button
+                  <a href="https://srotcloud.app" target="_blank">
+                    <Button
+                      _hover={{
+                        backgroundColor: "brand.hover",
+                      }}
+                      sx={{
+                        backgroundColor: "brand.primary",
+                        color: "white",
+                        fontSize: "16px",
+                        fontWeight: 500,
+                        width: "152px",
+                        height: "48px",
+                        borderRadius: "4px",
+                      }}
+                    >
+                      Get Started
+                    </Button>
+                  </a>
+                  {/* <Button
                     leftIcon={<MdSlowMotionVideo />}
                     sx={{
                       // backgroundColor: "brand.primary",
@@ -156,7 +158,7 @@ const LandingSection = () => {
                     }}
                   >
                     Watch Video
-                  </Button>
+                  </Button> */}
                 </Flex>
 
                 <Text

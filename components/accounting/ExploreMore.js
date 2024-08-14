@@ -90,7 +90,15 @@ const ExploreMore = ({ isRestaurantPage = false }) => {
   ];
   return (
     <>
-      <Flex justifyContent={"center"}>
+      <Flex
+        justifyContent={"center"}
+        sx={{
+          mt: {
+            base: "40px",
+            md: "0px",
+          },
+        }}
+      >
         <Box
           sx={{
             width: {
@@ -103,7 +111,7 @@ const ExploreMore = ({ isRestaurantPage = false }) => {
           <SectionTitle
             title={
               isRestaurantPage
-                ? "Some feature about Srot Restaurant"
+                ? "Some feature about SROT Restaurant"
                 : "Explore More About Accounting"
             }
           />

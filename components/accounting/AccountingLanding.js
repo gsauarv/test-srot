@@ -2,7 +2,6 @@ import AccountingImage from "@/public/accounting.svg";
 import RestaurantImage from "@/public/landingimage1.svg";
 import { Box, Button, Flex, Text } from "@chakra-ui/react";
 import Image from "next/image";
-import { MdSlowMotionVideo } from "react-icons/md";
 import CommonWrapper from "../common/CommonWrapper";
 
 const AccountingLanding = ({ isRestaurantPage = false }) => {
@@ -40,7 +39,7 @@ const AccountingLanding = ({ isRestaurantPage = false }) => {
             top: 0,
             w: "100%",
             height: {
-              base: "120dvh",
+              base: "125dvh",
               sm: "101dvh",
               md: "85dvh",
             },
@@ -177,7 +176,7 @@ const AccountingLanding = ({ isRestaurantPage = false }) => {
                     >
                       Get Started
                     </Button>
-                    <Button
+                    {/* <Button
                       leftIcon={<MdSlowMotionVideo />}
                       sx={{
                         // backgroundColor: "brand.primary",
@@ -191,7 +190,7 @@ const AccountingLanding = ({ isRestaurantPage = false }) => {
                       }}
                     >
                       Watch Video
-                    </Button>
+                    </Button> */}
                   </Flex>
 
                   <Text
@@ -211,7 +210,12 @@ const AccountingLanding = ({ isRestaurantPage = false }) => {
               <Box
                 w={{ base: "100%", md: "850px" }}
                 position={"relative"}
+<<<<<<< HEAD
                 h={{ base: 350, md: 650 }} // sx={{
+=======
+                h={{ base: 350, md: 650 }}
+                // sx={{
+>>>>>>> test-landing-section
                 //   marginTop: {
                 //     base: "30px",
                 //   },

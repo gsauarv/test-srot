@@ -21,15 +21,13 @@ const FeaturesSection = ({ isRestaurantPage }) => {
 
     {
       title: "Purchase Bills",
-      description:
-        "Easily record and track all purchase bills.",
+      description: "Easily record and track all purchase bills.",
       icon: Bank,
       color: "#4C7CE5",
     },
     {
       title: "Expenses",
-      description:
-        "Track and manage all business expenses efficiently.",
+      description: "Track and manage all business expenses efficiently.",
       icon: Expenses,
       color: "#10B981",
     },
@@ -49,22 +47,19 @@ const FeaturesSection = ({ isRestaurantPage }) => {
     },
     {
       title: "Excise and Custom Duty",
-      description:
-        "Manage excise and customs duties with ease.",
+      description: "Manage excise and customs duties with ease.",
       icon: Receipts,
       color: "#EC4899",
     },
     {
       title: "Cheque Management",
-      description:
-        "Simplify cheque tracking and management.",
+      description: "Simplify cheque tracking and management.",
       icon: Gst,
       color: "#3B9B2B",
     },
     {
       title: "Documents Numbering",
-      description:
-        "Automatically number your documents for easy organization.",
+      description: "Automatically number your documents for easy organization.",
       icon: Insights,
       color: "#49A68A",
     },
@@ -94,36 +89,31 @@ const FeaturesSection = ({ isRestaurantPage }) => {
     },
     {
       title: "Multiple Users & Roles",
-      description:
-        "Assign different roles and permissions to multiple users.",
+      description: "Assign different roles and permissions to multiple users.",
       icon: Expenses,
       color: "#10B981",
     },
     {
       title: "Menu Management",
-      description:
-        "Easily update and manage your menu items",
+      description: "Easily update and manage your menu items",
       icon: Gst,
       color: "#EF4444",
     },
     {
       title: "Inventory Tracking",
-      description:
-        "Keep tabs on your stock in real-time.",
+      description: "Keep tabs on your stock in real-time.",
       icon: Bank,
       color: "#8B5CF6",
     },
     {
       title: "Day Book Entry",
-      description:
-        "Record daily financial transactions effortlessly.",
+      description: "Record daily financial transactions effortlessly.",
       icon: Receipts,
       color: "#EC4899",
     },
     {
       title: "Track Cashier Session",
-      description:
-        "Monitor and manage cashier activities and sessions.",
+      description: "Monitor and manage cashier activities and sessions.",
       icon: Gst,
       color: "#3B9B2B",
     },
@@ -163,8 +153,8 @@ const FeaturesSection = ({ isRestaurantPage }) => {
             <SectionTitle
               title={
                 isRestaurantPage
-                  ? "What else can you get in srot Resaturant"
-                  : "What Else Can You Get In Srot Accounting"
+                  ? "What else can you get in SROT Restaurant"
+                  : "What Else Can You Get In SROT Accounting"
               }
             />
           </Box>
@@ -179,6 +169,7 @@ const FeaturesSection = ({ isRestaurantPage }) => {
                   md: "repeat(3, 1fr)",
                 }}
                 rowGap={"68px"}
+                columnGap={"20px"}
                 sx={{ placeItems: "center" }}
               >
                 {isRestaurantPage
