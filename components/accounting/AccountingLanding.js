@@ -210,12 +210,8 @@ const AccountingLanding = ({ isRestaurantPage = false }) => {
               <Box
                 w={{ base: "100%", md: "850px" }}
                 position={"relative"}
-<<<<<<< HEAD
-                h={{ base: 350, md: 650 }} // sx={{
-=======
                 h={{ base: 350, md: 650 }}
                 // sx={{
->>>>>>> test-landing-section
                 //   marginTop: {
                 //     base: "30px",
                 //   },
