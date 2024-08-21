@@ -61,6 +61,11 @@ const NavBar = () => {
     },
 
     // {
+    //   label: "Blogs",
+    //   href: "/blogs",
+    // },
+
+    // {
     //   label: "Help",
     //   href: "/help",
     // },

@@ -12,10 +12,10 @@ const Footer = () => {
     {
       title: "Products",
       links: [
-        {
-          label: "Invoicing",
-          to: "/",
-        },
+        // {
+        //   label: "Invoicing",
+        //   to: "/",
+        // },
         {
           label: "Accounting",
           to: "/",
@@ -24,14 +24,14 @@ const Footer = () => {
           label: "Restaurant",
           to: "/",
         },
-        {
-          label: "Contracts",
-          to: "/",
-        },
-        {
-          label: "Scheduling",
-          to: "/",
-        },
+        // {
+        //   label: "Contracts",
+        //   to: "/",
+        // },
+        // {
+        //   label: "Scheduling",
+        //   to: "/",
+        // },
       ],
     },
 
@@ -46,14 +46,14 @@ const Footer = () => {
           label: "Account Resource",
           to: "/",
         },
-        {
-          label: "How to Bill a client",
-          to: "/",
-        },
-        {
-          label: "How to switch  company",
-          to: "/",
-        },
+        // {
+        //   label: "How to Bill a client",
+        //   to: "/",
+        // },
+        // {
+        //   label: "How to switch  company",
+        //   to: "/",
+        // },
       ],
     },
 

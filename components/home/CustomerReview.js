@@ -4,7 +4,6 @@ import { Avatar, Box, Flex, IconButton, Text } from "@chakra-ui/react";
 import { useRef } from "react";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import Slider from "react-slick";
-
 import CommonWrapper from "../common/CommonWrapper";
 import SectionTitle from "../common/SectionTitle";
 
@@ -13,6 +12,7 @@ const REVIEW_DATA = [
     review:
       "SROT Accounting made my business finances so easy to manage. Their tools helped me track expenses and profits effortlessly. I can now focus more on growing my business without worrying about accounting.",
     author: "Rabin Pokharel - Fintrust",
+    // image:
   },
 
   {
