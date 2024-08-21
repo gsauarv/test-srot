@@ -1,4 +1,8 @@
 "use client";
+import FinImage from "@/public/fint.jpeg";
+import SetoBagh from "@/public/setobagh.jpg";
+import Wings from "@/public/wings.jpeg";
+
 import { StarIcon } from "@chakra-ui/icons";
 import { Avatar, Box, Flex, IconButton, Text } from "@chakra-ui/react";
 import { useRef } from "react";
@@ -12,19 +16,21 @@ const REVIEW_DATA = [
     review:
       "SROT Accounting made my business finances so easy to manage. Their tools helped me track expenses and profits effortlessly. I can now focus more on growing my business without worrying about accounting.",
     author: "Rabin Pokharel - Fintrust",
-    // image:
+    image: FinImage,
   },
 
   {
     review:
       "Using SROT Accounting has been a game-changer for my company. It simplified our bookkeeping, saving us both time and money. Highly recommend it to anyone looking for reliable accounting support",
     author: "Ashim Sitaula - Seto Bagh",
+    image: SetoBagh,
   },
 
   {
     review:
       "SROT's restaurant management system has truly transformed how we run our business. It streamlines orders, inventory, and staff scheduling, making everything so much easier to manage. Our operations are now smoother, and customer satisfaction has improved significantly.",
     author: "Wings Factory - Rupesh Niraula",
+    image: Wings,
   },
 ];
 const CustomerReview = () => {
@@ -134,6 +140,7 @@ const CustomerReview = () => {
 export default CustomerReview;
 
 const ReviewCard = ({ item }) => {
+  console.log({ item });
   return (
     <>
       <Box sx={{ margin: "10px" }}>
@@ -151,7 +158,7 @@ const ReviewCard = ({ item }) => {
         >
           <Flex columnGap={"16px"} alignItems={"center"}>
             <Avatar
-              src="https://picsum.photos/200/300"
+              src={item?.image?.src || "https://picsum.photos/200/300"}
               sx={{ width: "48px", height: "48px" }}
             />
 
@@ -175,7 +182,7 @@ const ReviewCard = ({ item }) => {
                   // paddingTop: "4px",
                 }}
               >
-                Senior marketing manager
+                Founder
               </Text>
             </Box>
           </Flex>
