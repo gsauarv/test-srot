@@ -211,11 +211,12 @@ const AccountingLanding = ({ isRestaurantPage = false }) => {
                 w={{ base: "100%", md: "850px" }}
                 position={"relative"}
                 h={{ base: 450, md: 650 }}
-                // sx={{
-                //   marginTop: {
-                //     base: "30px",
-                //   },
-                // }}
+                sx={{
+                  marginTop: {
+                    base: "-20px",
+                    md: "0px",
+                  },
+                }}
               >
                 <Image
                   src={isRestaurantPage ? RestaurantImage : AccountingImage}
