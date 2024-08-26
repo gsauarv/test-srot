@@ -35,6 +35,7 @@ const CommonLayout = ({ children }) => {
       {mounted ? (
         <ChakraProvider theme={theme}>
           <NavBar />
+
           {children}
           <Footer />
         </ChakraProvider>
