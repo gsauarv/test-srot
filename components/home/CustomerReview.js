@@ -95,11 +95,12 @@ const CustomerReview = () => {
                   height: "54px",
                   backgroundColor: "#fff",
                   borderRadius: "100%",
+                  boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
                 }}
                 onClick={previous}
               >
                 <MdKeyboardArrowLeft
-                  style={{ fontSize: "28px", color: "#D1D1DB" }}
+                  style={{ fontSize: "28px", color: "#201F37" }}
                 />
               </IconButton>
               <IconButton

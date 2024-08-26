@@ -26,8 +26,8 @@ const AccountingLanding = ({ isRestaurantPage = false }) => {
         sx={{
           width: "100%",
           height: {
-            base: "125dvh",
-            sm: "101dvh",
+            base: "130dvh",
+            sm: "110dvh",
             md: "85dvh",
           },
         }}
@@ -39,8 +39,8 @@ const AccountingLanding = ({ isRestaurantPage = false }) => {
             top: 0,
             w: "100%",
             height: {
-              base: "125dvh",
-              sm: "101dvh",
+              base: "130dvh",
+              sm: "110dvh",
               md: "85dvh",
             },
             // height: "100%",
