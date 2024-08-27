@@ -1,5 +1,6 @@
 import BlogDetails from "@/components/blogs/BlogDetails";
 import { client } from "@/sanity/client";
+import { revalidateTag } from "next/cache";
 
 const getSingleBlogDetail = async (slug) => {
   const blogs = await client.fetch(
