@@ -4,55 +4,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import CommonWrapper from "../common/CommonWrapper";
 import BlogCard from "./BlogCard";
 
-const BlogLandingSection = () => {
-  const blogs_data = [
-    {
-      id: 1,
-      title: "The Rise of JavaScript Frameworks",
-      author: "Jane Doe",
-      content:
-        "JavaScript frameworks have become an integral part of web development. They provide powerful tools and libraries to create dynamic and responsive web applications...",
-      date: "2024-01-15",
-      slug: "the-rise-of-javascript-frameworks",
-    },
-    {
-      id: 2,
-      title: "Understanding React Hooks",
-      author: "John Smith",
-      content:
-        "React Hooks were introduced in version 16.8 and have transformed the way we write React components. Hooks allow you to use state and other React features without writing a class...",
-      date: "2024-02-10",
-      slug: "understanding-react-hooks",
-    },
-    {
-      id: 3,
-      title: "A Guide to CSS Grid",
-      author: "Alice Johnson",
-      content:
-        "CSS Grid Layout is a two-dimensional layout system for the web. It allows you to create complex layouts more easily compared to older methods like floats and flexbox...",
-      date: "2024-03-05",
-      slug: "a-guide-to-css-grid",
-    },
-    {
-      id: 4,
-      title: "Tips for Optimizing Web Performance",
-      author: "Bob Brown",
-      content:
-        "Web performance optimization is crucial for providing a good user experience. This blog covers various techniques such as lazy loading, code splitting, and using efficient image formats...",
-      date: "2024-04-20",
-      slug: "tips-for-optimizing-web-performance",
-    },
-    {
-      id: 5,
-      title: "An Introduction to TypeScript",
-      author: "Catherine Green",
-      content:
-        "TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. It adds optional static types, interfaces, and type inference, making it easier to write large and maintainable codebases...",
-      date: "2024-05-18",
-      slug: "an-introduction-to-typescript",
-    },
-  ];
-
+const BlogLandingSection = ({ blogs }) => {
   return (
     <>
       <Flex
@@ -94,15 +46,10 @@ const BlogLandingSection = () => {
           paddingBlock={"50px 0px"}
           placeItems={"center"}
         >
-          {blogs_data?.map(({ title, author, content, date, id }) => (
-            <Link key={id} href={`blogs/${id}`}>
+          {blogs?.map((item) => (
+            <Link key={item?.id} href={`blogs/${item?.slug?.current}`}>
               <GridItem>
-                <BlogCard
-                  title={title}
-                  author={author}
-                  content={content}
-                  date={date}
-                />
+                <BlogCard item={item} />
               </GridItem>
             </Link>
           ))}

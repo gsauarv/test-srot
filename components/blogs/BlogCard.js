@@ -1,13 +1,22 @@
-import { Avatar, Box, Flex, Text } from "@chakra-ui/react";
+"use client";
+import { client } from "@/sanity/client";
+import { Box, Text } from "@chakra-ui/react";
+import imageUrlBuilder from "@sanity/image-url";
 import Image from "next/image";
 
-const BlogCard = ({ title, author, content, date }) => {
+export function urlFor(source) {
+  return imageUrlBuilder(client).image(source);
+}
+
+const BlogCard = ({ item }) => {
+  const { title, author, content, date, description, featured_image } = item;
+  console.log({ featured_image: urlFor(featured_image).url() });
   return (
     <>
       <Box
         sx={{
           width: "344px",
-          minH: "503px",
+          // minH: "503px",
           boxShadow: "0px 20px 50px 0px #12112714",
           borderRadius: "12px",
           backgroundColor: "#fff",
@@ -15,7 +24,7 @@ const BlogCard = ({ title, author, content, date }) => {
         }}
       >
         <Box sx={{ width: "100%", height: "201px", position: "relative" }}>
-          <Image src={"https://picsum.photos/600/600"} fill />
+          <Image src={urlFor(featured_image).url()} fill />
         </Box>
 
         <Box sx={{ padding: "32px 24px 16px 24px" }}>
@@ -40,10 +49,10 @@ const BlogCard = ({ title, author, content, date }) => {
               height: "110px",
             }}
           >
-            {content}
+            {description}
           </Text>
 
-          <Flex
+          {/* <Flex
             sx={{ paddingTop: "41px", columnGap: "12px", alignItems: "center" }}
           >
             <Avatar
@@ -62,7 +71,7 @@ const BlogCard = ({ title, author, content, date }) => {
                 {date} · 6 min read
               </Text>
             </Box>
-          </Flex>
+          </Flex> */}
         </Box>
       </Box>
     </>
