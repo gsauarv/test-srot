@@ -24,7 +24,7 @@ const BlogCard = ({ item }) => {
         }}
       >
         <Box sx={{ width: "100%", height: "201px", position: "relative" }}>
-          <Image src={urlFor(featured_image).url()} fill />
+          <Image src={urlFor(featured_image).url()} fill objectFit="cover" />
         </Box>
 
         <Box sx={{ padding: "32px 24px 16px 24px" }}>
@@ -34,8 +34,9 @@ const BlogCard = ({ item }) => {
               fontWeight: 700,
               color: "#121127",
               lineHeight: "25.2px",
-              height: "50px",
+              // height: "50px",
             }}
+            noOfLines={3}
           >
             {title}
           </Text>
@@ -46,8 +47,9 @@ const BlogCard = ({ item }) => {
               fontWeight: 400,
               fontSize: "14px",
               paddingTop: "24px",
-              height: "110px",
+              // height: "110px",
             }}
+            noOfLines={3}
           >
             {description}
           </Text>
