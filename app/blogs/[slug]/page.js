@@ -22,3 +22,5 @@ const BlogDetailPage = async ({ params }) => {
 };
 
 export default BlogDetailPage;
+
+export const revalidate = 60;
