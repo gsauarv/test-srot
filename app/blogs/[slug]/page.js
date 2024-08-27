@@ -4,7 +4,13 @@ import { revalidateTag } from "next/cache";
 
 const getSingleBlogDetail = async (slug) => {
   const blogs = await client.fetch(
-    `*[_type == "blogs"&&slug.current == "${slug}"]`
+    `*[_type == "blogs"&&slug.current == "${slug}"]`,
+    {
+      next: {
+        revalidate: 60,
+        tags: [slug],
+      },
+    }
   );
   revalidateTag(slug, 60);
   return blogs;

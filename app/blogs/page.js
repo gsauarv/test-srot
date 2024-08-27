@@ -1,10 +1,13 @@
 import BlogLandingSection from "@/components/blogs/BlogLandingSection";
 import { client } from "@/sanity/client";
-import { revalidateTag } from "next/cache";
 
 const getBlogs = async () => {
-  const blogs = await client.fetch(`*[_type == "blogs"]`);
-  revalidateTag("blogs", 60);
+  const blogs = await client.fetch(`*[_type == "blogs"]`, {
+    next: {
+      revalidate: 60,
+      tags: ["blogs"],
+    },
+  });
   return blogs;
 };
 
