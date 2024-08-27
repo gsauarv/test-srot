@@ -70,11 +70,11 @@ const Footer = () => {
         },
         {
           label: "Privacy",
-          to: "/",
+          to: "/privacy-policy",
         },
         {
           label: "Terms and conditions",
-          to: "/",
+          to: "/terms-and-conditions",
         },
       ],
     },

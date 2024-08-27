@@ -18,6 +18,7 @@ const ptComponents = {
           alt={value.alt || " "}
           loading="lazy"
           src={urlFor(value).fit("max").auto("format")}
+          style={{ margin: "25px 0px" }}
         />
       );
     },
