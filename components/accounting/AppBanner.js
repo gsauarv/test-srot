@@ -62,7 +62,7 @@ const AppBanner = ({ isRestaurantPage = false }) => {
                 sx={{
                   textAlign: "center",
                   fontSize: {
-                    base: "30px",
+                    base: "20px",
                     md: "38px",
                   },
                   color: "#181380",
@@ -76,7 +76,10 @@ const AppBanner = ({ isRestaurantPage = false }) => {
                 style={{
                   textAlign: "center",
                   padding: "16px 0px",
-                  fontSize: "16px",
+                  fontSize: {
+                    base: "10px",
+                    md: "16px",
+                  },
                   fontWeight: 500,
                   lineHeight: "27px",
                   color: "#6C6B80",

@@ -16,6 +16,7 @@ import SubscriptionsImg from "@/public/subscriptions.svg";
 import TransactionImg from "@/public/transactions.svg";
 
 import Image from "next/image";
+import Link from "next/link";
 
 const HelpLandingSection = () => {
   const help_data = [
@@ -25,14 +26,17 @@ const HelpLandingSection = () => {
       links: [
         {
           label: "Downloading app",
+          value: "/downloading-app",
         },
 
         {
           label: "Help Guide",
+          value: "/help-guide",
         },
 
         {
           label: "Verifying Identity",
+          value: "/verifying-identity",
         },
       ],
     },
@@ -222,12 +226,14 @@ const HelpCard = ({ icon, title, links = [] }) => {
 
         <Box sx={{ paddingTop: "24px" }}>
           <Flex sx={{ flexDir: "column", rowGap: "8px" }}>
-            {links?.map((item) => (
-              <Text
-                sx={{ fontSize: "15px", fontWeight: 500, color: "#383751" }}
-              >
-                {item?.label}
-              </Text>
+            {links?.map((item, index) => (
+              <Link href={`/help/${item?.value}` || "/"} key={index}>
+                <Text
+                  sx={{ fontSize: "15px", fontWeight: 500, color: "#383751" }}
+                >
+                  {item?.label}
+                </Text>
+              </Link>
             ))}
           </Flex>
         </Box>

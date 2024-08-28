@@ -26,7 +26,7 @@ const AccountingLanding = ({ isRestaurantPage = false }) => {
         sx={{
           width: "100%",
           height: {
-            base: "130dvh",
+            base: "108dvh",
             sm: "122dvh",
             md: "85dvh",
           },
@@ -39,7 +39,7 @@ const AccountingLanding = ({ isRestaurantPage = false }) => {
             top: 0,
             w: "100%",
             height: {
-              base: "130dvh",
+              base: "108dvh",
               sm: "122dvh",
               md: "85dvh",
             },
@@ -84,6 +84,7 @@ const AccountingLanding = ({ isRestaurantPage = false }) => {
                     backgroundColor: "#F5F8FF",
                     color: isRestaurantPage ? "#FF4D00" : "#496AD0",
                     fontSize: "12px",
+
                     height: "30px",
                     border: `1px solid ${
                       isRestaurantPage ? "#E4D5C4" : "#CCD9F8"
@@ -100,12 +101,12 @@ const AccountingLanding = ({ isRestaurantPage = false }) => {
                   sx={{
                     color: isRestaurantPage ? "#150E07" : "#2019A2",
                     fontSize: {
-                      base: "25px",
+                      base: "16px",
                       md: "25px",
                     },
                     fontWeight: 500,
                     lineHeight: {
-                      base: "37px",
+                      base: "25px",
                       md: "37px",
                     },
                     paddingTop: "10px",
@@ -119,12 +120,12 @@ const AccountingLanding = ({ isRestaurantPage = false }) => {
                   sx={{
                     color: isRestaurantPage ? "#150E07" : "#2019A2",
                     fontSize: {
-                      base: "41px",
+                      base: "26px",
                       md: "41px",
                     },
                     fontWeight: 800,
                     lineHeight: {
-                      base: "49px",
+                      base: "35px",
                       md: "49px",
                     },
                     paddingTop: "10px",
@@ -141,7 +142,10 @@ const AccountingLanding = ({ isRestaurantPage = false }) => {
                     color: "#6C6B80",
                     fontSize: "15px",
                     fontWeight: 300,
-                    paddingTop: "10px",
+                    paddingTop: {
+                      base: "5px",
+                      md: "10px",
+                    },
                   }}
                 >
                   {isRestaurantPage
@@ -210,7 +214,7 @@ const AccountingLanding = ({ isRestaurantPage = false }) => {
               <Box
                 w={{ base: "100%", md: "850px" }}
                 position={"relative"}
-                h={{ base: 450, md: 650 }}
+                h={{ base: 500, md: 650 }}
                 sx={{
                   marginTop: {
                     base: "-80px",

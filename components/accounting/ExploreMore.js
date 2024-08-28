@@ -94,7 +94,7 @@ const ExploreMore = ({ isRestaurantPage = false }) => {
         justifyContent={"center"}
         sx={{
           mt: {
-            base: "40px",
+            base: "20px",
             md: "0px",
           },
         }}
@@ -102,7 +102,7 @@ const ExploreMore = ({ isRestaurantPage = false }) => {
         <Box
           sx={{
             width: {
-              base: "100%",
+              base: "95%",
               md: "471.98px",
             },
             textAlign: "center",
@@ -122,7 +122,10 @@ const ExploreMore = ({ isRestaurantPage = false }) => {
         <Flex
           justifyContent={"center"}
           columnGap={"24px"}
-          paddingBlock={"46px"}
+          paddingBlock={{
+            base: "10px",
+            md: "46px",
+          }}
           sx={{
             flexDirection: {
               base: "column",

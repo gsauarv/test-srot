@@ -31,7 +31,10 @@ const LandingSection = () => {
           w: "100%",
           height: "100%",
           paddingTop: "80px",
-          paddingBottom: "150px",
+          paddingBottom: {
+            base: "50px",
+            md: "150px",
+          },
         }}
       >
         <CommonWrapper>
@@ -75,11 +78,11 @@ const LandingSection = () => {
                 <Text
                   sx={{
                     fontSize: {
-                      base: "25px",
+                      base: "16px",
                       md: "25px",
                     },
                     lineHeight: {
-                      base: "37px",
+                      base: "28px",
                       md: "37px",
                     },
                     fontWeight: 500,
@@ -93,12 +96,12 @@ const LandingSection = () => {
                 <Text
                   sx={{
                     fontSize: {
-                      base: "34px",
+                      base: "22px",
                       md: "34px",
                     },
                     fontWeight: 800,
                     lineHeight: {
-                      base: "45px",
+                      base: "30px",
                       md: "45px",
                     },
                     paddingTop: "10px",
@@ -112,7 +115,10 @@ const LandingSection = () => {
                   sx={{
                     paddingTop: "16px",
                     color: "#6C6B80",
-                    fontSize: "16px",
+                    fontSize: {
+                      base: "14px",
+                      md: "16px",
+                    },
                     fontWeight: 300,
                   }}
                 >
@@ -122,7 +128,10 @@ const LandingSection = () => {
 
                 <Flex
                   sx={{
-                    paddingTop: "40px",
+                    paddingTop: {
+                      base: "30px",
+                      md: "40px",
+                    },
                     alignItems: "center",
                     columnGap: "16px",
                   }}
@@ -163,9 +172,16 @@ const LandingSection = () => {
 
                 <Text
                   sx={{
-                    paddingTop: "30px",
+                    paddingTop: {
+                      base: "20px",
+                      md: "30px",
+                    },
                     color: "#6C6B80",
-                    fontSize: "14px",
+
+                    fontSize: {
+                      base: "12px",
+                      md: "14px",
+                    },
                     fontWeight: 500,
                   }}
                 >

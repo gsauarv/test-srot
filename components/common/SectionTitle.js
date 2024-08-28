@@ -5,9 +5,15 @@ const SectionTitle = ({ title, subtitle }) => {
     <>
       <Text
         sx={{
-          fontSize: "38px",
+          fontSize: {
+            base: "24px",
+            md: "38px",
+          },
           color: "#181380",
-          lineHeight: "45px",
+          lineHeight: {
+            base: "34px",
+            md: "45px",
+          },
           fontWeight: 700,
         }}
       >

@@ -67,6 +67,10 @@ const BlogDetails = ({ blogDetails }) => {
               borderRadius: "100%",
               border: "1px solid #6C6B80",
               backgroundColor: "transparent",
+              mb: {
+                base: "15px",
+                md: "0px",
+              },
             }}
             icon={<ArrowBackIcon sx={{ fontSize: "14px" }} />}
           ></IconButton>
@@ -95,7 +99,10 @@ const BlogDetails = ({ blogDetails }) => {
           <Text
             sx={{
               color: "#3E399B",
-              fontSize: "30px",
+              fontSize: {
+                base: "18px",
+                md: "30px",
+              },
               fontWeight: 700,
             }}
           >
@@ -105,7 +112,10 @@ const BlogDetails = ({ blogDetails }) => {
           <Box
             sx={{
               width: "100%",
-              height: "430px",
+              height: {
+                base: "250px",
+                md: "430px",
+              },
               position: "relative",
               marginTop: "18px",
             }}

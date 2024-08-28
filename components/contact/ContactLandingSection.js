@@ -31,7 +31,7 @@ const ContactLandingSection = () => {
           sx={{
             color: "#3E399B",
             fontSize: {
-              base: "30px",
+              base: "24px",
               lg: "46px",
             },
             fontWeight: 700,

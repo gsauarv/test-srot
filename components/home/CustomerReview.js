@@ -81,7 +81,15 @@ const CustomerReview = () => {
   };
   return (
     <>
-      <Box sx={{ backgroundColor: "#F6F6F8", padding: "71px 0px" }}>
+      <Box
+        sx={{
+          backgroundColor: "#F6F6F8",
+          padding: {
+            base: "20px 0px",
+            md: "71px 0px",
+          },
+        }}
+      >
         <CommonWrapper>
           <Flex sx={{ alignItems: "center", justifyContent: "space-between" }}>
             <Box sx={{ width: "408px" }}>
@@ -154,7 +162,10 @@ const ReviewCard = ({ item }) => {
             height: "100%",
             minH: "400px",
             borderRadius: "12px",
-            padding: "44px",
+            padding: {
+              base: "30px",
+              md: "44px",
+            },
           }}
         >
           <Flex columnGap={"16px"} alignItems={"center"}>
@@ -194,7 +205,10 @@ const ReviewCard = ({ item }) => {
                 fontSize: "16px",
                 fontWeight: 500,
                 color: "#201F37",
-                lineHeight: "33px",
+                lineHeight: {
+                  base: "28px",
+                  md: "33px",
+                },
               }}
             >
               {item?.review}

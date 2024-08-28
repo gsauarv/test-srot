@@ -60,10 +60,10 @@ const NavBar = () => {
       href: "/pricing",
     },
 
-    // {
-    //   label: "Blogs",
-    //   href: "/blogs",
-    // },
+    {
+      label: "Blogs",
+      href: "/blogs",
+    },
 
     // {
     //   label: "Help",

@@ -18,11 +18,11 @@ const Footer = () => {
         // },
         {
           label: "Accounting",
-          to: "/",
+          to: "/accounting",
         },
         {
           label: "Restaurant",
-          to: "/",
+          to: "/restaurant",
         },
         // {
         //   label: "Contracts",
@@ -40,7 +40,7 @@ const Footer = () => {
       links: [
         {
           label: "Blog",
-          to: "/",
+          to: "/blogs",
         },
         {
           label: "Account Resource",
@@ -66,7 +66,7 @@ const Footer = () => {
         },
         {
           label: "Contact us",
-          to: "/",
+          to: "/contact",
         },
         {
           label: "Privacy",

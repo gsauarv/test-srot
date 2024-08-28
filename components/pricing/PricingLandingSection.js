@@ -42,7 +42,7 @@ const PricingLandingSection = () => {
           sx={{
             color: "#3E399B",
             fontSize: {
-              base: "40px",
+              base: "30px",
               md: "46px",
             },
             fontWeight: 700,
@@ -73,7 +73,10 @@ const PricingLandingSection = () => {
                 md: "554px",
               },
               fontWeight: 300,
-              fontSize: "15px",
+              fontSize: {
+                base: "13px",
+                md: "15px",
+              },
               color: "#6C6B80",
             }}
           >
@@ -104,7 +107,6 @@ const PricingLandingSection = () => {
                   width: "fit-content",
                   height: "37px",
                   borderRadius: "4px",
-
                   fontSize: "15px",
                   fontWeight: 600,
                 }}
@@ -141,10 +143,13 @@ const PricingLandingSection = () => {
             sx={{
               fontWeight: 700,
               color: "#2019A2",
-              fontSize: "26px",
+              fontSize: "24px",
               fontWeight: 700,
               textAlign: "center",
-              paddingTop: "40px",
+              paddingTop: {
+                base: "15px",
+                md: "40px",
+              },
             }}
           >
             {selectedTab === 0
@@ -171,7 +176,15 @@ const PricingLandingSection = () => {
                 borderRadius: "4px",
               }}
             />
-            <Box sx={{ paddingTop: "40px", paddingBottom: "88px" }}>
+            <Box
+              sx={{
+                paddingTop: {
+                  base: "20px",
+                  md: "40px",
+                },
+                paddingBottom: "88px",
+              }}
+            >
               <PackageSection
                 title={false}
                 isRestaurantPage={selectedTab === 1}
@@ -181,11 +194,22 @@ const PricingLandingSection = () => {
         </Box>
       </CommonWrapper>
 
-      <Box sx={{ paddingBlock: "80px", backgroundColor: "#fff" }}>
+      <Box
+        sx={{
+          paddingBlock: {
+            base: "40px",
+            md: "80px",
+          },
+          backgroundColor: "#fff",
+        }}
+      >
         <CommonWrapper type={"tight"}>
           <Text
             sx={{
-              fontSize: "24px",
+              fontSize: {
+                base: "20px",
+                md: "24px",
+              },
               color: selectedTab === 0 ? "#2019A2" : "#FD8332",
               fontWeight: 600,
             }}
@@ -203,7 +227,10 @@ const PricingLandingSection = () => {
                   <Text
                     sx={{
                       fontWeight: 500,
-                      fontSize: "18px",
+                      fontSize: {
+                        base: "14px",
+                        md: "18px",
+                      },
                       color: "#383751",
                     }}
                   >

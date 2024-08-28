@@ -123,10 +123,16 @@ const PlatformDetailCard = ({ title, type = "" }) => {
             <Box sx={{ paddingTop: "8px" }}>
               <Text
                 sx={{
-                  fontSize: "36px",
+                  fontSize: {
+                    base: "22px",
+                    md: "36px",
+                  },
                   color: "#181380",
                   fontWeight: 700,
-                  lineHeight: "46px",
+                  lineHeight: {
+                    base: "34px",
+                    md: "46px",
+                  },
                   width: {
                     base: "100%",
                     md:

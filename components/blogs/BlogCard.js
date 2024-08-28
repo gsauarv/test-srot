@@ -30,7 +30,10 @@ const BlogCard = ({ item }) => {
         <Box sx={{ padding: "32px 24px 16px 24px" }}>
           <Text
             sx={{
-              fontSize: "18px",
+              fontSize: {
+                base: "16px",
+                md: "18px",
+              },
               fontWeight: 700,
               color: "#121127",
               lineHeight: "25.2px",
@@ -45,8 +48,14 @@ const BlogCard = ({ item }) => {
             sx={{
               color: "#1211278F",
               fontWeight: 400,
-              fontSize: "14px",
-              paddingTop: "24px",
+              fontSize: {
+                base: "12px",
+                md: "14px",
+              },
+              paddingTop: {
+                base: "10px",
+                md: "24px",
+              },
               // height: "110px",
             }}
             noOfLines={3}

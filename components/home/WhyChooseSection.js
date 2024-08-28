@@ -28,12 +28,15 @@ const WhyChooseSection = () => {
         <Text
           sx={{
             width: {
-              base: "100%",
+              base: "95%",
               md: "642.63px",
             },
-            lineHeight: "46px",
-            fontSize: {
+            lineHeight: {
               base: "30px",
+              md: "46px",
+            },
+            fontSize: {
+              base: "22px",
               md: "38px",
             },
             fontWeight: 700,
@@ -52,6 +55,10 @@ const WhyChooseSection = () => {
             fontSize: "16px",
             paddingTop: "16px",
             fontWeight: 400,
+            width: {
+              base: "95%",
+              md: "100%",
+            },
           }}
         >
           Take your business to the next level with our cutting-edge.

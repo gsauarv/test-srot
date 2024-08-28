@@ -1,6 +1,5 @@
-import { Flex, Grid, GridItem, IconButton, Text } from "@chakra-ui/react";
+import { Box, Flex, Grid, GridItem, Text } from "@chakra-ui/react";
 import Link from "next/link";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import CommonWrapper from "../common/CommonWrapper";
 import BlogCard from "./BlogCard";
 
@@ -16,7 +15,16 @@ const BlogLandingSection = ({ blogs }) => {
           paddingTop: "46px",
         }}
       >
-        <Text sx={{ fontSize: "46px", fontWeight: 700, color: "#3E399B" }}>
+        <Text
+          sx={{
+            fontSize: {
+              base: "28px",
+              md: "46px",
+            },
+            fontWeight: 700,
+            color: "#3E399B",
+          }}
+        >
           Our Blogs
         </Text>
         <Text
@@ -34,28 +42,28 @@ const BlogLandingSection = ({ blogs }) => {
           Take your business to the next level with our cutting-edge.
         </Text>
       </Flex>
+      <Box sx={{ paddingY: "20px" }}>
+        <CommonWrapper type={"tight"}>
+          <Grid
+            templateColumns={{
+              base: "repeat(1, 1fr)",
+              md: "repeat(3, 1fr)",
+            }}
+            rowGap={"42px"}
+            columnGap={"26px"}
+            paddingBlock={"50px 0px"}
+            placeItems={"center"}
+          >
+            {blogs?.map((item) => (
+              <Link key={item?.id} href={`blogs/${item?.slug?.current}`}>
+                <GridItem>
+                  <BlogCard item={item} />
+                </GridItem>
+              </Link>
+            ))}
+          </Grid>
 
-      <CommonWrapper type={"tight"}>
-        <Grid
-          templateColumns={{
-            base: "repeat(1, 1fr)",
-            md: "repeat(3, 1fr)",
-          }}
-          rowGap={"42px"}
-          columnGap={"26px"}
-          paddingBlock={"50px 0px"}
-          placeItems={"center"}
-        >
-          {blogs?.map((item) => (
-            <Link key={item?.id} href={`blogs/${item?.slug?.current}`}>
-              <GridItem>
-                <BlogCard item={item} />
-              </GridItem>
-            </Link>
-          ))}
-        </Grid>
-
-        <Flex
+          {/* <Flex
           sx={{
             justifyContent: "center",
             paddingBlock: "76px",
@@ -117,8 +125,9 @@ const BlogLandingSection = ({ blogs }) => {
               border: "1px solid #DFE3E8",
             }}
           ></IconButton>
-        </Flex>
-      </CommonWrapper>
+        </Flex> */}
+        </CommonWrapper>
+      </Box>
     </>
   );
 };

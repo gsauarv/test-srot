@@ -17,16 +17,17 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <CommonLayout>{children}</CommonLayout>
+
         <Script
           id="tawk-to"
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `
-              var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+             var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
               (function(){
               var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
               s1.async=true;
-              s1.src='https://embed.tawk.to/66c43675146b7af4a43c4850/1i5n79f9h';
+              s1.src='https://embed.tawk.to/66c6d1bbea492f34bc08cde8/1i5sa6ht8';
               s1.charset='UTF-8';
               s1.setAttribute('crossorigin','*');
               s0.parentNode.insertBefore(s1,s0);

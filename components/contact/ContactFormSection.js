@@ -39,7 +39,14 @@ const ContactFormSection = () => {
               }}
             >
               <Text
-                sx={{ fontSize: "26px", fontWeight: 700, color: "#4559BD" }}
+                sx={{
+                  fontSize: {
+                    base: "24px",
+                    md: "26px",
+                  },
+                  fontWeight: 700,
+                  color: "#4559BD",
+                }}
               >
                 Submit a request
               </Text>

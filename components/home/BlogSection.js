@@ -24,7 +24,14 @@ const BlogSection = () => {
             />
           </Flex>
 
-          <Box sx={{ paddingTop: "43px" }}>
+          <Box
+            sx={{
+              paddingTop: {
+                base: "0px",
+                md: "43px",
+              },
+            }}
+          >
             <Grid
               templateColumns={{
                 base: "repeat(1, 1fr)",
