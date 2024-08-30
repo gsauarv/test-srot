@@ -28,7 +28,7 @@ const AccountingLanding = ({ isRestaurantPage = false }) => {
           height: {
             base: "108dvh",
             sm: "122dvh",
-            md: "85dvh",
+            md: "87dvh",
           },
         }}
       >
@@ -41,7 +41,7 @@ const AccountingLanding = ({ isRestaurantPage = false }) => {
             height: {
               base: "108dvh",
               sm: "122dvh",
-              md: "85dvh",
+              md: "87dvh",
             },
             // height: "100%",
             // height: "75dvh",
