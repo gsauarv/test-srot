@@ -46,6 +46,11 @@ const Footer = () => {
           label: "Account Resource",
           to: "/",
         },
+
+        {
+          label: "Download",
+          to: "https://drive.google.com/drive/folders/1NbrvXhyE8GZ9Zlaepwdzk3Np0QVnZM7d?usp=sharing",
+        },
         // {
         //   label: "How to Bill a client",
         //   to: "/",
