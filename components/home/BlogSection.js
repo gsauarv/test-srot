@@ -24,28 +24,30 @@ const BlogSection = () => {
             />
           </Flex>
 
-          <Box
-            sx={{
-              paddingTop: {
-                base: "0px",
-                md: "43px",
-              },
-            }}
-          >
-            <Grid
-              templateColumns={{
-                base: "repeat(1, 1fr)",
-                md: "repeat(3, 1fr)",
+          <Flex justifyContent={"center"}>
+            <Box
+              sx={{
+                paddingTop: {
+                  base: "0px",
+                  md: "43px",
+                },
               }}
-              gap={6}
             >
-              {[...Array(3)]?.map((item) => (
-                <GridItem>
-                  <BlogCard />
-                </GridItem>
-              ))}
-            </Grid>
-          </Box>
+              <Grid
+                templateColumns={{
+                  base: "repeat(1, 1fr)",
+                  md: "repeat(3, 1fr)",
+                }}
+                gap={6}
+              >
+                {[...Array(3)]?.map((item) => (
+                  <GridItem>
+                    <BlogCard />
+                  </GridItem>
+                ))}
+              </Grid>
+            </Box>
+          </Flex>
 
           <Flex align={"center"} justifyContent={"center"}>
             <Link href={"/blogs"}>

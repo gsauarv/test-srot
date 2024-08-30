@@ -44,25 +44,26 @@ const BlogLandingSection = ({ blogs }) => {
       </Flex>
       <Box sx={{ paddingY: "20px" }}>
         <CommonWrapper type={"tight"}>
-          <Grid
-            templateColumns={{
-              base: "repeat(1, 1fr)",
-              md: "repeat(3, 1fr)",
-            }}
-            rowGap={"42px"}
-            columnGap={"26px"}
-            paddingBlock={"50px 0px"}
-            placeItems={"center"}
-          >
-            {blogs?.map((item) => (
-              <Link key={item?.id} href={`blogs/${item?.slug?.current}`}>
-                <GridItem>
-                  <BlogCard item={item} />
-                </GridItem>
-              </Link>
-            ))}
-          </Grid>
-
+          <Flex sx={{ justifyContent: "center" }}>
+            <Grid
+              templateColumns={{
+                base: "repeat(1, 1fr)",
+                md: "repeat(3, 1fr)",
+              }}
+              rowGap={"42px"}
+              columnGap={"26px"}
+              paddingBlock={"50px 0px"}
+              placeItems={"center"}
+            >
+              {blogs?.map((item) => (
+                <Link key={item?.id} href={`blogs/${item?.slug?.current}`}>
+                  <GridItem>
+                    <BlogCard item={item} />
+                  </GridItem>
+                </Link>
+              ))}
+            </Grid>
+          </Flex>
           {/* <Flex
           sx={{
             justifyContent: "center",
