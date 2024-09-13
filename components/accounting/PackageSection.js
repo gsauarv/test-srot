@@ -87,7 +87,7 @@ const PackageSection = ({ title = true, isRestaurantPage }) => {
       price: "15,000",
       items: [
         { title: "Unlimited Storage", included: true },
-        { title: "Upto 3 Users", included: true },
+        { title: "Upto 5 Users", included: true },
         { title: "Table Management", included: true },
         { title: "Real Time Analytics", included: true },
         { title: "50+ Insightful Reports", included: true },
@@ -96,13 +96,15 @@ const PackageSection = ({ title = true, isRestaurantPage }) => {
         { title: "Manage Delivery Partners", included: true },
         { title: "Leakage Control & Inventory Tracking", included: false },
       ],
+
+      otc: "30,000",
       icon: <BsFillSendFill />,
     },
 
     {
       name: "Premium",
       subtitle: "For large restaurants and cafe",
-      price: "30,000",
+      price: "20,000",
       isRecommended: true,
       items: [
         { title: "Unlimited Storage", included: true },
@@ -115,14 +117,15 @@ const PackageSection = ({ title = true, isRestaurantPage }) => {
         { title: "Manage Delivery Partners", included: true },
         { title: "Leakage Control & Inventory Tracking", included: true },
       ],
+      otc: "40,000",
       icon: <FaIdCardClip />,
     },
 
     {
       name: "Premium Plus",
       subtitle: "For large restaurants",
-      price: "50,000",
-      deducted_price: "60,000",
+      price: "30,000",
+      deducted_price: "35,000",
 
       items: [
         {
@@ -139,6 +142,7 @@ const PackageSection = ({ title = true, isRestaurantPage }) => {
           included: true,
         },
       ],
+      otc: "50,000",
       icon: <FaCrown />,
     },
   ];
@@ -212,6 +216,7 @@ const PackageSection = ({ title = true, isRestaurantPage }) => {
                 enterprise_description={item?.enterprise_description}
                 isRecommended={item?.isRecommended}
                 deducted_price={item?.deducted_price}
+                otc={item?.otc}
               />
             ))
           : accountingData?.map((item) => (
@@ -226,6 +231,7 @@ const PackageSection = ({ title = true, isRestaurantPage }) => {
                 included={item?.items}
                 enterprise_description={item?.enterprise_description}
                 deducted_price={item?.deducted_price}
+                otc={item?.otc}
               />
             ))}
       </Flex>
@@ -246,6 +252,7 @@ const PackageCard = ({
   included = [],
   enterprise_description,
   deducted_price,
+  otc,
 }) => {
   return (
     <>
@@ -326,6 +333,17 @@ const PackageCard = ({
             {!enterprise_description && (
               <Box sx={{ paddingTop: "13px" }}>
                 <Text
+                  // as={"span"}
+                  sx={{
+                    fontSize: "14px",
+                    fontWeight: 500,
+                    color: "#9D9CAF",
+                    textAlign: "center",
+                  }}
+                >
+                  Yearly Renewal@
+                </Text>
+                <Text
                   sx={{
                     fontSize: "26px",
                     fontWeight: 800,
@@ -333,12 +351,6 @@ const PackageCard = ({
                   }}
                 >
                   Rs {price}{" "}
-                  <Text
-                    as={"span"}
-                    sx={{ fontSize: "14px", fontWeight: 500, color: "#9D9CAF" }}
-                  >
-                    /year
-                  </Text>
                 </Text>
 
                 {deducted_price && (
@@ -353,7 +365,7 @@ const PackageCard = ({
                       Rs {deducted_price}
                     </Text>
 
-                    <Text
+                    {/* <Text
                       as={"span"}
                       sx={{
                         fontSize: "16px",
@@ -362,7 +374,7 @@ const PackageCard = ({
                       }}
                     >
                       /year
-                    </Text>
+                    </Text> */}
                   </Flex>
                 )}
               </Box>
@@ -416,6 +428,21 @@ const PackageCard = ({
                 </Text>
               ))
             )}
+            <Box>
+              <Text
+                sx={{
+                  fontSize: "14px",
+                  color: "#383751",
+                  fontWeight: 500,
+                  // paddingBlock: "3px",
+                  marginTop: "20px",
+                  fontWeight: "700",
+                  // textAlign: "center",
+                }}
+              >
+                {otc && `One Time Cost: Rs ${otc} (Includes first year cost) `}
+              </Text>
+            </Box>
 
             {enterprise_description ? (
               <>
