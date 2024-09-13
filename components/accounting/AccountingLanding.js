@@ -2,6 +2,7 @@ import AccountingImage from "@/public/accounting.svg";
 import RestaurantImage from "@/public/landingimage1.svg";
 import { Box, Button, Flex, Text } from "@chakra-ui/react";
 import Image from "next/image";
+import Link from "next/link";
 import CommonWrapper from "../common/CommonWrapper";
 
 const AccountingLanding = ({ isRestaurantPage = false }) => {
@@ -20,6 +21,7 @@ const AccountingLanding = ({ isRestaurantPage = false }) => {
     bottomSubtitle:
       "Kick start your restaurant business to the digital future ",
   };
+
   return (
     <>
       <Box
@@ -161,25 +163,32 @@ const AccountingLanding = ({ isRestaurantPage = false }) => {
                       columnGap: "16px",
                     }}
                   >
-                    <Button
-                      _hover={{
-                        backgroundColor: "brand.hover",
-                      }}
-                      sx={{
-                        background: isRestaurantPage
-                          ? "linear-gradient(277.8deg, #F31255 -81.61%, #FF9E2A 105.38%)"
-                          : "brand.primary",
+                    <Link href={"/contact"}>
+                      <Button
+                        _hover={{
+                          backgroundColor: "brand.hover",
+                        }}
+                        sx={{
+                          background: isRestaurantPage
+                            ? "linear-gradient(277.8deg, #F31255 -81.61%, #FF9E2A 105.38%)"
+                            : "brand.primary",
 
-                        color: "white",
-                        fontSize: "16px",
-                        fontWeight: 500,
-                        width: "152px",
-                        height: "48px",
-                        borderRadius: "4px",
-                      }}
-                    >
-                      Get Started
-                    </Button>
+                          color: "white",
+                          fontSize: "16px",
+                          fontWeight: 500,
+                          width: "152px",
+                          height: "48px",
+                          borderRadius: "4px",
+                        }}
+                        _focus={{
+                          background: isRestaurantPage
+                            ? "linear-gradient(277.8deg, #F31255 -81.61%, #FF9E2A 105.38%)"
+                            : "brand.primary",
+                        }}
+                      >
+                        Get Started
+                      </Button>
+                    </Link>
                     {/* <Button
                       leftIcon={<MdSlowMotionVideo />}
                       sx={{

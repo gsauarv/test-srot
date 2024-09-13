@@ -1,4 +1,5 @@
 import { Box, Button, Divider, Flex, Text } from "@chakra-ui/react";
+import Link from "next/link";
 import { BsFillSendFill } from "react-icons/bs";
 import { FaCrown } from "react-icons/fa";
 import { FaBuilding, FaIdCardClip } from "react-icons/fa6";
@@ -418,32 +419,59 @@ const PackageCard = ({
 
             {enterprise_description ? (
               <>
-                <Button
-                  sx={{
-                    border: `2px solid ${
-                      isRestaurantPage
+                <Link href={"/contact"}>
+                  <Button
+                    sx={{
+                      border: `2px solid ${
+                        isRestaurantPage
+                          ? "linear-gradient(280.48deg, #F31255 -238.37%, #FF9E2A 106.98%)"
+                          : "#4E8AF4"
+                      }`,
+                      width: "100%",
+
+                      fontSize: "14px",
+                      fontWeight: 700,
+                      color: "#4E8AF4",
+                      marginTop: "53px",
+                      backgroundColor: "#FFF",
+
+                      height: "42px",
+                      marginBottom: "10px",
+
+                      _hover: {
+                        // backgroundColor: "brand.hover",
+                      },
+                    }}
+                  >
+                    Contact Us
+                  </Button>
+                </Link>
+
+                <Link href={"/contact"}>
+                  <Button
+                    sx={{
+                      background: isRestaurantPage
                         ? "linear-gradient(280.48deg, #F31255 -238.37%, #FF9E2A 106.98%)"
-                        : "#4E8AF4"
-                    }`,
-                    width: "100%",
+                        : "#4E8AF4",
+                      width: "100%",
+                      fontSize: "14px",
+                      fontWeight: 700,
+                      color: "#fff",
+                      // marginTop: "53px",
+                      height: "42px",
+                      marginBottom: "30px",
 
-                    fontSize: "14px",
-                    fontWeight: 700,
-                    color: "#4E8AF4",
-                    marginTop: "53px",
-                    backgroundColor: "#FFF",
-
-                    height: "42px",
-                    marginBottom: "10px",
-
-                    _hover: {
-                      // backgroundColor: "brand.hover",
-                    },
-                  }}
-                >
-                  Contact Us
-                </Button>
-
+                      _hover: {
+                        backgroundColor: "brand.hover",
+                      },
+                    }}
+                  >
+                    Get A Quote
+                  </Button>
+                </Link>
+              </>
+            ) : (
+              <Link href={"/contact"}>
                 <Button
                   sx={{
                     background: isRestaurantPage
@@ -453,39 +481,24 @@ const PackageCard = ({
                     fontSize: "14px",
                     fontWeight: 700,
                     color: "#fff",
-                    // marginTop: "53px",
+                    marginTop: "53px",
                     height: "42px",
                     marginBottom: "30px",
 
                     _hover: {
                       backgroundColor: "brand.hover",
                     },
+
+                    _focus: {
+                      background: isRestaurantPage
+                        ? "linear-gradient(280.48deg, #F31255 -238.37%, #FF9E2A 106.98%)"
+                        : "#4E8AF4",
+                    },
                   }}
                 >
-                  Get A Quote
+                  Get Subscription
                 </Button>
-              </>
-            ) : (
-              <Button
-                sx={{
-                  background: isRestaurantPage
-                    ? "linear-gradient(280.48deg, #F31255 -238.37%, #FF9E2A 106.98%)"
-                    : "#4E8AF4",
-                  width: "100%",
-                  fontSize: "14px",
-                  fontWeight: 700,
-                  color: "#fff",
-                  marginTop: "53px",
-                  height: "42px",
-                  marginBottom: "30px",
-
-                  _hover: {
-                    backgroundColor: "brand.hover",
-                  },
-                }}
-              >
-                Get Subscription
-              </Button>
+              </Link>
             )}
           </Box>
         </Box>
